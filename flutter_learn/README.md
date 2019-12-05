@@ -1,16 +1,21 @@
 # flutter_learn
 
-A new Flutter project.
+学习和体验flutter组件的小Demo
 
-## Getting Started
+## 运行方式
 
-This project is a starting point for a Flutter application.
+* 查看一下版本号是否正确
+```
+flutter --version
+```
 
-A few resources to get you started if this is your first Flutter project:
+* 运行以下命令查看是否需要安装其它依赖项来完成安装
+```
+flutter doctor
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* 运行启动您的应用
+```
+flutter packages get 
+flutter run
+```
