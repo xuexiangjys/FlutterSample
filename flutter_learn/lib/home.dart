@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/widget/button.dart';
 
 class MainHomePage extends StatefulWidget {
   MainHomePage({Key key}) : super(key: key);
@@ -10,25 +9,10 @@ class MainHomePage extends StatefulWidget {
 
 class _MainHomePageState extends State<MainHomePage> {
   final List<ListItem> items = [
-    new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", (context) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => ButtonPage()));
-    }),
-    new ListItem(Icons.text_fields, "文字", "简单的文字使用", (context) {
-      Scaffold.of(context).showSnackBar(SnackBar(
-        content: Text('点击title2'),
-      ));
-    }),
-    new ListItem(Icons.image, "图片", "简单的图片使用", (context) {
-      Scaffold.of(context).showSnackBar(SnackBar(
-        content: Text('点击title3'),
-      ));
-    }),
-    new ListItem(Icons.tab, "选项卡", "简单的选项卡使用", (context) {
-      Scaffold.of(context).showSnackBar(SnackBar(
-        content: Text('点击title3'),
-      ));
-    }),
+    new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
+    new ListItem(Icons.text_fields, "文字", "简单的文字使用", '/widget/text'),
+    new ListItem(Icons.image, "图片", "简单的图片使用", '/widget/image'),
+    new ListItem(Icons.tab, "选项卡", "简单的选项卡使用", '/widget/tab'),
   ];
 
   @override
@@ -56,7 +40,7 @@ class _MainHomePageState extends State<MainHomePage> {
                     left: 20, right: 10, top: 5, bottom: 5), // item 内容内边距
                 enabled: true,
                 onTap: () {
-                  items[index].onPressed(context); // item onTap 点击事件
+                  Navigator.of(context).pushNamed(items[index].pageName);
                 },
                 onLongPress: () {
                   print('长按:$index');
@@ -80,9 +64,6 @@ class ListItem {
   final IconData icon;
   final String title;
   final String subTitle;
-  final ContextCallback onPressed;
-  const ListItem(
-      this.icon, this.title, this.subTitle, this.onPressed); // 常量构造函数
+  final String pageName;
+  const ListItem(this.icon, this.title, this.subTitle, this.pageName);
 }
-
-typedef ContextCallback = void Function(BuildContext context);

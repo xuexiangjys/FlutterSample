@@ -71,9 +71,36 @@ class _ButtonPageState extends State<ButtonPage> {
                   color: Colors.pink,
                   onPressed: () => {},
                 ),
+                IconButtonDefault(false),
+                IconButtonDefault(true),
               ],
             )
           ]))),
     );
+  }
+}
+
+// IconButton 默认按钮的实例
+// isDisabled:是否是禁用，isDisabled 默认为true
+class IconButtonDefault extends StatelessWidget {
+  final bool isDisabled;
+
+  const IconButtonDefault([this.isDisabled = true])
+      : assert(isDisabled != null),
+        super();
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+        // 文本内容
+        icon: Icon(Icons.volume_up),
+        tooltip: isDisabled ? 'Increase volume by 10%' : null,
+        onPressed: isDisabled
+            ? () {
+                Scaffold.of(context).showSnackBar(SnackBar(
+                  content: Text("点击了按钮"),
+                ));
+              }
+            : null);
   }
 }
