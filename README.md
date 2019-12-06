@@ -19,6 +19,8 @@ Flutter学习经验总结
 * flutter升级：`flutter upgrade`
 
 4.打包apk包：
+* 直接打包：
+`flutter build apk`
 * 64位-release：
 `flutter build apk --release --target-platform android-arm64`
 * 32位-release：
