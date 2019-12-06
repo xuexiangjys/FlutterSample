@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/viewpageitem.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -16,26 +17,10 @@ class _MainHomePageState extends State<MainHomePage>
     Tab(text: '拓展')
   ];
 
-  static final List<ListItem> widgetItems = [
-    new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
-    new ListItem(Icons.text_fields, "文字", "简单的文字使用", '/widget/text'),
-    new ListItem(Icons.image, "图片", "简单的图片使用", '/widget/image'),
-    new ListItem(Icons.tab, "选项卡", "简单的选项卡使用", '/widget/tab'),
-  ];
-
-   static final List<ListItem> utilsItems = [
-    new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
-    new ListItem(Icons.text_fields, "文字", "简单的文字使用", '/widget/text'),
-  ];
-
-   static final List<ListItem> expandItems = [
-    new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
-  ];
-
   final List<Widget> mTabViews = <Widget>[
-    ViewPageItem(items: widgetItems),
-    ViewPageItem(items: utilsItems),
-    ViewPageItem(items: expandItems),
+    ViewPageItem(items: RouteMap.widgetItems),
+    ViewPageItem(items: RouteMap.utilsItems),
+    ViewPageItem(items: RouteMap.expandItems),
   ];
 
   TabController _tabController;
