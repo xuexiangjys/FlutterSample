@@ -5,7 +5,7 @@ import 'package:flutter_learn/page/widget/button.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
 import 'package:flutter_learn/page/widget/text.dart';
-import 'package:flutter_learn/view/viewpageitem.dart';
+import 'package:flutter_learn/view/viewpage_item.dart';
 
 class RouteMap {
   static final routes = <String, WidgetBuilder>{
