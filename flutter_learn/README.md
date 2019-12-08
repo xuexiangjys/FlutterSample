@@ -19,3 +19,14 @@ flutter doctor
 flutter packages get 
 flutter run
 ```
+
+
+## 依赖库说明
+
+* [非常好用的网络请求库 dio](https://github.com/flutterchina/dio)
+* [FlutterToast](https://github.com/PonnamKarthik/FlutterToast)
+
+
+## 非常感谢
+
+* [阿里巴巴的入门级项目 flutter-go](https://github.com/alibaba/flutter-go)
