@@ -116,6 +116,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.8"
+  mmkv_flutter:
+    dependency: "direct main"
+    description:
+      name: mmkv_flutter
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.10"
   path:
     dependency: transitive
     description:
