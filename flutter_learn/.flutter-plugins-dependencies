@@ -1,1 +1,1 @@
-{"_info":"// This is a generated file; do not edit or check into version control.","dependencyGraph":[{"name":"fluttertoast","dependencies":[]},{"name":"mmkv_flutter","dependencies":[]}]}
+{"_info":"// This is a generated file; do not edit or check into version control.","dependencyGraph":[{"name":"fluttertoast","dependencies":[]},{"name":"mmkv_flutter","dependencies":[]},{"name":"shared_preferences","dependencies":[]},{"name":"sqflite","dependencies":[]}]}
