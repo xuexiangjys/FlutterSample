@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/router/switch_animation.dart';
 
 class ViewPageItem extends StatefulWidget {
 
@@ -32,7 +33,7 @@ class _ViewPageItemState extends State<ViewPageItem> {
                   left: 20, right: 10, top: 5, bottom: 5), // item 内容内边距
               enabled: true,
               onTap: () {
-                Navigator.of(context).pushNamed(widget.items[index].pageName);
+                Navigator.push(context, SlidePageRoute(widget.items[index].pageName));
               },
               onLongPress: () {
                 print('长按:$index');
