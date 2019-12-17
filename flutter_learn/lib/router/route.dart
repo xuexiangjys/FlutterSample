@@ -3,6 +3,7 @@ import 'package:flutter_learn/home.dart';
 import 'package:flutter_learn/page/utils/mmkv.dart';
 import 'package:flutter_learn/page/utils/net.dart';
 import 'package:flutter_learn/page/utils/shared_preferences.dart';
+import 'package:flutter_learn/page/utils/sqlite.dart';
 import 'package:flutter_learn/page/utils/toast.dart';
 import 'package:flutter_learn/page/widget/button.dart';
 import 'package:flutter_learn/page/widget/image.dart';
@@ -27,6 +28,7 @@ class RouteMap {
     '/utils/toast': (BuildContext context) => new ToastPage(),
     '/utils/mmkv': (BuildContext context) => new MMKVPage(),
     '/utils/shared_preferences': (BuildContext context) => new SharedPreferencesPage(),
+    '/utils/sqlite': (BuildContext context) => new SqlitePage(),
 
     //=============================================================//
   };
@@ -48,7 +50,8 @@ class RouteMap {
     new ListItem(Icons.http, "网络请求", "详解dio的使用", '/utils/net'),
     new ListItem(Icons.info, "Toast使用", "详解Toast的使用", '/utils/toast'),
     new ListItem(Icons.data_usage, "MMKV使用", "腾讯MMKV键值对使用", '/utils/mmkv'),
-    new ListItem(Icons.data_usage, "SharedPreferences使用", "SharedPreferences键值对使用", '/utils/shared_preferences'),
+    new ListItem(Icons.data_usage, "SharedPreferences使用","SharedPreferences键值对使用", '/utils/shared_preferences'),
+    new ListItem(Icons.data_usage, "Sqlite数据库使用","Sqlite增删改查操作", '/utils/sqlite'),
 
   ];
 
