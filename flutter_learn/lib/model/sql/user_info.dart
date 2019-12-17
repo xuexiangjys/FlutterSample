@@ -1,6 +1,7 @@
 import 'package:flutter_learn/utils/sql.dart';
 
 abstract class UserInfoInterface {
+  int get id;
   String get userName;
   String get password;
   String get nickName;
@@ -9,16 +10,24 @@ abstract class UserInfoInterface {
 }
 
 class UserInfo implements UserInfoInterface {
+  int id;
   String userName;
   String password;
   String nickName;
   int age;
   int sex;
 
-  UserInfo({this.userName, this.password, this.nickName, this.age, this.sex});
+  UserInfo(
+      {this.id,
+      this.userName,
+      this.password,
+      this.nickName,
+      this.age,
+      this.sex});
 
   factory UserInfo.fromJSON(Map json) {
     return UserInfo(
+        id: json['id'],
         userName: json['userName'],
         password: json['password'],
         nickName: json['nickName'],
@@ -28,6 +37,7 @@ class UserInfo implements UserInfoInterface {
 
   Object toMap() {
     return {
+      'id': id,
       'userName': userName,
       'password': password,
       'nickName': nickName,
@@ -46,14 +56,8 @@ class UserInfoModel {
   }
 
   // 插入
-  Future insert(UserInfo userInfo) {
-    return sql.insert({
-      'username': userInfo.userName,
-      'password': userInfo.password,
-      'nickName': userInfo.nickName,
-      'age': userInfo.age,
-      'sex': userInfo.sex
-    });
+  Future<Map<String, dynamic>> insert(UserInfo userInfo) {
+    return sql.insert(userInfo.toMap());
   }
 
   // 查询
@@ -69,17 +73,16 @@ class UserInfoModel {
 
   // 修改
   Future<int> update(UserInfo userInfo) {
-    return sql.update({
-      'username': userInfo.userName,
-      'password': userInfo.password,
-      'nickName': userInfo.nickName,
-      'age': userInfo.age,
-      'sex': userInfo.sex
-    });
+    return sql.updateById(userInfo.toMap(), userInfo.id);
   }
 
-  // 删除
-  Future deleteAll() async {
+  // 删除所有
+  Future<int> deleteAll() async {
     return await sql.deleteAll();
+  }
+
+  // 删除所有
+  Future<int> deleteById(int id) async {
+    return await sql.deleteById(id);
   }
 }

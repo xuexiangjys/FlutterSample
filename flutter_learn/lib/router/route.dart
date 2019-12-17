@@ -51,7 +51,7 @@ class RouteMap {
     new ListItem(Icons.info, "Toast使用", "详解Toast的使用", '/utils/toast'),
     new ListItem(Icons.data_usage, "MMKV使用", "腾讯MMKV键值对使用", '/utils/mmkv'),
     new ListItem(Icons.data_usage, "SharedPreferences使用","SharedPreferences键值对使用", '/utils/shared_preferences'),
-    new ListItem(Icons.data_usage, "Sqlite数据库使用","Sqlite增删改查操作", '/utils/sqlite'),
+    new ListItem(Icons.date_range, "Sqlite数据库使用","Sqlite增删改查操作", '/utils/sqlite'),
 
   ];
 

@@ -27,10 +27,16 @@ class Sql extends BaseModel {
     return tableName;
   }
 
-  Future<int> delete(String value, String key) async {
+  Future<int> delete(String key, String value) async {
     return await this
         .db
         .delete(tableName, where: '$key = ?', whereArgs: [value]);
+  }
+
+  Future<int> deleteById(int id, {String key = 'id'}) async {
+    return await this
+        .db
+        .delete(tableName, where: '$key = ?', whereArgs: [id]);
   }
 
   Future<int> deleteAll() async {
@@ -70,14 +76,18 @@ class Sql extends BaseModel {
     return values;
   }
 
-  Future<int> update(Map<String, dynamic> values,
-      {String where,
-      List<dynamic> whereArgs,
-      ConflictAlgorithm conflictAlgorithm}) async {
-    return await this.db.update(tableName, values,
-        where: where,
-        whereArgs: whereArgs,
-        conflictAlgorithm: conflictAlgorithm);
+  Future<int> update(
+      Map<String, dynamic> values, String key, String value) async {
+    return await this
+        .db
+        .update(tableName, values, where: '$key = ?', whereArgs: [value]);
+  }
+
+  Future<int> updateById(
+      Map<String, dynamic> values, int id, {String key = 'id'}) async {
+    return await this
+        .db
+        .update(tableName, values, where: '$key = ?', whereArgs: [id]);
   }
 
   ///
