@@ -5,6 +5,7 @@ import 'package:flutter_learn/page/utils/net.dart';
 import 'package:flutter_learn/page/utils/shared_preferences.dart';
 import 'package:flutter_learn/page/utils/sqlite.dart';
 import 'package:flutter_learn/page/utils/toast.dart';
+import 'package:flutter_learn/page/widget/bottom_navigation_bar.dart';
 import 'package:flutter_learn/page/widget/button.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
@@ -21,6 +22,7 @@ class RouteMap {
     '/widget/text': (BuildContext context) => new TextPage(),
     '/widget/image': (BuildContext context) => new ImagePage(),
     '/widget/tab': (BuildContext context) => new TabPage(),
+    '/widget/navigation': (BuildContext context) => new BottomNavigationBarPage(),
 
     //=============================================================//
 
@@ -38,9 +40,10 @@ class RouteMap {
    */
   static final List<ListItem> widgetItems = [
     new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
-    new ListItem(Icons.text_fields, "文字", "简单的文字使用", '/widget/text'),
+    new ListItem(Icons.text_fields, "文字", "简单的文字、输入框使用", '/widget/text'),
     new ListItem(Icons.image, "图片", "简单的图片使用", '/widget/image'),
     new ListItem(Icons.tab, "选项卡", "简单的选项卡使用", '/widget/tab'),
+    new ListItem(Icons.navigation, "底部导航栏", "简单的底部导航栏使用", '/widget/navigation'),
   ];
 
   /*
