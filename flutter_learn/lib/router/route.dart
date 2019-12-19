@@ -7,6 +7,8 @@ import 'package:flutter_learn/page/utils/sqlite.dart';
 import 'package:flutter_learn/page/utils/toast.dart';
 import 'package:flutter_learn/page/widget/bottom_navigation_bar.dart';
 import 'package:flutter_learn/page/widget/button.dart';
+import 'package:flutter_learn/page/widget/dialog.dart';
+import 'package:flutter_learn/page/widget/drawer.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
 import 'package:flutter_learn/page/widget/text.dart';
@@ -23,6 +25,8 @@ class RouteMap {
     '/widget/image': (BuildContext context) => new ImagePage(),
     '/widget/tab': (BuildContext context) => new TabPage(),
     '/widget/navigation': (BuildContext context) => new BottomNavigationBarPage(),
+    '/widget/dialog': (BuildContext context) => new DialogPage(),
+    '/widget/drawer': (BuildContext context) => new DrawerPage(),
 
     //=============================================================//
 
@@ -44,6 +48,8 @@ class RouteMap {
     new ListItem(Icons.image, "图片", "简单的图片使用", '/widget/image'),
     new ListItem(Icons.tab, "选项卡", "简单的选项卡使用", '/widget/tab'),
     new ListItem(Icons.navigation, "底部导航栏", "简单的底部导航栏使用", '/widget/navigation'),
+    new ListItem(Icons.notifications, "对话框", "简单的对话框使用", '/widget/dialog'),
+    new ListItem(Icons.menu, "侧滑菜单", "简单侧滑菜单的使用", '/widget/drawer'),
   ];
 
   /*

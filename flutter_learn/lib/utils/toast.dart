@@ -3,8 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class XToast {
 
-  static void toast({
-    @required String msg,
+  static void toast(String msg, {
     Toast length = Toast.LENGTH_SHORT
   }) {
     Fluttertoast.cancel();
@@ -19,8 +18,7 @@ class XToast {
   }
 
 
-  static void waring({
-    @required String msg,
+  static void waring(String msg, {
     Toast length = Toast.LENGTH_SHORT
   }) {
     Fluttertoast.cancel();
@@ -35,8 +33,7 @@ class XToast {
   }
 
 
-  static void error({
-    @required String msg,
+  static void error(String msg, {
     Toast length = Toast.LENGTH_SHORT
   }) {
     Fluttertoast.cancel();
@@ -51,8 +48,7 @@ class XToast {
   }
 
 
-  static void success({
-    @required String msg,
+  static void success(String msg, {
     Toast toastLength = Toast.LENGTH_SHORT
   }) {
     Fluttertoast.cancel();

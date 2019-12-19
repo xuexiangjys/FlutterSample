@@ -30,12 +30,12 @@ class _ToastPageState extends State<ToastPage> {
                     RaisedButton(
                       child: Text('普通toast'),
                       color: Colors.blue,
-                      onPressed: () => {XToast.toast(msg: "这是一个普通的Toast")},
+                      onPressed: () => {XToast.toast("这是一个普通的Toast")},
                     ),
                     RaisedButton(
                       child: Text('警告toast'),
                       color: Colors.blue,
-                      onPressed: () => {XToast.waring(msg: "这是一个警告Toast")},
+                      onPressed: () => {XToast.waring("这是一个警告Toast")},
                     ),
                   ],
                 ),
@@ -49,14 +49,13 @@ class _ToastPageState extends State<ToastPage> {
                       child: Text('错误toast'),
                       color: Colors.blue,
                       onPressed: () => {
-                        XToast.error(
-                            msg: "这是一个错误Toast", length: Toast.LENGTH_LONG)
+                        XToast.error("这是一个错误Toast", length: Toast.LENGTH_LONG)
                       },
                     ),
                     RaisedButton(
                       child: Text('成功toast'),
                       color: Colors.blue,
-                      onPressed: () => {XToast.success(msg: "这是一个成功Toast")},
+                      onPressed: () => {XToast.success("这是一个成功Toast")},
                     ),
                   ],
                 ),
