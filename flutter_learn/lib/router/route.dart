@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/home.dart';
+import 'package:flutter_learn/page/expand/web.dart';
 import 'package:flutter_learn/page/utils/mmkv.dart';
+import 'package:flutter_learn/page/utils/navigator.dart';
 import 'package:flutter_learn/page/utils/net.dart';
 import 'package:flutter_learn/page/utils/shared_preferences.dart';
 import 'package:flutter_learn/page/utils/sqlite.dart';
@@ -9,6 +11,7 @@ import 'package:flutter_learn/page/widget/bottom_navigation_bar.dart';
 import 'package:flutter_learn/page/widget/button.dart';
 import 'package:flutter_learn/page/widget/dialog.dart';
 import 'package:flutter_learn/page/widget/drawer.dart';
+import 'package:flutter_learn/page/widget/empty.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
 import 'package:flutter_learn/page/widget/text.dart';
@@ -17,6 +20,7 @@ import 'package:flutter_learn/view/viewpage_item.dart';
 class RouteMap {
   static final routes = <String, WidgetBuilder>{
     '/home': (BuildContext context) => new MainHomePage(),
+    '/empty': (BuildContext context) => new EmptyPage(),
 
     //=============================================================//
 
@@ -30,6 +34,7 @@ class RouteMap {
 
     //=============================================================//
 
+    '/utils/navigator': (BuildContext context) => new NavigatorPage(),
     '/utils/net': (BuildContext context) => new NetRequestPage(),
     '/utils/toast': (BuildContext context) => new ToastPage(),
     '/utils/mmkv': (BuildContext context) => new MMKVPage(),
@@ -37,6 +42,9 @@ class RouteMap {
     '/utils/sqlite': (BuildContext context) => new SqlitePage(),
 
     //=============================================================//
+
+    '/expand/web_page': (BuildContext context) => new WebPage(),
+
   };
 
   /*
@@ -56,6 +64,7 @@ class RouteMap {
    * 工具
    */
   static final List<ListItem> utilsItems = [
+    new ListItem(Icons.navigation, "页面跳转", "详解页面路由跳转", '/utils/navigator'),
     new ListItem(Icons.http, "网络请求", "详解dio的使用", '/utils/net'),
     new ListItem(Icons.info, "Toast使用", "详解Toast的使用", '/utils/toast'),
     new ListItem(Icons.data_usage, "MMKV使用", "腾讯MMKV键值对使用", '/utils/mmkv'),
@@ -68,6 +77,6 @@ class RouteMap {
    * 拓展
    */
   static final List<ListItem> expandItems = [
-    new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
+    new ListItem(Icons.radio_button_checked, "网页加载", "简单的网页加载", '/expand/web_page'),
   ];
 }

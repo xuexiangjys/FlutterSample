@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/view/web_view_page.dart';
 
-class EmptyPage extends StatefulWidget {
-
-  EmptyPage({this.title = "空页面", Key key}) : super(key: key);
-
-  final String title;
-
+class WebPage extends StatefulWidget {
+  WebPage({Key key}) : super(key: key);
+  final String title = "网页加载";
   @override
-  _EmptyPageState createState() => _EmptyPageState();
+  _WebPageState createState() => _WebPageState();
 }
 
-class _EmptyPageState extends State<EmptyPage> {
+class _WebPageState extends State<WebPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,20 +26,19 @@ class _EmptyPageState extends State<EmptyPage> {
                   mainAxisSize: MainAxisSize.min, //主轴大小，默认MainAxisSize.max
                   children: <Widget>[
                     RaisedButton(
-                      child: Text('参数回传'),
+                      child: Text('访问百度'),
                       color: Colors.blue,
-                      onPressed: () => {
-                        Navigator.of(context).pop("回传的参数")
-                      },
-                    ),
-                    RaisedButton(
-                      child: Text('按钮二'),
-                      color: Colors.blue,
-                      onPressed: () => {},
+                      onPressed: () => {gotoBaidu(context)},
                     ),
                   ],
                 ),
               ],
             )));
+  }
+
+  void gotoBaidu(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return WebViewPage("www.baidu.com", "百度");
+    }));
   }
 }
