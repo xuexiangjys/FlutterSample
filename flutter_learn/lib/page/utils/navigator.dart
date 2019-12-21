@@ -58,7 +58,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                       child: Text('fluro跳转'),
                       color: Colors.blue,
                       onPressed: () => {
-                        XRouter.router.navigateTo(context, "/web?url=${Uri.encodeComponent("www.baidu.com")}&title=${Uri.encodeComponent("百度")}", transition: TransitionType.fadeIn)
+                        XRouter.router.navigateTo(context, "/web?url=${Uri.encodeComponent("https://www.baidu.com/")}&title=${Uri.encodeComponent("百度")}", transition: TransitionType.fadeIn)
                       },
                     ),
                   ],

@@ -1,6 +1,7 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class WebViewPage extends StatefulWidget {
   final String url;
@@ -26,6 +27,12 @@ class _WebViewPageState extends State<WebViewPage> {
   }
 
   Widget getWebView(String url) {
-    return Text(url);
+    return WebviewScaffold(
+        url: widget.url,
+        withZoom: false,
+        withLocalStorage: true,
+        withJavascript: true,
+        hidden: true,
+      );
   }
 }

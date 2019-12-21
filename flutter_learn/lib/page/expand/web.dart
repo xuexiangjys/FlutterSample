@@ -38,7 +38,7 @@ class _WebPageState extends State<WebPage> {
 
   void gotoBaidu(BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
-      return WebViewPage("www.baidu.com", "百度");
+      return WebViewPage("https://www.baidu.com/", "百度");
     }));
   }
 }
