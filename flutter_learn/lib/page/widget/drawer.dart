@@ -29,6 +29,12 @@ class _DrawerPageState extends State<DrawerPage> {
                   _scaffoldKey.currentState.showSnackBar(const SnackBar(
                       content: Text("我是通过ScaffoldState的方式呼出的SnackBar.")));
                 },
+              ),
+              RaisedButton(
+                child: Text('返回'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               )
             ],
           ),

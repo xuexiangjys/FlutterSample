@@ -63,7 +63,7 @@ class RouteMap {
     new ListItem(Icons.navigation, "底部导航栏", "简单的底部导航栏使用", '/widget/navigation'),
     new ListItem(Icons.notifications, "对话框", "简单的对话框使用", '/widget/dialog'),
     new ListItem(Icons.menu, "侧滑菜单", "简单侧滑菜单的使用", '/widget/drawer'),
-    new ListItem(Icons.list, "NestedScrollView", "NestedScrollView的使用", '/widget/nested_scrollview'),
+    new ListItem(Icons.list, "NestedScrollView", "嵌套滚动联动的使用", '/widget/nested_scrollview'),
   ];
 
   /*
