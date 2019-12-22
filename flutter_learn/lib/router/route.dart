@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/home.dart';
+import 'package:flutter_learn/page/expand/image_picker.dart';
 import 'package:flutter_learn/page/expand/web.dart';
 import 'package:flutter_learn/page/utils/mmkv.dart';
 import 'package:flutter_learn/page/utils/navigator.dart';
@@ -48,6 +49,7 @@ class RouteMap {
     //=============================================================//
 
     '/expand/web_page': (BuildContext context) => new WebPage(),
+    '/expand/image_picker': (BuildContext context) => new ImagePickerPage(),
 
   };
 
@@ -84,5 +86,6 @@ class RouteMap {
    */
   static final List<ListItem> expandItems = [
     new ListItem(Icons.radio_button_checked, "网页加载", "简单的网页加载", '/expand/web_page'),
+    new ListItem(Icons.image, "图片选择", "图片选择的简单使用", '/expand/image_picker'),
   ];
 }

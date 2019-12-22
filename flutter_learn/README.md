@@ -25,7 +25,12 @@ flutter run
 
 * [非常好用的网络请求库 dio](https://github.com/flutterchina/dio)
 * [FlutterToast](https://github.com/PonnamKarthik/FlutterToast)
-
+* [mmkv_flutter](https://github.com/OpenFlutter/mmkv_flutter)
+* [shared_preferences](https://github.com/flutter/plugins/tree/master/packages/shared_preferences/shared_preferences)
+* [sqlite数据库 sqflite](https://github.com/tekartik/sqflite)
+* [页面路由神器 fluro](https://github.com/theyakka/fluro)
+* [网页加载 flutter_webview_plugin](https://github.com/fluttercommunity/flutter_webview_plugin)
+* [图片选择 image_picker](https://github.com/flutter/plugins/tree/master/packages/image_picker)
 
 ## 非常感谢
 

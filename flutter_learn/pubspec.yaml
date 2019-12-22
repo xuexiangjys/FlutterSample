@@ -30,6 +30,8 @@ dependencies:
   sqflite: ^1.1.7
   fluro: ^1.4.0
   flutter_webview_plugin: ^0.3.10
+  image_picker: ^0.6.2+3
+
 
 dev_dependencies:
   flutter_test:
