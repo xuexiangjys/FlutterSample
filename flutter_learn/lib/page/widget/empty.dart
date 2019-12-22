@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class EmptyPage extends StatefulWidget {
-
   EmptyPage({this.title = "空页面", Key key}) : super(key: key);
 
   final String title;
@@ -30,9 +29,7 @@ class _EmptyPageState extends State<EmptyPage> {
                     RaisedButton(
                       child: Text('参数回传'),
                       color: Colors.blue,
-                      onPressed: () => {
-                        Navigator.of(context).pop("回传的参数")
-                      },
+                      onPressed: () => {Navigator.of(context).pop("回传的参数")},
                     ),
                     RaisedButton(
                       child: Text('按钮二'),

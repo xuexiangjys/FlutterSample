@@ -44,6 +44,73 @@ class _TextPageState extends State<TextPage> {
                   },
                   autofocus: false,
                 ),
+
+
+                SizedBox(height: 20),
+                Divider(height: 5),
+                SizedBox(height: 20),
+
+
+                Text(
+                  'inherit: 为 false 的时候不显示',
+                  style: TextStyle(
+                    inherit: true,
+                  ),
+                ),
+                Text(
+                  'color/fontSize: 字体颜色，字号等',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 150, 150, 150),
+                    fontSize: 22.0,
+                  ),
+                ),
+                Text(
+                  'fontWeight: 字重',
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  'fontStyle: FontStyle.italic 斜体',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                Text(
+                  'letterSpacing: 字符间距',
+                  style: TextStyle(
+                    letterSpacing: 10.0,
+                    // wordSpacing: 15.0
+                  ),
+                ),
+                Text(
+                  'wordSpacing: 字或单词间距',
+                  style: TextStyle(
+                      // letterSpacing: 10.0,
+                      wordSpacing: 15.0),
+                ),
+                Text(
+                  'textBaseline:这一行的值为TextBaseline.alphabetic',
+                  style: TextStyle(textBaseline: TextBaseline.alphabetic),
+                ),
+                Text(
+                  'textBaseline:这一行的值为TextBaseline.ideographic',
+                  style: TextStyle(textBaseline: TextBaseline.ideographic),
+                ),
+                Text('height: 用在Text控件上的时候，会乘以fontSize做为行高,所以这个值不能设置过大',
+                    style: TextStyle(
+                      height: 1.0,
+                    )),
+                Text('decoration: TextDecoration.overline 上划线',
+                    style: TextStyle(
+                        decoration: TextDecoration.overline,
+                        decorationStyle: TextDecorationStyle.wavy)),
+                Text('decoration: TextDecoration.lineThrough 删除线',
+                    style: TextStyle(
+                        decoration: TextDecoration.lineThrough,
+                        decorationStyle: TextDecorationStyle.dashed)),
+                Text('decoration: TextDecoration.underline 下划线',
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        decorationStyle: TextDecorationStyle.dotted)),
               ],
             )));
   }

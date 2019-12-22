@@ -11,11 +11,13 @@ import 'package:flutter_learn/page/utils/toast.dart';
 import 'package:flutter_learn/page/widget/appbar.dart';
 import 'package:flutter_learn/page/widget/bottom_navigation_bar.dart';
 import 'package:flutter_learn/page/widget/button.dart';
+import 'package:flutter_learn/page/widget/cardview.dart';
 import 'package:flutter_learn/page/widget/dialog.dart';
 import 'package:flutter_learn/page/widget/drawer.dart';
 import 'package:flutter_learn/page/widget/empty.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/nested_scrollview.dart';
+import 'package:flutter_learn/page/widget/progress.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
 import 'package:flutter_learn/page/widget/text.dart';
 import 'package:flutter_learn/view/viewpage_item.dart';
@@ -36,6 +38,8 @@ class RouteMap {
     '/widget/dialog': (BuildContext context) => new DialogPage(),
     '/widget/drawer': (BuildContext context) => new DrawerPage(),
     '/widget/nested_scrollview': (BuildContext context) => new NestedScrollViewPage(),
+    '/widget/progress': (BuildContext context) => new ProgressPage(),
+    '/widget/cardview': (BuildContext context) => new CardViewPage(),
 
     //=============================================================//
 
@@ -50,7 +54,6 @@ class RouteMap {
 
     '/expand/web_page': (BuildContext context) => new WebPage(),
     '/expand/image_picker': (BuildContext context) => new ImagePickerPage(),
-
   };
 
   /*
@@ -66,6 +69,8 @@ class RouteMap {
     new ListItem(Icons.notifications, "对话框", "简单的对话框使用", '/widget/dialog'),
     new ListItem(Icons.menu, "侧滑菜单", "简单侧滑菜单的使用", '/widget/drawer'),
     new ListItem(Icons.list, "NestedScrollView", "嵌套滚动联动的使用", '/widget/nested_scrollview'),
+    new ListItem(Icons.update, "进度条显示", "简单的进度条使用", '/widget/progress'),
+    new ListItem(Icons.credit_card, "卡片", "简单的卡片使用", '/widget/cardview'),
   ];
 
   /*
@@ -76,16 +81,18 @@ class RouteMap {
     new ListItem(Icons.http, "网络请求", "详解dio的使用", '/utils/net'),
     new ListItem(Icons.info, "Toast使用", "详解Toast的使用", '/utils/toast'),
     new ListItem(Icons.data_usage, "MMKV使用", "腾讯MMKV键值对使用", '/utils/mmkv'),
-    new ListItem(Icons.data_usage, "SharedPreferences使用","SharedPreferences键值对使用", '/utils/shared_preferences'),
-    new ListItem(Icons.date_range, "Sqlite数据库使用","Sqlite增删改查操作", '/utils/sqlite'),
-
+    new ListItem(Icons.data_usage, "SharedPreferences使用",
+        "SharedPreferences键值对使用", '/utils/shared_preferences'),
+    new ListItem(
+        Icons.date_range, "Sqlite数据库使用", "Sqlite增删改查操作", '/utils/sqlite'),
   ];
 
   /*
    * 拓展
    */
   static final List<ListItem> expandItems = [
-    new ListItem(Icons.radio_button_checked, "网页加载", "简单的网页加载", '/expand/web_page'),
+    new ListItem(
+        Icons.radio_button_checked, "网页加载", "简单的网页加载", '/expand/web_page'),
     new ListItem(Icons.image, "图片选择", "图片选择的简单使用", '/expand/image_picker'),
   ];
 }
