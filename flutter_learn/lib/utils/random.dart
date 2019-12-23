@@ -1,6 +1,8 @@
 //随机生成的工具
 import 'dart:math';
 
+import 'dart:ui';
+
 class RandomUtils {
   static final List<String> numbersAndLetters = [
     '0',
@@ -257,5 +259,13 @@ class RandomUtils {
       target += sourceChar[random.nextInt(sourceChar.length)];
     }
     return target;
+  }
+
+  // 取随机颜色
+  static Color getRandomColor() {
+    var red = Random.secure().nextInt(255);
+    var greed = Random.secure().nextInt(255);
+    var blue = Random.secure().nextInt(255);
+    return Color.fromARGB(255, red, greed, blue);
   }
 }

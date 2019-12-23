@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/home.dart';
 import 'package:flutter_learn/page/expand/image_picker.dart';
 import 'package:flutter_learn/page/expand/web.dart';
+import 'package:flutter_learn/page/utils/event_bus.dart';
 import 'package:flutter_learn/page/utils/mmkv.dart';
 import 'package:flutter_learn/page/utils/navigator.dart';
 import 'package:flutter_learn/page/utils/net.dart';
@@ -49,6 +50,8 @@ class RouteMap {
     '/utils/mmkv': (BuildContext context) => new MMKVPage(),
     '/utils/shared_preferences': (BuildContext context) => new SharedPreferencesPage(),
     '/utils/sqlite': (BuildContext context) => new SqlitePage(),
+    '/utils/event_bus': (BuildContext context) => new EventBusPage(),
+
 
     //=============================================================//
 
@@ -81,18 +84,16 @@ class RouteMap {
     new ListItem(Icons.http, "网络请求", "详解dio的使用", '/utils/net'),
     new ListItem(Icons.info, "Toast使用", "详解Toast的使用", '/utils/toast'),
     new ListItem(Icons.data_usage, "MMKV使用", "腾讯MMKV键值对使用", '/utils/mmkv'),
-    new ListItem(Icons.data_usage, "SharedPreferences使用",
-        "SharedPreferences键值对使用", '/utils/shared_preferences'),
-    new ListItem(
-        Icons.date_range, "Sqlite数据库使用", "Sqlite增删改查操作", '/utils/sqlite'),
+    new ListItem(Icons.data_usage, "SharedPreferences", "SharedPreferences键值对使用", '/utils/shared_preferences'),
+    new ListItem(Icons.date_range, "Sqlite数据库", "Sqlite增删改查操作", '/utils/sqlite'),
+    new ListItem(Icons.event, "EventBus", "EventBus事件使用", '/utils/event_bus'),
   ];
 
   /*
    * 拓展
    */
   static final List<ListItem> expandItems = [
-    new ListItem(
-        Icons.radio_button_checked, "网页加载", "简单的网页加载", '/expand/web_page'),
+    new ListItem(Icons.radio_button_checked, "网页加载", "简单的网页加载", '/expand/web_page'),
     new ListItem(Icons.image, "图片选择", "图片选择的简单使用", '/expand/image_picker'),
   ];
 }

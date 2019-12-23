@@ -81,15 +81,34 @@ class _ButtonPageState extends State<ButtonPage> {
               mainAxisSize: MainAxisSize.min, //主轴大小，默认MainAxisSize.max
               children: <Widget>[
                 FlatButtonDefault(false),
-                FlatButtonDefault(true),
+                FlatButton(
+                  child: Text("默认按钮"),
+                  onPressed: () {},
+                ),
+                FlatButton.icon(
+                  icon: Icon(Icons.add),
+                  label: Text("添加"),
+                  onPressed: () {},
+                )
               ],
             ),
-             ButtonBar(
+            ButtonBar(
               alignment: MainAxisAlignment.start, //布局方向，默认MainAxisAlignment.end
               mainAxisSize: MainAxisSize.min, //主轴大小，默认MainAxisSize.max
               children: <Widget>[
-                FlatButtonCustom('主要按钮', Colors.blue, drawShape('radius')),
-                FlatButtonCustom('主要按钮', Colors.blue)
+                FlatButtonCustom('按钮', Colors.blue, drawShape('radius')),
+                FlatButtonCustom('按钮', Colors.blue),
+                FlatButton(
+                  child: Text("默认按钮"),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                  padding: EdgeInsets.only(
+                      bottom: 5.0, top: 5.0, left: 20.0, right: 20.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  onPressed: () {},
+                ),
               ],
             )
           ])),
@@ -138,7 +157,6 @@ class FlatButtonDefault extends StatelessWidget {
   }
 }
 
-
 // FlatButton 自定义的实例
 
 class FlatButtonCustom extends StatelessWidget {
@@ -180,7 +198,7 @@ class FlatButtonCustom extends StatelessWidget {
         // 抗锯齿能力,抗锯齿等级依次递增,none（默认),hardEdge,antiAliasWithSaveLayer,antiAlias
         clipBehavior: Clip.antiAlias,
         padding:
-            EdgeInsets.only(bottom: 5.0, top: 5.0, left: 30.0, right: 30.0),
+            EdgeInsets.only(bottom: 5.0, top: 5.0, left: 20.0, right: 20.0),
         shape: (shape is ShapeBorder)
             ? shape
             : Border.all(
@@ -203,7 +221,6 @@ class FlatButtonCustom extends StatelessWidget {
         });
   }
 }
-
 
 // 绘制边框信息,比如是否有边框,是否是圆角
 ShapeBorder drawShape(String type) {
@@ -240,7 +257,6 @@ ShapeBorder drawShape(String type) {
       return null;
   }
 }
-
 
 // 取随机颜色
 Color _randomColor() {

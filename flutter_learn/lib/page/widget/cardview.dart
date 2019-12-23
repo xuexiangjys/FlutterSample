@@ -18,7 +18,7 @@ class _CardViewPageState extends State<CardViewPage> {
           title: Text(widget.title),
         ),
         body: Container(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(0),
             child: ListView(
               scrollDirection: Axis.vertical, // 水平listView
               children: <Widget>[getCardView1(), getCardView2()],
@@ -159,21 +159,21 @@ class _CardViewPageState extends State<CardViewPage> {
                       icon: Icon(Icons.thumb_up, size: 20, color: Colors.grey),
                       label: const Text('99',
                           style: TextStyle(color: Colors.grey, fontSize: 12)),
-                      onPressed: () {}),
+                      onPressed: () {XToast.toast("点赞");}),
                 ),
                 Expanded(
                   child: FlatButton.icon(
                       icon: Icon(Icons.comment, size: 20, color: Colors.grey),
                       label: const Text('25',
                           style: TextStyle(color: Colors.grey, fontSize: 12)),
-                      onPressed: () {}),
+                      onPressed: () {XToast.toast("评论");}),
                 ),
                 Expanded(
                   child: FlatButton.icon(
                       icon: Icon(Icons.share, size: 20, color: Colors.grey),
                       label: const Text('分享',
                           style: TextStyle(color: Colors.grey, fontSize: 12)),
-                      onPressed: () {}),
+                      onPressed: () {XToast.toast("分享");}),
                 )
               ],
             )
