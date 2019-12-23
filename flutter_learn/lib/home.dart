@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/router/route.dart';
-
+import 'package:flutter_learn/utils/click.dart';
 import 'view/viewpage_item.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -40,25 +40,28 @@ class _MainHomePageState extends State<MainHomePage>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        bottom: TabBar(
-          controller: _tabController,
-          tabs: mTabs,
+    return WillPopScope(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text(widget.title),
+            bottom: TabBar(
+              controller: _tabController,
+              tabs: mTabs,
+            ),
+          ),
+          body: TabBarView(
+            controller: _tabController,
+            children: mTabViews.map((Widget widget) {
+              return widget;
+            }).toList(),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            tooltip: '新建',
+            child: Icon(Icons.add),
+          ),
         ),
-      ),
-      body: TabBarView(
-        controller: _tabController,
-        children: mTabViews.map((Widget widget) {
-          return widget;
-        }).toList(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: '新建',
-        child: Icon(Icons.add),
-      ),
-    );
+        //监听导航栏返回,类似onKeyEvent
+        onWillPop: ClickUtils.exitBy2Click);
   }
 }
