@@ -25,7 +25,7 @@ class UserInfo implements UserInfoInterface {
       this.age,
       this.sex});
 
-  factory UserInfo.fromJSON(Map json) {
+  factory UserInfo.fromJSON(Map<String, dynamic> json) {
     return UserInfo(
         id: json['id'],
         userName: json['userName'],
@@ -35,7 +35,7 @@ class UserInfo implements UserInfoInterface {
         sex: json['sex']);
   }
 
-  Object toMap() {
+  Map<String, dynamic> toJSON() {
     return {
       'id': id,
       'userName': userName,
@@ -57,7 +57,7 @@ class UserInfoModel {
 
   // 插入
   Future<Map<String, dynamic>> insert(UserInfo userInfo) {
-    return sql.insert(userInfo.toMap());
+    return sql.insert(userInfo.toJSON());
   }
 
   // 查询
@@ -73,7 +73,7 @@ class UserInfoModel {
 
   // 修改
   Future<int> update(UserInfo userInfo) {
-    return sql.updateById(userInfo.toMap(), userInfo.id);
+    return sql.updateById(userInfo.toJSON(), userInfo.id);
   }
 
   // 删除所有
