@@ -18,6 +18,7 @@ import 'package:flutter_learn/page/widget/dialog.dart';
 import 'package:flutter_learn/page/widget/drawer.dart';
 import 'package:flutter_learn/page/widget/empty.dart';
 import 'package:flutter_learn/page/widget/image.dart';
+import 'package:flutter_learn/page/widget/input.dart';
 import 'package:flutter_learn/page/widget/nested_scrollview.dart';
 import 'package:flutter_learn/page/widget/progress.dart';
 import 'package:flutter_learn/page/widget/refresh_list.dart';
@@ -35,6 +36,7 @@ class RouteMap {
     '/widget/appbar': (BuildContext context) => new AppBarPage(),
     '/widget/button': (BuildContext context) => new ButtonPage(),
     '/widget/text': (BuildContext context) => new TextPage(),
+    '/widget/input': (BuildContext context) => new InputPage(),
     '/widget/image': (BuildContext context) => new ImagePage(),
     '/widget/tab': (BuildContext context) => new TabPage(),
     '/widget/navigation': (BuildContext context) => new BottomNavigationBarPage(),
@@ -69,7 +71,8 @@ class RouteMap {
   static final List<ListItem> widgetItems = [
     new ListItem(Icons.title, "标题", "简单的标题使用", '/widget/appbar'),
     new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
-    new ListItem(Icons.text_fields, "文字", "简单的文字、输入框使用", '/widget/text'),
+    new ListItem(Icons.text_fields, "文字", "简单的文字使用", '/widget/text'),
+    new ListItem(Icons.input, "输入框", "简单的输入框使用", '/widget/input'),
     new ListItem(Icons.image, "图片", "简单的图片使用", '/widget/image'),
     new ListItem(Icons.tab, "选项卡", "简单的选项卡使用", '/widget/tab'),
     new ListItem(Icons.navigation, "底部导航栏", "简单的底部导航栏使用", '/widget/navigation'),
@@ -92,7 +95,7 @@ class RouteMap {
     new ListItem(Icons.data_usage, "SharedPreferences", "SharedPreferences键值对使用", '/utils/shared_preferences'),
     new ListItem(Icons.date_range, "Sqlite数据库", "Sqlite增删改查操作", '/utils/sqlite'),
     new ListItem(Icons.event, "EventBus", "EventBus事件使用", '/utils/event_bus'),
-    new ListItem(Icons.event, "Json序列化", "Json序列化和反序列化", '/utils/json_serialize'),
+    new ListItem(Icons.date_range, "Json序列化", "Json序列化和反序列化", '/utils/json_serialize'),
   ];
 
   /*

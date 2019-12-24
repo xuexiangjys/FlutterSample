@@ -91,7 +91,7 @@ class _NestedScrollViewPageState extends State<NestedScrollViewPage>
 class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return SingleChildScrollView(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -100,6 +100,7 @@ class PageOne extends StatelessWidget {
           width: 300.0,
           fit: BoxFit.contain,
         ),
+        SizedBox(height: 30),
         Image.asset(
           'assets/images/food02.jpeg',
           width: 300.0,

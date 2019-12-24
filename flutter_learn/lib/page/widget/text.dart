@@ -1,4 +1,8 @@
+import 'package:fluro/fluro.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/utils/router.dart';
+import 'package:flutter_learn/utils/toast.dart';
 
 class TextPage extends StatefulWidget {
   TextPage({Key key}) : super(key: key);
@@ -8,13 +12,41 @@ class TextPage extends StatefulWidget {
 }
 
 class _TextPageState extends State<TextPage> {
+  LongPressGestureRecognizer _longPressRecognizer;
+  TapGestureRecognizer _tapGestureRecognizer;
+
+  @override
+  void initState() {
+    super.initState();
+    _tapGestureRecognizer = TapGestureRecognizer()..onTap = _handlePress;
+    _longPressRecognizer = LongPressGestureRecognizer()
+      ..onLongPress = _handleLongPress;
+  }
+
+  @override
+  void dispose() {
+    _tapGestureRecognizer.dispose();
+    _longPressRecognizer.dispose();
+    super.dispose();
+  }
+
+  void _handlePress() {
+    XRouter.router.navigateTo(context,
+        "/web?url=${Uri.encodeComponent("https://flutterchina.club/")}&title=${Uri.encodeComponent("Flutter中文网")}",
+        transition: TransitionType.fadeIn);
+  }
+
+  void _handleLongPress() {
+    XToast.success("长按点击");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Container(
+        body: SingleChildScrollView(
             padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start, //文本是起始端对齐
@@ -44,19 +76,22 @@ class _TextPageState extends State<TextPage> {
                   },
                   autofocus: false,
                 ),
-
-
                 SizedBox(height: 20),
                 Divider(height: 5),
                 SizedBox(height: 20),
-
-
                 Text(
                   'inherit: 为 false 的时候不显示',
                   style: TextStyle(
                     inherit: true,
                   ),
                 ),
+                Text.rich(TextSpan(children: [
+                  TextSpan(text: "Flutter中文网: "),
+                  TextSpan(
+                      text: "https://flutterchina.club",
+                      style: TextStyle(color: Colors.blue),
+                      recognizer: _tapGestureRecognizer),
+                ])),
                 Text(
                   'color/fontSize: 字体颜色，字号等',
                   style: TextStyle(

@@ -15,10 +15,10 @@ class _ImagePageState extends State<ImagePage> {
           title: Text(widget.title),
         ),
         body: Container(
-            padding: const EdgeInsets.all(20),
-            child: ListView(
-              scrollDirection: Axis.vertical, // 水平listView
-              children: <Widget>[
+            padding: const EdgeInsets.all(10),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(children: <Widget>[
                 CircleAvatar(
                   backgroundImage: AssetImage('assets/images/food01.jpeg'),
                 ),
@@ -40,7 +40,7 @@ class _ImagePageState extends State<ImagePage> {
                       'https://gw.alicdn.com/tfs/TB1XD.ZuYwrBKNjSZPcXXXpapXa-255-251.png',
                       scale: 0.5),
                 )
-              ],
+              ]),
             )));
   }
 }
