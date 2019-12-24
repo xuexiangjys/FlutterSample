@@ -19,6 +19,7 @@ import 'package:flutter_learn/page/widget/empty.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/nested_scrollview.dart';
 import 'package:flutter_learn/page/widget/progress.dart';
+import 'package:flutter_learn/page/widget/refresh_list.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
 import 'package:flutter_learn/page/widget/text.dart';
 import 'package:flutter_learn/view/viewpage_item.dart';
@@ -41,6 +42,7 @@ class RouteMap {
     '/widget/nested_scrollview': (BuildContext context) => new NestedScrollViewPage(),
     '/widget/progress': (BuildContext context) => new ProgressPage(),
     '/widget/cardview': (BuildContext context) => new CardViewPage(),
+    '/widget/refresh_list': (BuildContext context) => new RefreshListPage(),
 
     //=============================================================//
 
@@ -74,6 +76,7 @@ class RouteMap {
     new ListItem(Icons.list, "NestedScrollView", "嵌套滚动联动的使用", '/widget/nested_scrollview'),
     new ListItem(Icons.update, "进度条显示", "简单的进度条使用", '/widget/progress'),
     new ListItem(Icons.credit_card, "卡片", "简单的卡片使用", '/widget/cardview'),
+    new ListItem(Icons.credit_card, "下拉刷新", "下拉刷新、上拉加载", '/widget/refresh_list'),
   ];
 
   /*
