@@ -55,6 +55,11 @@ flutter:
   - assets/json/
   - assets/app.db
 
+  fonts:
+    - family: xuifont  #指定一个字体名
+      fonts:
+        - asset: assets/fonts/iconfont.ttf
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
