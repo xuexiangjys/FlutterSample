@@ -15,6 +15,7 @@ import 'package:flutter_learn/page/widget/appbar.dart';
 import 'package:flutter_learn/page/widget/bottom_navigation_bar.dart';
 import 'package:flutter_learn/page/widget/button.dart';
 import 'package:flutter_learn/page/widget/cardview.dart';
+import 'package:flutter_learn/page/widget/control.dart';
 import 'package:flutter_learn/page/widget/dialog.dart';
 import 'package:flutter_learn/page/widget/drawer.dart';
 import 'package:flutter_learn/page/widget/empty.dart';
@@ -36,6 +37,7 @@ class RouteMap {
 
     '/widget/appbar': (BuildContext context) => new AppBarPage(),
     '/widget/button': (BuildContext context) => new ButtonPage(),
+    '/widget/control': (BuildContext context) => new ControlPage(),
     '/widget/text': (BuildContext context) => new TextPage(),
     '/widget/input': (BuildContext context) => new InputPage(),
     '/widget/image': (BuildContext context) => new ImagePage(),
@@ -74,6 +76,7 @@ class RouteMap {
   static final List<ListItem> widgetItems = [
     new ListItem(Icons.title, "标题", "简单的标题使用", '/widget/appbar'),
     new ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
+    new ListItem(Icons.check_box, "控制开关", "简单的控制组件使用", '/widget/control'),
     new ListItem(Icons.text_fields, "文字", "简单的文字使用", '/widget/text'),
     new ListItem(Icons.input, "输入框", "简单的输入框使用", '/widget/input'),
     new ListItem(Icons.image, "图片", "简单的图片使用", '/widget/image'),
