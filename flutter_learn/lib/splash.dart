@@ -22,8 +22,8 @@ class _SplashPageState extends State<SplashPage> {
         child: Center(
             child: Image(
           image: AssetImage('assets/images/flutter.png'),
-          height: 100,
-          width: 100,
+          height: 96,
+          width: 96,
         )));
   }
 
