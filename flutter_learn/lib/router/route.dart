@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/home.dart';
 import 'package:flutter_learn/page/expand/iconfont.dart';
 import 'package:flutter_learn/page/expand/image_picker.dart';
+import 'package:flutter_learn/page/expand/spinkit.dart';
 import 'package:flutter_learn/page/expand/web.dart';
 import 'package:flutter_learn/page/utils/event_bus.dart';
 import 'package:flutter_learn/page/utils/json_serialize.dart';
@@ -19,6 +20,7 @@ import 'package:flutter_learn/page/widget/control.dart';
 import 'package:flutter_learn/page/widget/dialog.dart';
 import 'package:flutter_learn/page/widget/drawer.dart';
 import 'package:flutter_learn/page/widget/empty.dart';
+import 'package:flutter_learn/page/widget/form.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/input.dart';
 import 'package:flutter_learn/page/widget/nested_scrollview.dart';
@@ -40,6 +42,7 @@ class RouteMap {
     '/widget/control': (BuildContext context) => new ControlPage(),
     '/widget/text': (BuildContext context) => new TextPage(),
     '/widget/input': (BuildContext context) => new InputPage(),
+    '/widget/form': (BuildContext context) => new FormPage(),
     '/widget/image': (BuildContext context) => new ImagePage(),
     '/widget/tab': (BuildContext context) => new TabPage(),
     '/widget/navigation': (BuildContext context) => new BottomNavigationBarPage(),
@@ -67,6 +70,7 @@ class RouteMap {
     '/expand/web_page': (BuildContext context) => new WebPage(),
     '/expand/image_picker': (BuildContext context) => new ImagePickerPage(),
     '/expand/iconfont': (BuildContext context) => new IconFontPage(),
+    '/expand/spinkit': (BuildContext context) => new SpinkitPage(),
 
   };
 
@@ -79,13 +83,14 @@ class RouteMap {
     new ListItem(Icons.check_box, "控制开关", "简单的控制组件使用", '/widget/control'),
     new ListItem(Icons.text_fields, "文字", "简单的文字使用", '/widget/text'),
     new ListItem(Icons.input, "输入框", "简单的输入框使用", '/widget/input'),
+    new ListItem(Icons.input, "表单输入", "简单的表单使用", '/widget/form'),
     new ListItem(Icons.image, "图片", "简单的图片使用", '/widget/image'),
     new ListItem(Icons.tab, "选项卡", "简单的选项卡使用", '/widget/tab'),
     new ListItem(Icons.navigation, "底部导航栏", "简单的底部导航栏使用", '/widget/navigation'),
     new ListItem(Icons.notifications, "对话框", "简单的对话框使用", '/widget/dialog'),
     new ListItem(Icons.menu, "侧滑菜单", "简单侧滑菜单的使用", '/widget/drawer'),
     new ListItem(Icons.list, "NestedScrollView", "嵌套滚动联动的使用", '/widget/nested_scrollview'),
-    new ListItem(Icons.update, "进度条显示", "简单的进度条使用", '/widget/progress'),
+    new ListItem(Icons.refresh, "进度条显示", "简单的进度条使用", '/widget/progress'),
     new ListItem(Icons.credit_card, "卡片", "简单的卡片使用", '/widget/cardview'),
     new ListItem(Icons.credit_card, "下拉刷新", "下拉刷新、上拉加载", '/widget/refresh_list'),
   ];
@@ -111,5 +116,6 @@ class RouteMap {
     new ListItem(Icons.radio_button_checked, "网页加载", "简单的网页加载", '/expand/web_page'),
     new ListItem(Icons.image, "图片选择", "图片选择的简单使用", '/expand/image_picker'),
     new ListItem(Icons.font_download, "字体图标", "使用自定义的字体图标", '/expand/iconfont'),
+    new ListItem(Icons.refresh, "Spinkit", "使用更多有趣的loading动画", '/expand/spinkit'),
   ];
 }
