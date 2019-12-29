@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
+import 'package:flutter_learn/view/loading_dialog.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class FormPage extends StatefulWidget {
   FormPage({this.title = "表单", Key key}) : super(key: key);
@@ -24,7 +26,7 @@ class _FormPageState extends State<FormPage> {
       body: GestureDetector(
         onTap: () {
           // 点击空白页面关闭键盘
-          FocusScope.of(context).requestFocus(blankNode);
+          closeKeyboard(context);
         },
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
@@ -82,11 +84,7 @@ class _FormPageState extends State<FormPage> {
                     onPressed: () {
                       //由于本widget也是Form的子代widget，所以可以通过下面方式获取FormState
                       if (Form.of(context).validate()) {
-                        //验证通过提交数据
-                        XToast.success("用户名:" +
-                            _unameController.text +
-                            ",密码:" +
-                            _pwdController.text);
+                        onSubmit(context);
                       }
                     },
                   );
@@ -97,5 +95,29 @@ class _FormPageState extends State<FormPage> {
         ],
       ),
     );
+  }
+
+  void closeKeyboard(BuildContext context) {
+    FocusScope.of(context).requestFocus(blankNode);
+  }
+
+  //验证通过提交数据
+  void onSubmit(BuildContext context) {
+    closeKeyboard(context);
+    
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return new LoadingDialog(
+            text: "登录中…",
+            loadingView: SpinKitCircle(color: Colors.lightBlue),
+          );
+        });
+    Future.delayed(Duration(seconds: 2), () {
+      Navigator.pop(context);
+      XToast.success(
+          "用户名:" + _unameController.text + ",密码:" + _pwdController.text);
+    });
   }
 }
