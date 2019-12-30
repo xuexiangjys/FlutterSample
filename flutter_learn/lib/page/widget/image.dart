@@ -29,6 +29,12 @@ class _ImagePageState extends State<ImagePage> {
                     width: 200,
                   ),
                 ),
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                        'https://pic2.zhimg.com/v2-639b49f2f6578eabddc458b84eb3c6a1.jpg',
+                        width: 120,
+                        height: 120)),
                 Image.network(
                     'https://gw.alicdn.com/tfs/TB1XD.ZuYwrBKNjSZPcXXXpapXa-255-251.png'),
                 Container(
@@ -39,7 +45,17 @@ class _ImagePageState extends State<ImagePage> {
                   image: NetworkImage(
                       'https://gw.alicdn.com/tfs/TB1XD.ZuYwrBKNjSZPcXXXpapXa-255-251.png',
                       scale: 0.5),
-                )
+                ),
+                ClipOval(
+                  child: FadeInImage.assetNetwork(
+                    placeholder: "assets/images/normal_user_icon.png", //预览图
+                    fit: BoxFit.fitWidth,
+                    image:
+                        "http://img.wxcha.com/file/201806/06/520cba4626.jpg?down",
+                    width: 80,
+                    height: 80,
+                  ),
+                ),
               ]),
             )));
   }

@@ -3,6 +3,7 @@ import 'package:flutter_learn/home.dart';
 import 'package:flutter_learn/page/expand/iconfont.dart';
 import 'package:flutter_learn/page/expand/image_picker.dart';
 import 'package:flutter_learn/page/expand/spinkit.dart';
+import 'package:flutter_learn/page/expand/swiper.dart';
 import 'package:flutter_learn/page/expand/web.dart';
 import 'package:flutter_learn/page/utils/event_bus.dart';
 import 'package:flutter_learn/page/utils/json_serialize.dart';
@@ -71,7 +72,7 @@ class RouteMap {
     '/expand/image_picker': (BuildContext context) => new ImagePickerPage(),
     '/expand/iconfont': (BuildContext context) => new IconFontPage(),
     '/expand/spinkit': (BuildContext context) => new SpinkitPage(),
-
+    '/expand/swiper': (BuildContext context) => new SwiperPage(),
   };
 
   /*
@@ -117,5 +118,6 @@ class RouteMap {
     new ListItem(Icons.image, "图片选择", "图片选择的简单使用", '/expand/image_picker'),
     new ListItem(Icons.font_download, "字体图标", "使用自定义的字体图标", '/expand/iconfont'),
     new ListItem(Icons.refresh, "Spinkit", "使用更多有趣的loading动画", '/expand/spinkit'),
+    new ListItem(Icons.pages, "轮播图", "使用Swiper构建丰富多彩的轮播图", '/expand/swiper'),
   ];
 }
