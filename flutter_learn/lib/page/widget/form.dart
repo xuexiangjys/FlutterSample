@@ -110,7 +110,7 @@ class _FormPageState extends State<FormPage> {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return new LoadingDialog(
-            text: "登录中…",
+            content: "登录中…",
             loadingView: SpinKitCircle(color: Colors.lightBlue),
           );
         });

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
+import 'package:flutter_learn/view/loading_dialog.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class DialogPage extends StatefulWidget {
   DialogPage({Key key}) : super(key: key);
@@ -9,7 +11,7 @@ class DialogPage extends StatefulWidget {
 }
 
 class _DialogPageState extends State<DialogPage> {
-  void showAboutDialog(BuildContext context) {
+  void showAboutDialog() {
     showDialog(
         context: context,
         builder: (_) => AboutDialog(
@@ -19,8 +21,8 @@ class _DialogPageState extends State<DialogPage> {
             children: <Widget>[Text('我是一个关于的dialog')]));
   }
 
-  void showAlertDialog(BuildContext context) {
-    showDialog<void>(
+  void showAlertDialog() {
+    showDialog(
       context: context,
       barrierDismissible: false, // user must tap button!
       builder: (BuildContext context) {
@@ -73,8 +75,8 @@ class _DialogPageState extends State<DialogPage> {
     );
   }
 
-  void showSimpleDialog(BuildContext context) {
-    showDialog<Null>(
+  void showSimpleDialog() {
+    showDialog(
       context: context,
       builder: (BuildContext context) {
         return SimpleDialog(
@@ -98,8 +100,8 @@ class _DialogPageState extends State<DialogPage> {
     );
   }
 
-  void showCustomDialog(BuildContext context) {
-    showDialog<void>(
+  void showCustomDialog() {
+    showDialog(
       context: context,
       barrierDismissible: false, // user must tap button!
       builder: (BuildContext context) {
@@ -123,6 +125,37 @@ class _DialogPageState extends State<DialogPage> {
     );
   }
 
+  void showLoadingDialog1(BuildContext context) {
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return new LoadingDialog(
+            content: "加载中…",
+            loadingView: SpinKitCircle(color: Colors.lightBlue),
+          );
+        });
+    Future.delayed(Duration(seconds: 2), () {
+      Navigator.pop(context);
+    });
+  }
+
+  void showLoadingDialog2(BuildContext context) {
+     showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return new LoadingDialog(
+            showContent: false,
+            backgroundColor: Colors.black38,
+            loadingView: SpinKitCircle(color: Colors.white),
+          );
+        });
+    Future.delayed(Duration(seconds: 2), () {
+      Navigator.pop(context);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -142,12 +175,12 @@ class _DialogPageState extends State<DialogPage> {
                     RaisedButton(
                       child: Text('AlertDialog'),
                       color: Colors.blue,
-                      onPressed: () => {showAlertDialog(context)},
+                      onPressed: showAlertDialog,
                     ),
                     RaisedButton(
                       child: Text('SimpleDialog'),
                       color: Colors.blue,
-                      onPressed: () => {showSimpleDialog(context)},
+                      onPressed: showSimpleDialog,
                     ),
                   ],
                 ),
@@ -159,12 +192,29 @@ class _DialogPageState extends State<DialogPage> {
                     RaisedButton(
                       child: Text('CustomDialog'),
                       color: Colors.blue,
-                      onPressed: () => {showCustomDialog(context)},
+                      onPressed: showCustomDialog,
                     ),
                     RaisedButton(
                       child: Text('AboutDialog'),
                       color: Colors.blue,
-                      onPressed: () => {showAboutDialog(context)},
+                      onPressed: showAboutDialog,
+                    ),
+                  ],
+                ),
+                ButtonBar(
+                  alignment:
+                      MainAxisAlignment.start, //布局方向，默认MainAxisAlignment.end
+                  mainAxisSize: MainAxisSize.min, //主轴大小，默认MainAxisSize.max
+                  children: <Widget>[
+                    RaisedButton(
+                      child: Text('LoadingDialog1'),
+                      color: Colors.blue,
+                      onPressed: () => {showLoadingDialog1(context)},
+                    ),
+                    RaisedButton(
+                      child: Text('LoadingDialog2'),
+                      color: Colors.blue,
+                      onPressed: () => {showLoadingDialog2(context)},
                     ),
                   ],
                 ),

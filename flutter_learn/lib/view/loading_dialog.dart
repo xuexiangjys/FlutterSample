@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 
+//loading加载框
 class LoadingDialog extends Dialog {
-  final String text;
+  //loading动画
   final Widget loadingView;
+  //提示内容
+  final String content;
+  //是否显示提示文字
+  final bool showContent;
+  //圆角大小
+  final double radius;
+  //背景颜色
+  final Color backgroundColor;
 
-  LoadingDialog({Key key, this.text = "加载中...", this.loadingView})
+  LoadingDialog(
+      {Key key,
+      this.loadingView,
+      this.content = "加载中...",
+      this.showContent = true,
+      this.radius = 10,
+      this.backgroundColor = Colors.white})
       : super(key: key);
 
   @override
@@ -13,14 +28,14 @@ class LoadingDialog extends Dialog {
       type: MaterialType.transparency,
       child: Center(
         child: SizedBox(
-          width: 120.0,
-          height: 120.0,
+          width: showContent ? 120 : 80,
+          height: showContent ? 120 : 80,
           child: Container(
             decoration: ShapeDecoration(
-              color: Colors.white,
+              color: backgroundColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
-                  Radius.circular(8.0),
+                  Radius.circular(radius),
                 ),
               ),
             ),
@@ -29,12 +44,14 @@ class LoadingDialog extends Dialog {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 loadingView == null ? CircularProgressIndicator() : loadingView,
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 20.0,
-                  ),
-                  child: Text(text),
-                ),
+                showContent
+                    ? Padding(
+                        padding: const EdgeInsets.only(
+                          top: 16,
+                        ),
+                        child: Text(content),
+                      )
+                    : SizedBox(),
               ],
             ),
           ),
