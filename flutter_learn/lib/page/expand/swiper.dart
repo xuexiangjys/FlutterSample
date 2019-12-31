@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
+import 'package:flutter_learn/view/swiper_control.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
 
@@ -64,7 +65,7 @@ class _SwiperPageState extends State<SwiperPage> {
 
   Widget getBanner2() {
     return SizedBox(
-      height: 200,
+      height: 180,
       child: Swiper(
           scale: 0.8,
           fade: 0.8,
@@ -106,7 +107,7 @@ class _SwiperPageState extends State<SwiperPage> {
           autoplay: false,
           itemCount: urls.length,
           pagination: SwiperPagination(),
-          control: SwiperControl(color: Colors.white),
+          control: FixSwiperControl(color: Colors.white),
         ));
   }
 }
