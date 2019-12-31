@@ -27,13 +27,15 @@ flutter run
 * [FlutterToast](https://github.com/PonnamKarthik/FlutterToast)
 * [mmkv_flutter](https://github.com/OpenFlutter/mmkv_flutter)
 * [shared_preferences](https://github.com/flutter/plugins/tree/master/packages/shared_preferences/shared_preferences)
+* [url_launcher](https://github.com/flutter/plugins/tree/master/packages/url_launcher)
+* [图片选择 image_picker](https://github.com/flutter/plugins/tree/master/packages/image_picker)
 * [sqlite数据库 sqflite](https://github.com/tekartik/sqflite)
 * [页面路由神器 fluro](https://github.com/theyakka/fluro)
 * [网页加载 flutter_webview_plugin](https://github.com/fluttercommunity/flutter_webview_plugin)
-* [图片选择 image_picker](https://github.com/flutter/plugins/tree/master/packages/image_picker)
 * [loading加载动画 flutter_spinkit](https://github.com/jogboms/flutter_spinkit)
 * [事件工具 event_bus](https://github.com/marcojakob/dart-event-bus)
 * [轮播图组件 flutter_swiper](https://github.com/best-flutter/flutter_swiper)
+* [刷新组件 flutter_easyrefresh](https://github.com/xuelongqy/flutter_easyrefresh)
 
 
 ## 非常感谢
