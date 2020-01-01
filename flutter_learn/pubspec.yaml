@@ -38,6 +38,7 @@ dependencies:
   flutter_spinkit: "^4.1.1"
   flutter_swiper: ^1.1.6
   flutter_easyrefresh: ^2.0.8
+  provider: ^4.0.1
 
 dev_dependencies:
   flutter_test:

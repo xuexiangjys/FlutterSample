@@ -1,6 +1,5 @@
+import 'package:flutter_learn/utils/sql_helper.dart';
 import 'package:sqflite/sqflite.dart';
-
-import './provider.dart';
 
 //使用的是sqflite数据库
 class BaseModel {
@@ -16,7 +15,7 @@ class Sql extends BaseModel {
   final String tableName;
   Sql.setTable(String name)
       : tableName = name,
-        super(Provider.db);
+        super(SQLHelper.db);
 
   // sdf
   Future<List> get() async {

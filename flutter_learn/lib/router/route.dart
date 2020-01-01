@@ -15,6 +15,8 @@ import 'package:flutter_learn/page/utils/json_serialize.dart';
 import 'package:flutter_learn/page/utils/mmkv.dart';
 import 'package:flutter_learn/page/utils/navigator.dart';
 import 'package:flutter_learn/page/utils/net.dart';
+import 'package:flutter_learn/page/utils/provider.dart';
+import 'package:flutter_learn/page/utils/provider_next.dart';
 import 'package:flutter_learn/page/utils/shared_preferences.dart';
 import 'package:flutter_learn/page/utils/sqlite.dart';
 import 'package:flutter_learn/page/utils/toast.dart';
@@ -67,6 +69,8 @@ class RouteMap {
     '/utils/sqlite': (BuildContext context) => SqlitePage(),
     '/utils/event_bus': (BuildContext context) => EventBusPage(),
     '/utils/json_serialize': (BuildContext context) => JsonSerializePage(),
+    '/utils/provider': (BuildContext context) => ProviderPage(),
+    '/utils/provider_next': (BuildContext context) => ProviderNextPage(),
 
 
     //============================expand=================================//
@@ -118,6 +122,7 @@ class RouteMap {
     ListItem(Icons.date_range, "Sqlite数据库", "Sqlite增删改查操作", '/utils/sqlite'),
     ListItem(Icons.event, "EventBus", "EventBus事件使用", '/utils/event_bus'),
     ListItem(Icons.date_range, "Json序列化", "Json序列化和反序列化", '/utils/json_serialize'),
+    ListItem(Icons.date_range, "状态同步", "使用provider进行简单的状态同步", '/utils/provider'),
   ];
 
   /*

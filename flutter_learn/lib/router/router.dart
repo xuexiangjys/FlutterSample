@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/router/switch_animation.dart';
 import 'package:flutter_learn/view/web_view_page.dart';
 
 class XRouter {
@@ -19,8 +20,10 @@ class XRouter {
     router.define('/web', handler: webViewPageHand);
   }
 
+  static void goto(BuildContext context, String pageName) {
+    Navigator.push(context, SlidePageRoute(pageName));
+  }
 }
-
 
 Handler webViewPageHand = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {

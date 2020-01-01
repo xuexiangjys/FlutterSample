@@ -1,7 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/utils/router.dart';
+import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class TextPage extends StatefulWidget {

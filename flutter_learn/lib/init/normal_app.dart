@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_learn/init/splash.dart';
 import 'package:flutter_learn/router/route.dart';
+import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/utils/provider.dart';
-import 'package:flutter_learn/utils/router.dart';
 import 'package:flutter_learn/utils/shared_preferences.dart';
+import 'package:flutter_learn/utils/sql_helper.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:provider/provider.dart';
 
 //普通App的启动
 class NormalApp {
   //运行app
   static void run() {
-    runApp(MyApp());
+    runApp(MultiProvider(providers: ProviderInit.providers, child: MyApp()));
     initApp();
   }
 
@@ -19,7 +21,7 @@ class NormalApp {
   static void initApp() {
     XRouter.init();
     SPUtils.getInstance().init();
-    Provider.init(true);
+    SQLHelper.init(true);
   }
 }
 

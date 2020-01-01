@@ -36,6 +36,7 @@ flutter run
 * [事件工具 event_bus](https://github.com/marcojakob/dart-event-bus)
 * [轮播图组件 flutter_swiper](https://github.com/best-flutter/flutter_swiper)
 * [刷新组件 flutter_easyrefresh](https://github.com/xuelongqy/flutter_easyrefresh)
+* [非常好用的数据共享工具 provider](https://github.com/rrousselGit/provider)
 
 
 ## 非常感谢

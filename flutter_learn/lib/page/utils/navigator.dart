@@ -1,8 +1,8 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/page/widget/empty.dart';
+import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/router/switch_animation.dart';
-import 'package:flutter_learn/utils/router.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class NavigatorPage extends StatefulWidget {
