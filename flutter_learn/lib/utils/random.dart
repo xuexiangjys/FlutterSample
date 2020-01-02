@@ -3,6 +3,8 @@ import 'dart:math';
 
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class RandomUtils {
   static final List<String> numbersAndLetters = [
     '0',
@@ -191,6 +193,20 @@ class RandomUtils {
     'z'
   ];
 
+  static final List<MaterialColor> materialColors = [
+    Colors.red,
+    Colors.blue,
+    Colors.lightBlue,
+    Colors.pink,
+    Colors.purple,
+    Colors.grey,
+    Colors.orange,
+    Colors.amber,
+    Colors.yellow,
+    Colors.lightGreen,
+    Colors.green,
+  ];
+
   RandomUtils._internal();
 
   /*
@@ -267,5 +283,10 @@ class RandomUtils {
     var greed = Random.secure().nextInt(255);
     var blue = Random.secure().nextInt(255);
     return Color.fromARGB(255, red, greed, blue);
+  }
+
+  // 取随机颜色
+  static MaterialColor getRandomMaterialColor() {
+    return materialColors[Random.secure().nextInt(materialColors.length)];
   }
 }

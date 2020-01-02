@@ -66,21 +66,4 @@ class AppInfo {
   String toString() {
     return 'AppInfo code: $code, msg: $msg, updateStatus: $updateStatus, versionCode: $versionCode, versionName: $versionName, uploadTime: $uploadTime, modifyContent: $modifyContent, downloadUrl: $downloadUrl, apkSize: $apkSize, apkMd5: $apkMd5';
   }
-
-  @override
-  bool operator ==(Object o) {
-    if (identical(this, o)) return true;
-  
-    return o is AppInfo &&
-      o.code == code &&
-      o.msg == msg &&
-      o.updateStatus == updateStatus &&
-      o.versionCode == versionCode &&
-      o.versionName == versionName &&
-      o.uploadTime == uploadTime &&
-      o.modifyContent == modifyContent &&
-      o.downloadUrl == downloadUrl &&
-      o.apkSize == apkSize &&
-      o.apkMd5 == apkMd5;
-  }
 }

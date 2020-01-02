@@ -15,6 +15,7 @@ class XRouter {
     router.notFoundHandler = new Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       print("route is not find !");
+      return null;
     });
 
     router.define('/web', handler: webViewPageHand);

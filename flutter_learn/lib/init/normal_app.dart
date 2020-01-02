@@ -7,13 +7,12 @@ import 'package:flutter_learn/utils/provider.dart';
 import 'package:flutter_learn/utils/shared_preferences.dart';
 import 'package:flutter_learn/utils/sql_helper.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:provider/provider.dart';
 
 //普通App的启动
 class NormalApp {
   //运行app
   static void run() {
-    runApp(MultiProvider(providers: ProviderInit.providers, child: MyApp()));
+    runApp(Store.init(MyApp()));
     initApp();
   }
 
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Learn',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Store.value<AppTheme>(context).themeColor,
         ),
         home: SplashPage(),
         onGenerateRoute: XRouter.router.generator,

@@ -40,5 +40,7 @@ class AppInit {
   }
 
   // 构建错误信息
-  static FlutterErrorDetails makeDetails(Object obj, StackTrace stack) {}
+  static FlutterErrorDetails makeDetails(Object obj, StackTrace stack) {
+    return FlutterErrorDetails(stack: stack);
+  }
 }

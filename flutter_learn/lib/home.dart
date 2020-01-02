@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/utils/click.dart';
+import 'package:flutter_learn/utils/provider.dart';
+import 'package:flutter_learn/utils/random.dart';
 import 'view/viewpage_item.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -55,11 +57,15 @@ class _MainHomePageState extends State<MainHomePage>
               return widget;
             }).toList(),
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            tooltip: '新建',
-            child: Icon(Icons.add),
-          ),
+          floatingActionButton: Builder(builder: (context) {
+            return FloatingActionButton(
+              onPressed: () {
+                Store.value<AppTheme>(context).setColor(RandomUtils.getRandomMaterialColor());
+              },
+              tooltip: '换肤',
+              child: Icon(Icons.color_lens),
+            );
+          }),
         ),
         //监听导航栏返回,类似onKeyEvent
         onWillPop: ClickUtils.exitBy2Click);

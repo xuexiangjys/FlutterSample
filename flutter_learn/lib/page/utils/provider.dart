@@ -14,6 +14,8 @@ class ProviderPage extends StatefulWidget {
 }
 
 class _ProviderPageState extends State<ProviderPage> {
+  final Color _color = RandomUtils.getRandomColor();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +30,7 @@ class _ProviderPageState extends State<ProviderPage> {
               SizedBox(height: 20),
               RaisedButton(
                 child: Text("下一页"),
-                color: RandomUtils.getRandomColor(),
+                color: _color,
                 textColor: Colors.white,
                 onPressed: () {
                   XRouter.goto(context, '/utils/provider_next');
