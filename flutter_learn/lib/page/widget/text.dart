@@ -12,7 +12,9 @@ class TextPage extends StatefulWidget {
 }
 
 class _TextPageState extends State<TextPage> {
+  //长按
   LongPressGestureRecognizer _longPressRecognizer;
+  //点击
   TapGestureRecognizer _tapGestureRecognizer;
 
   @override

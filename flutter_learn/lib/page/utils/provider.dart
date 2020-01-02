@@ -22,21 +22,22 @@ class _ProviderPageState extends State<ProviderPage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Padding(
-            padding: const EdgeInsets.all(30),
-            child: Center(
+        body: Center(
+            child: Container(
+                alignment: Alignment.center,
+                height: 100,
                 child: Column(children: <Widget>[
-              Text("counter:${Provider.of<Counter>(context).count}"),
-              SizedBox(height: 20),
-              RaisedButton(
-                child: Text("下一页"),
-                color: _color,
-                textColor: Colors.white,
-                onPressed: () {
-                  XRouter.goto(context, '/utils/provider_next');
-                },
-              ),
-            ]))),
+                  Text("counter:${Provider.of<Counter>(context).count}"),
+                  SizedBox(height: 20),
+                  RaisedButton(
+                    child: Text("下一页"),
+                    color: _color,
+                    textColor: Colors.white,
+                    onPressed: () {
+                      XRouter.goto(context, '/utils/provider_next');
+                    },
+                  ),
+                ]))),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Provider.of<Counter>(context, listen: false).add();

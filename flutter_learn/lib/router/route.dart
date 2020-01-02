@@ -26,9 +26,11 @@ import 'package:flutter_learn/page/widget/button.dart';
 import 'package:flutter_learn/page/widget/cardview.dart';
 import 'package:flutter_learn/page/widget/control.dart';
 import 'package:flutter_learn/page/widget/dialog.dart';
+import 'package:flutter_learn/page/widget/drag.dart';
 import 'package:flutter_learn/page/widget/drawer.dart';
 import 'package:flutter_learn/page/widget/empty.dart';
 import 'package:flutter_learn/page/widget/form.dart';
+import 'package:flutter_learn/page/widget/gesture.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/input.dart';
 import 'package:flutter_learn/page/widget/nested_scrollview.dart';
@@ -58,6 +60,9 @@ class RouteMap {
     '/widget/nested_scrollview': (BuildContext context) => NestedScrollViewPage(),
     '/widget/progress': (BuildContext context) => ProgressPage(),
     '/widget/cardview': (BuildContext context) => CardViewPage(),
+    '/widget/gesture': (BuildContext context) => GesturePage(),
+    '/widget/drag': (BuildContext context) => DragPage(),
+
 
     //============================utils=================================//
 
@@ -108,6 +113,8 @@ class RouteMap {
     ListItem(Icons.list, "NestedScrollView", "嵌套滚动联动的使用", '/widget/nested_scrollview'),
     ListItem(Icons.refresh, "进度条显示", "简单的进度条使用", '/widget/progress'),
     ListItem(Icons.credit_card, "卡片", "简单的卡片使用", '/widget/cardview'),
+    ListItem(Icons.gesture, "手势动作", "单击、双击、长按、缩放等手势动作", '/widget/gesture'),
+    ListItem(Icons.gesture, "拖拽动作", "简单的拖拽动作", '/widget/drag'),
   ];
 
   /*

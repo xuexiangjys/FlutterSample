@@ -50,17 +50,11 @@ class _MainHomePageState extends State<MainHomePage>
           child: ListView.builder(
             itemCount: AppTheme.materialColors.length,
             itemBuilder: (context, index) {
-              return FlatButton(
-                  onPressed: () {
+              return GestureDetector(
+                  onTap: () {
                     Store.value<AppTheme>(context).changeColor(index);
                     Navigator.of(context).pop();
                   },
-                  padding: EdgeInsets.all(0.0),
-                  shape: Border.all(
-                    color: Colors.transparent,
-                    width: 0.0,
-                    style: BorderStyle.none,
-                  ),
                   child: Container(
                       color: AppTheme.materialColors[index], height: 40));
             },
