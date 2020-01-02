@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/utils/random.dart';
 import 'package:provider/provider.dart';
 
 //状态管理
@@ -47,6 +46,20 @@ class Counter with ChangeNotifier {
 
 //主题
 class AppTheme with ChangeNotifier {
+  static final List<MaterialColor> materialColors = [
+    Colors.blue,
+    Colors.lightBlue,
+    Colors.red,
+    Colors.pink,
+    Colors.purple,
+    Colors.grey,
+    Colors.orange,
+    Colors.amber,
+    Colors.yellow,
+    Colors.lightGreen,
+    Colors.green,
+  ];
+
   MaterialColor _themeColor;
 
   AppTheme(this._themeColor);
@@ -56,10 +69,10 @@ class AppTheme with ChangeNotifier {
     notifyListeners();
   }
 
-  get themeColor => _themeColor;
-
-  void changeColor() {
-    _themeColor = RandomUtils.getRandomMaterialColor();
+  void changeColor(int index) {
+    _themeColor = materialColors[index];
     notifyListeners();
   }
+
+  get themeColor => _themeColor;
 }

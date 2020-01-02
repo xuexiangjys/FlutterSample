@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/utils/provider.dart';
 import 'package:flutter_learn/utils/random.dart';
+import 'package:provider/provider.dart';
 
 class ProviderNextPage extends StatefulWidget {
   ProviderNextPage({this.title = "下一页", Key key}) : super(key: key);
@@ -26,7 +27,7 @@ class _ProviderNextPageState extends State<ProviderNextPage> {
             child: Center(
                 child: Column(children: <Widget>[
               //可以使用Consumer
-              Store.connect<Counter>(builder: (cotext, value, child) {
+              Consumer<Counter>(builder: (cotext, value, child) {
                 return Text("counter:${value.count}");
               }),
               SizedBox(height: 20),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/utils/click.dart';
 import 'package:flutter_learn/utils/provider.dart';
-import 'package:flutter_learn/utils/random.dart';
 import 'view/viewpage_item.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -40,6 +39,37 @@ class _MainHomePageState extends State<MainHomePage>
     super.dispose();
   }
 
+  void showColorDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return Dialog(
+            child: Container(
+          height: 300,
+          child: ListView.builder(
+            itemCount: AppTheme.materialColors.length,
+            itemBuilder: (context, index) {
+              return FlatButton(
+                  onPressed: () {
+                    Store.value<AppTheme>(context).changeColor(index);
+                    Navigator.of(context).pop();
+                  },
+                  padding: EdgeInsets.all(0.0),
+                  shape: Border.all(
+                    color: Colors.transparent,
+                    width: 0.0,
+                    style: BorderStyle.none,
+                  ),
+                  child: Container(
+                      color: AppTheme.materialColors[index], height: 40));
+            },
+          ),
+        ));
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -59,9 +89,7 @@ class _MainHomePageState extends State<MainHomePage>
           ),
           floatingActionButton: Builder(builder: (context) {
             return FloatingActionButton(
-              onPressed: () {
-                Store.value<AppTheme>(context).setColor(RandomUtils.getRandomMaterialColor());
-              },
+              onPressed: showColorDialog,
               tooltip: '换肤',
               child: Icon(Icons.color_lens),
             );
