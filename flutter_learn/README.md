@@ -38,6 +38,7 @@ flutter run
 * [刷新组件 flutter_easyrefresh](https://github.com/xuelongqy/flutter_easyrefresh)
 * [非常好用的数据共享工具 provider](https://github.com/rrousselGit/provider)
 * [时间选择器 flutter_datetime_picker](https://github.com/Realank/flutter_datetime_picker)
+* [多图片选择 multi_image_picker](https://github.com/Sh1d0w/multi_image_picker)
 
 
 ## 非常感谢
