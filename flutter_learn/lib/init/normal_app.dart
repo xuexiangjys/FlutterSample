@@ -42,8 +42,9 @@ class MyApp extends StatelessWidget {
             GlobalEasyRefreshLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
           ],
-          supportedLocales: const <Locale>[
+          supportedLocales: <Locale>[
             Locale("en", ""),
             Locale("zh", "CN"),
           ]);
