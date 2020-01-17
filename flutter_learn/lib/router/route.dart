@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/home.dart';
+import 'package:flutter_learn/page/expand/date_picker.dart';
 import 'package:flutter_learn/page/expand/easy_refresh.dart';
 import 'package:flutter_learn/page/expand/iconfont.dart';
 import 'package:flutter_learn/page/expand/image_picker.dart';
@@ -82,10 +83,12 @@ class RouteMap {
 
     '/expand/web_page': (BuildContext context) => WebPage(),
     '/expand/image_picker': (BuildContext context) => ImagePickerPage(),
+    '/expand/date_picker': (BuildContext context) => DatePickerPage(),
     '/expand/iconfont': (BuildContext context) => IconFontPage(),
     '/expand/spinkit': (BuildContext context) => SpinkitPage(),
     '/expand/swiper': (BuildContext context) => SwiperPage(),
     '/expand/easy_refresh': (BuildContext context) => EasyRefreshPage(),
+
 
     //============================easy_refresh=================================//
     '/expand/easy_refresh/basic': (BuildContext context) => BasicRefreshPage(),
@@ -138,6 +141,7 @@ class RouteMap {
   static final List<ListItem> expandItems = [
     ListItem(Icons.radio_button_checked, "网页加载", "简单的网页加载", '/expand/web_page'),
     ListItem(Icons.image, "图片选择", "图片选择的简单使用", '/expand/image_picker'),
+    ListItem(Icons.date_range, "日期选择器", "日期选择器的简单使用", '/expand/date_picker'),
     ListItem(Icons.font_download, "字体图标", "使用自定义的字体图标", '/expand/iconfont'),
     ListItem(Icons.refresh, "Spinkit", "使用更多有趣的loading动画", '/expand/spinkit'),
     ListItem(Icons.pages, "轮播图", "使用Swiper构建丰富多彩的轮播图", '/expand/swiper'),

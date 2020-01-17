@@ -12,7 +12,7 @@ class _NetRequestPageState extends State<NetRequestPage> {
   String json = "";
 
   void doGet() {
-    XHttp.get("/weather/current/南京市").then((response) => {
+    XHttp.get("/banner/json").then((response) => {
           setState(() {
             json = response.toString();
           })
@@ -20,11 +20,21 @@ class _NetRequestPageState extends State<NetRequestPage> {
   }
 
   void doParam() {
-    XHttp.get("/music/singer/search/", {"keyWord": "周杰伦"}).then((response) => {
-          setState(() {
-            json = response.toString();
-          })
-        });
+    XHttp.get("/article/list/0/json", {"author": "xuexiangjys"})
+        .then((response) => {
+              setState(() {
+                json = response.toString();
+              })
+            });
+  }
+
+  void doPost() {
+    XHttp.post("/user/login", {"username": "xuexiang", "password" : "123456"})
+        .then((response) => {
+              setState(() {
+                json = response.toString();
+              })
+            });
   }
 
   @override
@@ -39,20 +49,24 @@ class _NetRequestPageState extends State<NetRequestPage> {
               scrollDirection: Axis.vertical, // 水平listView
               children: <Widget>[
                 ButtonBar(
-                  alignment: MainAxisAlignment
-                      .spaceAround, //布局方向，默认MainAxisAlignment.end
-                  mainAxisSize: MainAxisSize.max, //主轴大小，默认MainAxisSize.max
+                  alignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     // Button集合
                     RaisedButton(
                       child: Text('Get请求'),
                       color: Colors.blue,
-                      onPressed: () => {doGet()},
+                      onPressed: doGet,
                     ),
                     RaisedButton(
                       child: Text('参数请求'),
                       color: Colors.blue,
-                      onPressed: () => {doParam()},
+                      onPressed: doParam,
+                    ),
+                    RaisedButton(
+                      child: Text('post请求'),
+                      color: Colors.blue,
+                      onPressed: doPost,
                     ),
                   ],
                 ),

@@ -22,7 +22,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
         body: Container(
             padding: const EdgeInsets.all(10),
             child: ListView(
-              scrollDirection: Axis.vertical, // 水平listView
+              scrollDirection: Axis.vertical, // 垂直listView
               children: <Widget>[
                 ButtonBar(
                   alignment: MainAxisAlignment.start,

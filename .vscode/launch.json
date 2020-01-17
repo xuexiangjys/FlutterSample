@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "Dart",
-            "program": "bin/main.dart",
+            "program": "flutter_learn/lib/main.dart",
             "request": "launch",
             "type": "dart"
         }
