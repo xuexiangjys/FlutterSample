@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/utils/provider.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
 
 class MultiImagePickerPage extends StatefulWidget {

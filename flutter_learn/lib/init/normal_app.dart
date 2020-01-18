@@ -4,6 +4,7 @@ import 'package:flutter_learn/init/splash.dart';
 import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/utils/provider.dart';
+import 'package:flutter_learn/utils/push.dart';
 import 'package:flutter_learn/utils/shared_preferences.dart';
 import 'package:flutter_learn/utils/sql_helper.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -22,6 +23,7 @@ class NormalApp {
     XRouter.init();
     SPUtils.getInstance().init();
     SQLHelper.init();
+    XPush.init();
   }
 }
 

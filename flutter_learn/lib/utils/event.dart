@@ -58,6 +58,7 @@ class XEvent {
 
   //订阅取消
   static void cancel(String eventName, StreamSubscription subscription) {
+    if (subscription == null) return;
     List<StreamSubscription> streams = sStreamPool[eventName];
     if (streams != null) {
       subscription.cancel();
