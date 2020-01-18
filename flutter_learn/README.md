@@ -1,6 +1,6 @@
 # flutter_learn
 
-学习和体验flutter组件的小Demo
+Flutter使用指南,包含众多组件和插件的使用, 是学习和体验flutter组件的小Demo
 
 ## 运行方式
 
@@ -39,6 +39,7 @@ flutter run
 * [非常好用的数据共享工具 provider](https://github.com/rrousselGit/provider)
 * [时间选择器 flutter_datetime_picker](https://github.com/Realank/flutter_datetime_picker)
 * [多图片选择 multi_image_picker](https://github.com/Sh1d0w/multi_image_picker)
+* [极光推送 jpush_flutter](https://github.com/jpush/jpush-flutter-plugin)
 
 
 ## 非常感谢
