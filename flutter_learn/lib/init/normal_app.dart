@@ -21,7 +21,7 @@ class NormalApp {
   static void initApp() {
     XRouter.init();
     SPUtils.getInstance().init();
-    SQLHelper.init(true);
+    SQLHelper.init();
   }
 }
 

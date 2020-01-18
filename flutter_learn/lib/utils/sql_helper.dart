@@ -38,7 +38,7 @@ class SQLHelper {
   }
 
   //初始化数据库
-  static Future init(bool isCreate) async {
+  static Future init() async {
     //Get a location using getDatabasesPath
     String databasesPath = await getDatabasesPath();
     String path = join(databasesPath, 'flutter.db');
