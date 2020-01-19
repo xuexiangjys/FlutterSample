@@ -12,6 +12,7 @@ import 'package:flutter_learn/page/expand/refresh/user_profile.dart';
 import 'package:flutter_learn/page/expand/spinkit.dart';
 import 'package:flutter_learn/page/expand/swiper.dart';
 import 'package:flutter_learn/page/expand/web.dart';
+import 'package:flutter_learn/page/utils/device_info.dart';
 import 'package:flutter_learn/page/utils/event_bus.dart';
 import 'package:flutter_learn/page/utils/jpush.dart';
 import 'package:flutter_learn/page/utils/json_serialize.dart';
@@ -80,6 +81,7 @@ class RouteMap {
     '/utils/json_serialize': (BuildContext context) => JsonSerializePage(),
     '/utils/provider': (BuildContext context) => ProviderPage(),
     '/utils/provider_next': (BuildContext context) => ProviderNextPage(),
+    '/utils/device_info': (BuildContext context) => DeviceInfoPage(),
 
 
     //============================expand=================================//
@@ -138,6 +140,7 @@ class RouteMap {
     ListItem(Icons.notifications, "极光推送", "极光推送详细使用", '/utils/jpush'),
     ListItem(Icons.date_range, "Json序列化", "Json序列化和反序列化", '/utils/json_serialize'),
     ListItem(Icons.date_range, "状态同步", "使用provider进行简单的状态同步", '/utils/provider'),
+    ListItem(Icons.devices, "设备信息", "获取设备的详尽信息", '/utils/device_info'),
   ];
 
   /*

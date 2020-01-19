@@ -3,6 +3,7 @@ import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_learn/init/splash.dart';
 import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/router/router.dart';
+import 'package:flutter_learn/utils/bugly.dart';
 import 'package:flutter_learn/utils/provider.dart';
 import 'package:flutter_learn/utils/push.dart';
 import 'package:flutter_learn/utils/shared_preferences.dart';
@@ -24,6 +25,7 @@ class NormalApp {
     SPUtils.getInstance().init();
     SQLHelper.init();
     XPush.init();
+    Bugly.init();
   }
 }
 

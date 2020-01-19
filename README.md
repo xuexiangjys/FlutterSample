@@ -26,6 +26,7 @@ Flutter使用指南,包含众多组件和插件的使用
 
 ### 工具
 
+* [DeviceInfo(设备信息)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/device_info.dart)
 * [EventBus(事件总线)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/event_bus.dart)
 * [JPush(极光推送)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/jpush.dart)
 * [JsonSerialize(序列化)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/json_serialize.dart)
@@ -48,6 +49,10 @@ Flutter使用指南,包含众多组件和插件的使用
 * [Swiper(轮播图)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/swiper.dart)
 * [Web(网页加载)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/web.dart)
 
+
+## 插件查询
+
+[flutter插件平台](https://pub.dev/flutter/packages)
 
 ## 常用命令
 
