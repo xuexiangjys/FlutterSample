@@ -6,16 +6,22 @@ import 'package:flutter_learn/init/normal_app.dart';
 //应用初始化
 class AppInit {
 
-  //启动运行
-  static void runMyApp() {
+  static void run() {
+    catchException(() => NormalApp.run());
+    // //Bugly的异常捕获上传
+    // Bugly.postCatchedException(() => NormalApp.run());
+  }
+
+  ///异常捕获处理
+  static void catchException<T>(T callback()) {
     //捕获异常的回调
     FlutterError.onError = (FlutterErrorDetails details) {
       reportErrorAndLog(details);
     };
-    runZoned(
-      //启动App
-      () => NormalApp.run(),
-
+    runZoned<Future<Null>>(
+      () async {
+        callback();
+      },
       zoneSpecification: ZoneSpecification(
         print: (Zone self, ZoneDelegate parent, Zone zone, String line) {
           collectLog(parent, zone, line); // 收集日志

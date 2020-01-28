@@ -1,5 +1,4 @@
-import 'dart:io';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bugly/flutter_bugly.dart';
 import 'package:flutter_learn/utils/device.dart';
 
@@ -55,5 +54,29 @@ class Bugly {
   ///检查更新
   static Future<UpgradeInfo> checkUpgrade() {
     return FlutterBugly.checkUpgrade();
+  }
+
+  //============================日志上传==================================//
+
+  ///手动上报自定义异常信息
+  static Future<Null> uploadException(
+      String title, //标题
+      String detail, //内容
+      {Map data} //data为文本附件, Android 错误分析=>跟踪数据=>extraMessage.txt
+      //iOS 错误分析=>跟踪数据=>crash_attach.log
+      ) {
+    return FlutterBugly.uploadException(
+        message: title, detail: detail, data: data);
+  }
+
+  ///异常上报
+  static void postCatchedException<T>(
+    T callback(), {
+    FlutterExceptionHandler handler, //异常捕捉，用于自定义打印异常
+    String filterRegExp, //异常上报过滤正则，针对message
+    bool debugUpload = false,
+  }) {
+    return FlutterBugly.postCatchedException(callback,
+        handler: handler, filterRegExp: filterRegExp, debugUpload: debugUpload);
   }
 }
