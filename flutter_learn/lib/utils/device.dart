@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:device_info/device_info.dart';
+import 'package:flutter_learn/utils/random.dart';
 
 class DeviceUtils {
   static final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
@@ -83,6 +84,22 @@ class DeviceUtils {
 
   //================================设备信息================================================//
 
-  
+  static Future<String> getDeviceID() async {
+    if (Platform.isAndroid) {
+      return getAndroidDeviceID(await deviceInfoPlugin.androidInfo);
+    } else if (Platform.isIOS) {
+      return getIOSDeviceID(await deviceInfoPlugin.iosInfo);
+    }
+    return RandomUtils.getRandomNumbersAndLetters(16);
+  }
+
+  static String getIOSDeviceID(IosDeviceInfo data) {
+    return data.identifierForVendor;
+  }
+
+  static String getAndroidDeviceID(AndroidDeviceInfo data) {
+    return data.androidId;
+  }
+
 
 }

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_bugly/flutter_bugly.dart';
+import 'package:flutter_learn/utils/device.dart';
 
 class Bugly {
   static const String BUGLY_APP_KEY_ANDROID = "ee68b0a303";
@@ -15,6 +16,16 @@ class Bugly {
       iOSAppId: BUGLY_APP_KEY_IOS,
     ).then((_result) {
       print("Bugly初始化结果: " + _result.appId);
+    });
+    //初始化UserId
+    DeviceUtils.getDeviceID().then((deviceID) {
+      print("Bugly初始化UserId: $deviceID");
+      FlutterBugly.setUserId(deviceID);
+    });
+    //同步设备信息
+    DeviceUtils.getDeviceInfo().then((deviceInfo) {
+      print("Bugly同步设备信息: $deviceInfo");
+      FlutterBugly.putUserData(key: "deviceInfo", value: deviceInfo.toString());
     });
   }
 
@@ -45,5 +56,4 @@ class Bugly {
   static Future<UpgradeInfo> checkUpgrade() {
     return FlutterBugly.checkUpgrade();
   }
-  
 }
