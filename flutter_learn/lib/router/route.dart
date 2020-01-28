@@ -38,6 +38,10 @@ import 'package:flutter_learn/page/widget/form.dart';
 import 'package:flutter_learn/page/widget/gesture.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/input.dart';
+import 'package:flutter_learn/page/widget/layout_flex.dart';
+import 'package:flutter_learn/page/widget/layout_linear.dart';
+import 'package:flutter_learn/page/widget/layout_stack.dart';
+import 'package:flutter_learn/page/widget/layout_wrap.dart';
 import 'package:flutter_learn/page/widget/nested_scrollview.dart';
 import 'package:flutter_learn/page/widget/progress.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
@@ -67,6 +71,11 @@ class RouteMap {
     '/widget/cardview': (BuildContext context) => CardViewPage(),
     '/widget/gesture': (BuildContext context) => GesturePage(),
     '/widget/drag': (BuildContext context) => DragPage(),
+    '/widget/layout_linear': (BuildContext context) => LinearLayoutPage(),
+    '/widget/layout_flex': (BuildContext context) => FlexLayoutPage(),
+    '/widget/layout_wrap': (BuildContext context) => WrapLayoutPage(),
+    '/widget/layout_stack': (BuildContext context) => StackLayoutPage(),
+
 
     //============================utils=================================//
 
@@ -125,6 +134,10 @@ class RouteMap {
     ListItem(Icons.credit_card, "卡片", "简单的卡片使用", '/widget/cardview'),
     ListItem(Icons.gesture, "手势动作", "单击、双击、长按、缩放等手势动作", '/widget/gesture'),
     ListItem(Icons.gesture, "拖拽动作", "简单的拖拽动作", '/widget/drag'),
+    ListItem(Icons.layers, "线性布局", "Flutter中通过Row和Column来实现线性布局，类似于Android中的LinearLayout控件", '/widget/layout_linear'),
+    ListItem(Icons.layers, "弹性(权重)布局", "Flutter中的弹性布局主要通过Flex和Expanded来配合实现", '/widget/layout_flex'),
+    ListItem(Icons.layers, "流式布局", "Flutter中通过Wrap和Flow来支持流式布局", '/widget/layout_wrap'),
+    ListItem(Icons.layers, "层叠(框架)布局", "类似于Android中的Frame布局，子组件可以根据距父容器四个角的位置来确定自身的位置。", '/widget/layout_stack'),
   ];
 
   /*

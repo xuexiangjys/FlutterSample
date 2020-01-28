@@ -41,6 +41,7 @@ class _ProgressPageState extends State<ProgressPage>
                     width: 50,
                     height: 50,
                     child: CircularProgressIndicator(
+                      backgroundColor: Colors.grey[200],
                       value: _progress,
                       strokeWidth: 5,
                     )),
