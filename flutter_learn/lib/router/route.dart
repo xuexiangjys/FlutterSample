@@ -29,7 +29,11 @@ import 'package:flutter_learn/page/widget/appbar.dart';
 import 'package:flutter_learn/page/widget/bottom_navigation_bar.dart';
 import 'package:flutter_learn/page/widget/button.dart';
 import 'package:flutter_learn/page/widget/cardview.dart';
+import 'package:flutter_learn/page/widget/clip.dart';
+import 'package:flutter_learn/page/widget/constrained_box.dart';
+import 'package:flutter_learn/page/widget/container.dart';
 import 'package:flutter_learn/page/widget/control.dart';
+import 'package:flutter_learn/page/widget/decorated_box.dart';
 import 'package:flutter_learn/page/widget/dialog.dart';
 import 'package:flutter_learn/page/widget/drag.dart';
 import 'package:flutter_learn/page/widget/drawer.dart';
@@ -38,6 +42,7 @@ import 'package:flutter_learn/page/widget/form.dart';
 import 'package:flutter_learn/page/widget/gesture.dart';
 import 'package:flutter_learn/page/widget/image.dart';
 import 'package:flutter_learn/page/widget/input.dart';
+import 'package:flutter_learn/page/widget/layout_align.dart';
 import 'package:flutter_learn/page/widget/layout_flex.dart';
 import 'package:flutter_learn/page/widget/layout_linear.dart';
 import 'package:flutter_learn/page/widget/layout_stack.dart';
@@ -46,6 +51,7 @@ import 'package:flutter_learn/page/widget/nested_scrollview.dart';
 import 'package:flutter_learn/page/widget/progress.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
 import 'package:flutter_learn/page/widget/text.dart';
+import 'package:flutter_learn/page/widget/transform.dart';
 import 'package:flutter_learn/view/viewpage_item.dart';
 
 class RouteMap {
@@ -75,7 +81,12 @@ class RouteMap {
     '/widget/layout_flex': (BuildContext context) => FlexLayoutPage(),
     '/widget/layout_wrap': (BuildContext context) => WrapLayoutPage(),
     '/widget/layout_stack': (BuildContext context) => StackLayoutPage(),
-
+    '/widget/layout_align': (BuildContext context) => AlignLayoutPage(),
+    '/widget/constrained_box': (BuildContext context) => ConstrainedBoxPage(),
+    '/widget/decorated_box': (BuildContext context) => DecoratedBoxPage(),
+    '/widget/transform': (BuildContext context) => TransformPage(),
+    '/widget/containter': (BuildContext context) => ContainerPage(),
+    '/widget/clip': (BuildContext context) => ClipPage(),
 
     //============================utils=================================//
 
@@ -137,7 +148,13 @@ class RouteMap {
     ListItem(Icons.layers, "线性布局", "Flutter中通过Row和Column来实现线性布局，类似于Android中的LinearLayout控件", '/widget/layout_linear'),
     ListItem(Icons.layers, "弹性(权重)布局", "Flutter中的弹性布局主要通过Flex和Expanded来配合实现", '/widget/layout_flex'),
     ListItem(Icons.layers, "流式布局", "Flutter中通过Wrap和Flow来支持流式布局", '/widget/layout_wrap'),
-    ListItem(Icons.layers, "层叠(框架)布局", "类似于Android中的Frame布局，子组件可以根据距父容器四个角的位置来确定自身的位置。", '/widget/layout_stack'),
+    ListItem(Icons.layers, "层叠(框架)布局", "类似于Android中的FrameLayout布局，子组件可以根据距父容器四个角的位置来确定自身的位置。", '/widget/layout_stack'),
+    ListItem(Icons.layers, "定位布局", "Flutter中只想简单的调整一个子元素在父元素中的位置,只需使用Align即可.", '/widget/layout_align'),
+    ListItem(Icons.check_box_outline_blank, "尺寸限制类容器", "尺寸限制类容器用于限制容器大小，Flutter中提供了多种这样的容器，如ConstrainedBox、SizedBox、UnconstrainedBox、AspectRatio等", '/widget/constrained_box'),
+    ListItem(Icons.check_box_outline_blank, "装饰容器", "可以在其子组件绘制前(或后)绘制一些装饰（Decoration），如背景、边框、渐变等", '/widget/decorated_box'),
+    ListItem(Icons.transform, "控件变换", "Transform可以在其子组件绘制时对其应用一些矩阵变换来实现一些特效.", '/widget/transform'),
+    ListItem(Icons.check_box_outline_blank, "万能的Container容器", "Container是一个组合类容器，它是DecoratedBox、ConstrainedBox、Transform、Padding、Align等组件组合的一个多功能容器.", '/widget/containter'),
+    ListItem(Icons.content_cut, "控件裁剪", "Flutter中提供了ClipOval(圆形)、ClipRRect(圆角矩形)和ClipRect(矩形).", '/widget/clip'),
   ];
 
   /*

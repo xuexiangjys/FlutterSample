@@ -13,12 +13,10 @@ class _FlexLayoutPageState extends State<FlexLayoutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: Container(
-            child: ListView(
-          scrollDirection: Axis.vertical, // 水平listView
+        appBar: AppBar(title: Text(widget.title)),
+        body: SingleChildScrollView(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             //Flex的两个子widget按1：2来占据水平空间
             Flex(
@@ -71,6 +69,32 @@ class _FlexLayoutPageState extends State<FlexLayoutPage> {
                 ),
               ),
             ),
+            SizedBox(height: 20),
+
+            Container(
+                height: 300,
+                width: 100,
+                child: Flex(
+                  //水平方向
+                  direction: Axis.vertical,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        height: 30.0,
+                        color: Colors.red,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        height: 30.0,
+                        color: Colors.green,
+                      ),
+                    ),
+                  ],
+                ))
           ],
         )));
   }
