@@ -33,6 +33,7 @@ import 'package:flutter_learn/page/widget/clip.dart';
 import 'package:flutter_learn/page/widget/constrained_box.dart';
 import 'package:flutter_learn/page/widget/container.dart';
 import 'package:flutter_learn/page/widget/control.dart';
+import 'package:flutter_learn/page/widget/custom_scrollview.dart';
 import 'package:flutter_learn/page/widget/decorated_box.dart';
 import 'package:flutter_learn/page/widget/dialog.dart';
 import 'package:flutter_learn/page/widget/drag.dart';
@@ -73,6 +74,7 @@ class RouteMap {
     '/widget/dialog': (BuildContext context) => DialogPage(),
     '/widget/drawer': (BuildContext context) => DrawerPage(),
     '/widget/nested_scrollview': (BuildContext context) => NestedScrollViewPage(),
+    '/widget/custom_scrollview': (BuildContext context) => CustomScrollViewPage(),
     '/widget/progress': (BuildContext context) => ProgressPage(),
     '/widget/cardview': (BuildContext context) => CardViewPage(),
     '/widget/gesture': (BuildContext context) => GesturePage(),
@@ -141,6 +143,7 @@ class RouteMap {
     ListItem(Icons.notifications, "对话框", "简单的对话框使用", '/widget/dialog'),
     ListItem(Icons.menu, "侧滑菜单", "简单侧滑菜单的使用", '/widget/drawer'),
     ListItem(Icons.list, "NestedScrollView", "嵌套滚动联动的使用", '/widget/nested_scrollview'),
+    ListItem(Icons.list, "CustomScrollView", "自定义滚动模型", '/widget/custom_scrollview'),
     ListItem(Icons.refresh, "进度条显示", "简单的进度条使用", '/widget/progress'),
     ListItem(Icons.credit_card, "卡片", "简单的卡片使用", '/widget/cardview'),
     ListItem(Icons.gesture, "手势动作", "单击、双击、长按、缩放等手势动作", '/widget/gesture'),
