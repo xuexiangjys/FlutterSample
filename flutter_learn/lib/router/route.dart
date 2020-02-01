@@ -57,8 +57,10 @@ import 'package:flutter_learn/page/widget/nested_scrollview.dart';
 import 'package:flutter_learn/page/widget/notification.dart';
 import 'package:flutter_learn/page/widget/progress.dart';
 import 'package:flutter_learn/page/widget/scroll_controller.dart';
+import 'package:flutter_learn/page/widget/stagger_animation.dart';
 import 'package:flutter_learn/page/widget/tab.dart';
 import 'package:flutter_learn/page/widget/text.dart';
+import 'package:flutter_learn/page/widget/transition_animations.dart';
 import 'package:flutter_learn/view/viewpage_item.dart';
 
 class RouteMap {
@@ -104,6 +106,8 @@ class RouteMap {
 
     '/widget/notification': (BuildContext context) => NotificationPage(),
     '/widget/animation': (BuildContext context) => AnimationPage(),
+    '/widget/stagger_animation': (BuildContext context) => StaggerAnimationPage(),
+    '/widget/transition_animations': (BuildContext context) => TransitionAnimationsPage(),
 
     //============================utils=================================//
 
@@ -169,6 +173,8 @@ class RouteMap {
     ListItem(Icons.check_box_outline_blank, "容器演示", "尺寸限制容器、装饰容器、控件变换、万能容器和控件裁剪", '/widget/contain'),
     ListItem(Icons.notifications, "冒泡通知", "通知（Notification）是Flutter中一个重要的机制，在widget树中，每一个节点都可以分发通知，通知会沿着当前节点向上传递，所有父节点都可以通过NotificationListener来监听通知。", '/widget/notification'),
     ListItem(Icons.brightness_auto, "动画", "使用AnimatedBuilder构建动画。", '/widget/animation'),
+    ListItem(Icons.brightness_auto, "交织动画", "由一个动画序列或重叠的动画组成的复杂动画", '/widget/stagger_animation'),
+    ListItem(Icons.brightness_auto, "动画过渡组件", "动画过渡组件在Widget属性发生变化时会执行过渡动画", '/widget/transition_animations'),
   ];
 
   /*
