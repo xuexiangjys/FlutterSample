@@ -102,8 +102,8 @@ class _ProgressPageState extends State<ProgressPage>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 }
 

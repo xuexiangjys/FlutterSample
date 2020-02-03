@@ -54,26 +54,26 @@ flutter run
 
 ## 依赖库说明
 
-* [非常好用的网络请求库 dio](https://pub.dev/packages/dio)
+* [dio (非常好用的网络请求库)](https://pub.dev/packages/dio)
 * [FlutterToast](https://pub.dev/packages/fluttertoast)
 * [mmkv_flutter](https://pub.dev/packages/mmkv_flutter)
 * [shared_preferences](https://pub.dev/packages/shared_preferences)
 * [url_launcher](https://pub.dev/packages/url_launcher)
-* [图片选择 image_picker](https://pub.dev/packages/image_picker)
-* [sqlite数据库 sqflite](https://pub.dev/packages/sqflite)
-* [页面路由神器 fluro](https://pub.dev/packages/fluro)
-* [网页加载 flutter_webview_plugin](https://pub.dev/packages/flutter_webview_plugin)
-* [loading加载动画 flutter_spinkit](https://pub.dev/packages/flutter_spinkit)
-* [事件工具 event_bus](https://pub.dev/packages/event_bus)
-* [轮播图组件 flutter_swiper](https://pub.dev/packages/flutter_swiper)
-* [刷新组件 flutter_easyrefresh](https://pub.dev/packages/flutter_easyrefresh)
-* [非常好用的数据共享工具 provider](https://pub.dev/packages/provider)
-* [时间选择器 flutter_datetime_picker](https://pub.dev/packages/flutter_datetime_picker)
-* [多图片选择 multi_image_picker](https://pub.dev/packages/multi_image_picker)
-* [极光推送 jpush_flutter](https://pub.dev/packages/jpush_flutter)
-* [bugly统计 flutter_bugly](https://pub.dev/packages/flutter_bugly)
-* [设备信息 device_info](https://pub.dev/packages/device_info)
-
+* [image_picker (图片选择)](https://pub.dev/packages/image_picker)
+* [sqflite (sqlite数据库)](https://pub.dev/packages/sqflite)
+* [fluro (页面路由神器)](https://pub.dev/packages/fluro)
+* [flutter_webview_plugin (网页加载)](https://pub.dev/packages/flutter_webview_plugin)
+* [flutter_spinkit (loading加载动画)](https://pub.dev/packages/flutter_spinkit)
+* [event_bus (事件工具)](https://pub.dev/packages/event_bus)
+* [flutter_swiper (轮播图组件)](https://pub.dev/packages/flutter_swiper)
+* [flutter_easyrefresh (刷新组件)](https://pub.dev/packages/flutter_easyrefresh)
+* [provider (非常好用的数据共享工具)](https://pub.dev/packages/provider)
+* [flutter_datetime_picker (时间选择器)](https://pub.dev/packages/flutter_datetime_picker)
+* [multi_image_picker (多图片选择)](https://pub.dev/packages/multi_image_picker)
+* [jpush_flutter (极光推送)](https://pub.dev/packages/jpush_flutter)
+* [flutter_bugly (bugly统计)](https://pub.dev/packages/flutter_bugly)
+* [device_info (设备信息)](https://pub.dev/packages/device_info)
+* [lcfarm_flutter_umeng (友盟统计)](https://pub.dev/packages/lcfarm_flutter_umeng)
 
 ## 非常感谢
 

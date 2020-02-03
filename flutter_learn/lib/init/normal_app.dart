@@ -8,6 +8,7 @@ import 'package:flutter_learn/utils/provider.dart';
 import 'package:flutter_learn/utils/push.dart';
 import 'package:flutter_learn/utils/shared_preferences.dart';
 import 'package:flutter_learn/utils/sql_helper.dart';
+import 'package:flutter_learn/utils/umeng.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
@@ -26,6 +27,7 @@ class NormalApp {
     SQLHelper.init();
     XPush.init();
     Bugly.init();
+    UMeng.init();
   }
 }
 

@@ -28,6 +28,10 @@ PODS:
   - jpush_flutter (0.0.2):
     - Flutter
     - JPush
+  - lcfarm_flutter_umeng (0.0.1):
+    - Flutter
+    - UMCAnalytics
+    - UMCCommon
   - MMKV (1.0.23)
   - mmkv_flutter (0.0.1):
     - Flutter
@@ -44,6 +48,9 @@ PODS:
   - sqflite (0.0.1):
     - Flutter
     - FMDB (~> 2.7.2)
+  - UMCAnalytics (6.0.5):
+    - UMCCommon
+  - UMCCommon (2.1.1)
   - url_launcher (0.0.1):
     - Flutter
   - url_launcher_macos (0.0.1):
@@ -60,6 +67,7 @@ DEPENDENCIES:
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - image_picker (from `.symlinks/plugins/image_picker/ios`)
   - jpush_flutter (from `.symlinks/plugins/jpush_flutter/ios`)
+  - lcfarm_flutter_umeng (from `.symlinks/plugins/lcfarm_flutter_umeng/ios`)
   - mmkv_flutter (from `.symlinks/plugins/mmkv_flutter/ios`)
   - multi_image_picker (from `.symlinks/plugins/multi_image_picker/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
@@ -80,6 +88,8 @@ SPEC REPOS:
     - JCore
     - JPush
     - MMKV
+    - UMCAnalytics
+    - UMCCommon
 
 EXTERNAL SOURCES:
   device_info:
@@ -98,6 +108,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/image_picker/ios"
   jpush_flutter:
     :path: ".symlinks/plugins/jpush_flutter/ios"
+  lcfarm_flutter_umeng:
+    :path: ".symlinks/plugins/lcfarm_flutter_umeng/ios"
   mmkv_flutter:
     :path: ".symlinks/plugins/mmkv_flutter/ios"
   multi_image_picker:
@@ -133,6 +145,7 @@ SPEC CHECKSUMS:
   JCore: a7f1dead960d77a97717c73ea8b0aa5b33706491
   JPush: 8ce888d6dedfa417e90c8b6bc87405a16ce2e699
   jpush_flutter: d7e3a79466eb9447fd940233f02661b514f137c6
+  lcfarm_flutter_umeng: a06d7aba0fbbdee6c780c35a4506b43489429293
   MMKV: 031ae51aedc0af1b250922f7ed8a6b6ee2f94c4c
   mmkv_flutter: 511886651aef2c8e65402030d6517602776e8681
   multi_image_picker: 9fe118993be074708a1a2d3152ea48259d422988
@@ -140,6 +153,8 @@ SPEC CHECKSUMS:
   shared_preferences_macos: f3f29b71ccbb56bf40c9dd6396c9acf15e214087
   shared_preferences_web: 141cce0c3ed1a1c5bf2a0e44f52d31eeb66e5ea9
   sqflite: 4001a31ff81d210346b500c55b17f4d6c7589dd0
+  UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
+  UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
   url_launcher: a1c0cc845906122c4784c542523d8cacbded5626
   url_launcher_macos: fd7894421cd39320dce5f292fc99ea9270b2a313
   url_launcher_web: e5527357f037c87560776e36436bf2b0288b965c
