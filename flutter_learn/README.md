@@ -2,6 +2,17 @@
 
 Flutter使用指南,包含众多组件和插件的使用, 是学习和体验flutter组件的小Demo
 
+
+## 演示(请Star支持)
+
+![演示](./art/demo.gif)
+
+## 部分截图
+
+![](./art/1.png) &emsp; ![](./art/2.png) &emsp; ![](./art/3.png) &emsp; 
+![](./art/4.png) &emsp; ![](./art/5.png) &emsp; ![](./art/6.png) &emsp;
+![](./art/7.png) &emsp; ![](./art/8.png) &emsp; ![](./art/9.png) &emsp;
+
 ## 运行方式
 
 * 查看一下版本号是否正确
@@ -47,3 +58,4 @@ flutter run
 ## 非常感谢
 
 * [阿里巴巴的入门级项目 flutter-go](https://github.com/alibaba/flutter-go)
+* [flutter实战](https://book.flutterchina.club/)
