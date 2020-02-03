@@ -19,6 +19,12 @@ class _StaggerAnimationPageState extends State<StaggerAnimationPage>
         duration: const Duration(milliseconds: 2000), vsync: this);
   }
 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   Future<Null> _playAnimation() async {
     try {
       //先正向执行动画

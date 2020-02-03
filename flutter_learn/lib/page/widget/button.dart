@@ -121,7 +121,7 @@ class _ButtonPageState extends State<ButtonPage> {
 class IconButtonDefault extends StatelessWidget {
   final bool isDisabled;
 
-  const IconButtonDefault([this.isDisabled = true])
+  const IconButtonDefault([this.isDisabled])
       : assert(isDisabled != null),
         super();
 
@@ -132,19 +132,19 @@ class IconButtonDefault extends StatelessWidget {
         icon: Icon(Icons.volume_up),
         tooltip: isDisabled ? 'Increase volume by 10%' : null,
         onPressed: isDisabled
-            ? () {
+            ? null
+            : () {
                 Scaffold.of(context).showSnackBar(SnackBar(
                   content: Text("点击了按钮"),
                 ));
-              }
-            : null);
+              });
   }
 }
 
 class FlatButtonDefault extends StatelessWidget {
   final bool isDisabled;
 
-  const FlatButtonDefault([this.isDisabled = true])
+  const FlatButtonDefault([this.isDisabled])
       : assert(isDisabled != null),
         super();
 
@@ -153,7 +153,7 @@ class FlatButtonDefault extends StatelessWidget {
     return FlatButton(
         // 文本内容
         child: const Text('默认按钮', semanticsLabel: 'FLAT BUTTON 1'),
-        onPressed: isDisabled ? () {} : null);
+        onPressed: isDisabled ? null : () {});
   }
 }
 

@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-class AnimationPage extends StatefulWidget {
-  AnimationPage({this.title = "动画", Key key}) : super(key: key);
+class BasicAnimationPage extends StatefulWidget {
+  BasicAnimationPage({this.title = "动画", Key key}) : super(key: key);
   final String title;
   @override
   _AnimationPageState createState() => _AnimationPageState();
 }
 
-class _AnimationPageState extends State<AnimationPage>
+class _AnimationPageState extends State<BasicAnimationPage>
     with SingleTickerProviderStateMixin {
   Animation<double> animation;
-  AnimationController controller;
+  AnimationController _controller;
 
   @override
   void initState() {
     super.initState();
-    controller =
+    _controller =
         AnimationController(duration: const Duration(seconds: 1), vsync: this);
     //图片宽高从0变到300
-    animation = Tween(begin: 0.0, end: 300.0).animate(controller);
+    animation = Tween(begin: 0.0, end: 300.0).animate(_controller);
     animation.addStatusListener((status) {
       ///dismissed	动画在起始点停止
       ///forward	动画正在正向执行
@@ -26,15 +26,21 @@ class _AnimationPageState extends State<AnimationPage>
       ///completed	动画在终点停止
       if (status == AnimationStatus.completed) {
         //动画执行结束时反向执行动画
-        controller.reverse();
+        _controller.reverse();
       } else if (status == AnimationStatus.dismissed) {
         //动画恢复到初始状态时执行动画（正向）
-        controller.forward();
+        _controller.forward();
       }
     });
 
     //启动动画（正向）
-    controller.forward();
+    _controller.forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override

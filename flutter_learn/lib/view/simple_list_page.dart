@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/view/viewpage_item.dart';
 
-class ContainPage extends StatefulWidget {
-  ContainPage({this.title = "容器演示", Key key}) : super(key: key);
+class SimpleListPage extends StatefulWidget {
+  SimpleListPage(this.title, this.items, {Key key}) : super(key: key);
   final String title;
+  final List<ListItem> items;
   @override
-  _ContainPageState createState() => _ContainPageState();
+  _SimpleListPageState createState() => _SimpleListPageState();
 }
 
-class _ContainPageState extends State<ContainPage> {
+class _SimpleListPageState extends State<SimpleListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,6 +18,6 @@ class _ContainPageState extends State<ContainPage> {
         ),
         body: Container(
             padding: const EdgeInsets.all(10),
-            child: ViewPageItem(items: RouteMap.containerItems)));
+            child: ViewPageItem(items: widget.items)));
   }
 }
