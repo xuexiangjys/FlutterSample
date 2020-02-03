@@ -29,7 +29,7 @@ Flutter使用指南,包含众多组件和插件的使用, 是学习和体验flut
 
 #### Github下载
 
-[![Github](https://img.shields.io/badge/downloads-Github-blue.svg)](https://github.com/xuexiangjys/XUI/blob/master/apk/xuidemo.apk?raw=true)
+[![Github](https://img.shields.io/badge/downloads-Github-blue.svg)](https://github.com/xuexiangjys/FlutterSample/raw/master/flutter_learn/apk/app-release.apk?raw=true)
 
 ![](./art/download_github.png)
 
