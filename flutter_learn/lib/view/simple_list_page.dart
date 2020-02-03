@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/view/viewpage_item.dart';
+import 'package:flutter_learn/view/listview_page.dart';
 
 class SimpleListPage extends StatefulWidget {
   SimpleListPage(this.title, this.items, {Key key}) : super(key: key);
@@ -18,6 +18,6 @@ class _SimpleListPageState extends State<SimpleListPage> {
         ),
         body: Container(
             padding: const EdgeInsets.all(10),
-            child: ViewPageItem(items: widget.items)));
+            child: ListViewPage(items: widget.items)));
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/utils/click.dart';
 import 'package:flutter_learn/utils/provider.dart';
-import 'view/viewpage_item.dart';
+import 'package:flutter_learn/view/gridview_page.dart';
 
 class MainHomePage extends StatefulWidget {
   MainHomePage({Key key}) : super(key: key);
@@ -20,9 +20,9 @@ class _MainHomePageState extends State<MainHomePage>
   ];
 
   final List<Widget> mTabViews = <Widget>[
-    ViewPageItem(items: RouteMap.widgetItems),
-    ViewPageItem(items: RouteMap.utilsItems),
-    ViewPageItem(items: RouteMap.expandItems),
+    GridViewPage(items: RouteMap.widgetItems),
+    GridViewPage(items: RouteMap.utilsItems),
+    GridViewPage(items: RouteMap.expandItems),
   ];
 
   TabController _tabController;

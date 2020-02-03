@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/router/router.dart';
 
-class ViewPageItem extends StatefulWidget {
-  ViewPageItem({Key key, this.items}) : super(key: key);
+class ListViewPage extends StatefulWidget {
+  ListViewPage({Key key, this.items}) : super(key: key);
 
   final List<ListItem> items;
 
   @override
-  _ViewPageItemState createState() => _ViewPageItemState();
+  _ListViewPageState createState() => _ListViewPageState();
 }
 
-class _ViewPageItemState extends State<ViewPageItem> {
+class _ListViewPageState extends State<ListViewPage> {
   @override
   Widget build(BuildContext context) {
     return Center(

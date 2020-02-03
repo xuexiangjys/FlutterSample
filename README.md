@@ -7,11 +7,14 @@ Flutter使用指南,包含众多组件和插件的使用
 
 ### 组件
 
+* [Animation(动画)](https://github.com/xuexiangjys/FlutterSample/tree/master/flutter_learn/lib/page/widget/anim)
 * [AppBar(标题)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/appbar.dart)
 * [BottomNavigationBar(底部导航栏)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/bottom_navigation_bar.dart)
 * [Button(按钮)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/button.dart)
 * [CardView(卡片)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/cardview.dart)
+* [Containter(容器)](https://github.com/xuexiangjys/FlutterSample/tree/master/flutter_learn/lib/page/widget/contain)
 * [Control(控制开关)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/control.dart)
+* [CustomWidget(自定义组件)](https://github.com/xuexiangjys/FlutterSample/tree/master/flutter_learn/lib/page/widget/custom)
 * [Dialog(对话框)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/dialog.dart)
 * [Drag(拖拽)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/drag.dart)
 * [Drawer(侧滑菜单)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/drawer.dart)
@@ -19,8 +22,10 @@ Flutter使用指南,包含众多组件和插件的使用
 * [Gesture(手势)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/gesture.dart)
 * [Image(图片)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/image.dart)
 * [Input(输入框)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/input.dart)
-* [NestedScrollView(滚动页)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/nested_scrollview.dart)
+* [Layout(布局)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/layout)
+* [Notification(冒泡通知)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/notification.dart)
 * [Progress(进度条)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/progress.dart)
+* [ScrollView(列表滚动)](https://github.com/xuexiangjys/FlutterSample/tree/master/flutter_learn/lib/page/widget/scrollview)
 * [Tab(选项卡)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/tab.dart)
 * [Text(文字)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/widget/text.dart)
 
