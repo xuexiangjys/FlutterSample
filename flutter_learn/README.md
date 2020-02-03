@@ -15,6 +15,24 @@ Flutter使用指南,包含众多组件和插件的使用, 是学习和体验flut
 
 ![](./art/7.png) &emsp; ![](./art/8.png) &emsp; ![](./art/9.png)
 
+### Demo下载
+
+> 演示程序大概20M，项目比较大，推荐使用蒲公英下载。
+
+#### 蒲公英下载
+
+> 蒲公英下载的密码: xuexiangjys
+
+[![蒲公英](https://img.shields.io/badge/downloads-蒲公英-blue.svg)](https://www.pgyer.com/flutter_learn)
+
+![](./art/download_pugongying.png)
+
+#### Github下载
+
+[![Github](https://img.shields.io/badge/downloads-Github-blue.svg)](https://github.com/xuexiangjys/XUI/blob/master/apk/xuidemo.apk?raw=true)
+
+![](./art/download_github.png)
+
 ## 运行方式
 
 * 查看一下版本号是否正确
