@@ -45,6 +45,10 @@ dependencies:
   jpush_flutter: ^0.1.0
   flutter_bugly: ^0.2.8
   lcfarm_flutter_umeng: ^0.1.8
+  flutter_xupdate:
+    git:
+      url: git://github.com/xuexiangjys/flutter_xupdate.git
+      ref: master
   
 dev_dependencies:
   flutter_test:

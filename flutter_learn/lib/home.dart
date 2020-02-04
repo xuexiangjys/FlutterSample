@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/utils/click.dart';
 import 'package:flutter_learn/utils/provider.dart';
+import 'package:flutter_learn/utils/xupdate.dart';
 import 'package:flutter_learn/view/gridview_page.dart';
 
 class MainHomePage extends StatefulWidget {
@@ -31,6 +32,8 @@ class _MainHomePageState extends State<MainHomePage>
   void initState() {
     super.initState();
     _tabController = TabController(vsync: this, length: mTabs.length);
+
+    XUpdate.initAndCheck();
   }
 
   @override
