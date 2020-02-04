@@ -4,7 +4,7 @@ import 'package:flutter_xupdate/flutter_xupdate.dart';
 
 class XUpdate {
   static const String UPDATE_URL =
-      "https://gitee.com/xuexiangjys/XUpdate/raw/master/jsonapi/update_test.json";
+      "https://gitee.com/xuexiangjys/FlutterSample/raw/master/flutter_learn/jsonapi/update_api.json";
 
   static void initAndCheck() {
     if (DeviceUtils.isAndroid()) {
@@ -27,7 +27,17 @@ class XUpdate {
     });
     FlutterXUpdate.setErrorHandler(
         onUpdateError: (Map<String, dynamic> message) async {
-      XToast.error(message['detailMsg']);
+      ///2004是无最新版本
+      if (message['code'] != 2004) {
+        ///4000是下载失败
+        if (message['code'] == 4000) {
+          FlutterXUpdate.showRetryUpdateTipDialog(
+              retryContent: "Github被墙无法继续下载，是否考虑切换蒲公英下载？",
+              retryUrl: "https://www.pgyer.com/flutter_learn");
+        } else {
+          XToast.error(message['detailMsg']);
+        }
+      }
     });
   }
 
