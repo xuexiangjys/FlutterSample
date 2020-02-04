@@ -6,7 +6,7 @@
   "VersionName": "1.0.0",
   "UploadTime": "2020-02-04 00:00:00",
   "ModifyContent": "\r\n1、最初始版本。\r\n2、是学习flutter的好工具。",
-  "DownloadUrl": "https://raw.githubusercontent.com/xuexiangjys/FlutterSample/flutter_learn/master/apk/app-release.apk",
+  "DownloadUrl": "https://raw.githubusercontent.com/xuexiangjys/FlutterSample/master/flutter_learn/apk/app-release.apk",
   "ApkSize": 21504,
   "ApkMd5": "20532FC01C496471790072E7BB4675F2"
 }
