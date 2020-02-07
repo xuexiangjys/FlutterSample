@@ -11,6 +11,7 @@ import 'package:flutter_learn/page/expand/refresh/user_profile.dart';
 import 'package:flutter_learn/page/expand/spinkit.dart';
 import 'package:flutter_learn/page/expand/swiper.dart';
 import 'package:flutter_learn/page/expand/web.dart';
+import 'package:flutter_learn/page/utils/battery.dart';
 import 'package:flutter_learn/page/utils/bugly.dart';
 import 'package:flutter_learn/page/utils/device_info.dart';
 import 'package:flutter_learn/page/utils/event_bus.dart';
@@ -19,11 +20,14 @@ import 'package:flutter_learn/page/utils/json_serialize.dart';
 import 'package:flutter_learn/page/utils/mmkv.dart';
 import 'package:flutter_learn/page/utils/navigator.dart';
 import 'package:flutter_learn/page/utils/net.dart';
+import 'package:flutter_learn/page/utils/package_info.dart';
 import 'package:flutter_learn/page/utils/provider.dart';
 import 'package:flutter_learn/page/utils/provider_next.dart';
+import 'package:flutter_learn/page/utils/share.dart';
 import 'package:flutter_learn/page/utils/shared_preferences.dart';
 import 'package:flutter_learn/page/utils/sqlite.dart';
 import 'package:flutter_learn/page/utils/toast.dart';
+import 'package:flutter_learn/page/utils/url.dart';
 import 'package:flutter_learn/page/widget/anim/basic_animation.dart';
 import 'package:flutter_learn/page/widget/anim/stagger_animation.dart';
 import 'package:flutter_learn/page/widget/anim/transition_animations.dart';
@@ -132,6 +136,10 @@ class RouteMap {
     '/utils/provider_next': (BuildContext context) => ProviderNextPage(),
     '/utils/device_info': (BuildContext context) => DeviceInfoPage(),
     '/utils/bugly': (BuildContext context) => BuglyPage(),
+    '/utils/share': (BuildContext context) => SharePage(),
+    '/utils/url': (BuildContext context) => UrlPage(),
+    '/utils/battery': (BuildContext context) => BatteryPage(),
+    '/utils/package_info': (BuildContext context) => PackageInfoPage(),
 
     //============================expand=================================//
 
@@ -193,6 +201,10 @@ class RouteMap {
     ListItem(Icons.date_range, "状态同步", "使用provider进行简单的状态同步", '/utils/provider'),
     ListItem(Icons.devices, "设备信息", "获取设备的详尽信息", '/utils/device_info'),
     ListItem(Icons.report, "应用数据统计", "Bugly的应用", '/utils/bugly'),
+    ListItem(Icons.share, "分享", "文本分享", '/utils/share'),
+    ListItem(Icons.format_underlined, "链接", "网页、邮件、电话、短信等链接", '/utils/url'),
+    ListItem(Icons.battery_std, "电量", "电量、状态显示", '/utils/battery'),
+    ListItem(Icons.apps, "应用包信息", "应用名、包名、版本", '/utils/package_info'),
   ];
 
   ///拓展

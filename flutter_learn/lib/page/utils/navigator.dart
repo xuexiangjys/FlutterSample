@@ -19,10 +19,9 @@ class _NavigatorPageState extends State<NavigatorPage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Container(
+        body: SingleChildScrollView(
             padding: const EdgeInsets.all(10),
-            child: ListView(
-              scrollDirection: Axis.vertical, // 垂直listView
+            child: Column(
               children: <Widget>[
                 ButtonBar(
                   alignment: MainAxisAlignment.start,
@@ -48,6 +47,12 @@ class _NavigatorPageState extends State<NavigatorPage> {
                             })
                       },
                     ),
+                  ],
+                ),
+                 ButtonBar(
+                  alignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
                     RaisedButton(
                       child: Text('路由动画'),
                       color: Colors.blue,
@@ -58,7 +63,9 @@ class _NavigatorPageState extends State<NavigatorPage> {
                       child: Text('fluro跳转'),
                       color: Colors.blue,
                       onPressed: () => {
-                        XRouter.router.navigateTo(context, "/web?url=${Uri.encodeComponent("https://www.baidu.com/")}&title=${Uri.encodeComponent("百度")}", transition: TransitionType.fadeIn)
+                        XRouter.router.navigateTo(context,
+                            "/web?url=${Uri.encodeComponent("https://www.baidu.com/")}&title=${Uri.encodeComponent("百度")}",
+                            transition: TransitionType.fadeIn)
                       },
                     ),
                   ],
