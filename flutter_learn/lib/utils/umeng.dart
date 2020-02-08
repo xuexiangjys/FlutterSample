@@ -1,6 +1,8 @@
 import 'package:lcfarm_flutter_umeng/lcfarm_flutter_umeng.dart';
 
 class UMeng {
+  UMeng._internal();
+  
   static const String UMeng_APP_KEY_ANDROID = "5e382b330cafb2eacc0000a1";
   static const String UMeng_APP_KEY_IOS = "5e3822f0570df3425700018c";
 

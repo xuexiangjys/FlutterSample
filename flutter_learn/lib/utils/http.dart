@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 
 class XHttp {
+  XHttp._internal();
 
   static final Dio dio = Dio(BaseOptions(
     baseUrl: "https://www.wanandroid.com",
@@ -8,8 +9,7 @@ class XHttp {
     receiveTimeout: 3000,
   ));
 
-
-  static Future get(String url, [Map < String, dynamic > params]) async {
+  static Future get(String url, [Map<String, dynamic> params]) async {
     var response;
     if (params != null) {
       response = await dio.get(url, queryParameters: params);
@@ -19,16 +19,13 @@ class XHttp {
     return response.data;
   }
 
-  static Future post(String url, [Map < String, dynamic > params]) async {
+  static Future post(String url, [Map<String, dynamic> params]) async {
     var response = await dio.post(url, queryParameters: params);
     return response.data;
   }
 
-   static Future postJson(String url, [Map < String, dynamic > data]) async {
+  static Future postJson(String url, [Map<String, dynamic> data]) async {
     var response = await dio.post(url, data: data);
     return response.data;
   }
-
-
-
 }

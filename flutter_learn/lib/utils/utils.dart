@@ -1,13 +1,18 @@
 import 'dart:async';
 
 import 'package:battery/battery.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Utils {
-  static var _battery = Battery();
+  Utils._internal();
+
+  static Battery _battery = Battery();
   static StreamSubscription _subscription;
+
+  //=============url_launcher==================//
 
   ///处理链接
   static void launchURL(String url) async {
@@ -17,6 +22,8 @@ class Utils {
       XToast.error("暂不能处理这条链接:$url");
     }
   }
+
+  //=============battery==================//
 
   ///获取电池电量
   static Future<int> getBattery() {
@@ -38,6 +45,8 @@ class Utils {
     }
   }
 
+  //=============package_info==================//
+
   ///获取应用包信息
   static Future<PackageInfo> getPackageInfo() {
     return PackageInfo.fromPlatform();
@@ -52,5 +61,11 @@ class Utils {
       'version': packageInfo.version,
       'buildNumber': packageInfo.buildNumber,
     };
+  }
+
+  //===============camera================//
+
+  static Future<List<CameraDescription>> getAvailableCameras() {
+    return availableCameras();
   }
 }

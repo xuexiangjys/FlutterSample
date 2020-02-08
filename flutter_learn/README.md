@@ -44,6 +44,7 @@ flutter run
 
 ## 依赖库说明
 
+* [camera (照相机)](https://pub.dev/packages/camera)
 * [dio (非常好用的网络请求库)](https://pub.dev/packages/dio)
 * [device_info (设备信息)](https://pub.dev/packages/device_info)
 * [event_bus (事件工具)](https://pub.dev/packages/event_bus)
@@ -60,8 +61,9 @@ flutter run
 * [lcfarm_flutter_umeng (友盟统计)](https://pub.dev/packages/lcfarm_flutter_umeng)
 * [multi_image_picker (多图片选择)](https://pub.dev/packages/multi_image_picker)
 * [mmkv_flutter](https://pub.dev/packages/mmkv_flutter)
-* [provider (非常好用的数据共享工具)](https://pub.dev/packages/provider)
 * [package_info (应用包信息)](https://pub.dev/packages/url_launcher)
+* [path_provider (路径)](https://pub.dev/packages/path_provider)
+* [provider (非常好用的数据共享工具)](https://pub.dev/packages/provider)
 * [shared_preferences](https://pub.dev/packages/shared_preferences)
 * [share 分享](https://pub.dev/packages/share)
 * [sqflite (sqlite数据库)](https://pub.dev/packages/sqflite)

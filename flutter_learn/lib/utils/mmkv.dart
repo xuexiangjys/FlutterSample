@@ -1,6 +1,7 @@
 import 'package:mmkv_flutter/mmkv_flutter.dart';
 
 class MMKV {
+  MMKV._internal();
 
   static Future<String> getString(String key) async {
     MmkvFlutter mmkv = await MmkvFlutter.getInstance();

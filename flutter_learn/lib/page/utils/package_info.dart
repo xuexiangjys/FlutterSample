@@ -29,28 +29,34 @@ class _PackageInfoPageState extends State<PackageInfoPage> {
         body: ListView(
           shrinkWrap: true,
           children: _packageInfo.keys.map((String property) {
-            return Row(
-              children: <Widget>[
-                Container(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    property,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Expanded(
-                    child: Container(
-                  padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
-                  child: Text(
-                    '${_packageInfo[property]}',
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                )),
-              ],
-            );
+            return buildItem(property, '${_packageInfo[property]}');
           }).toList(),
         ));
   }
+
+  Widget buildItem(String title, String content) {
+    return Row(
+      children: <Widget>[
+        Container(
+          padding: const EdgeInsets.all(10.0),
+          child: Text(
+            title,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Expanded(
+            child: Container(
+          padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+          child: Text(
+            content,
+            overflow: TextOverflow.ellipsis,
+          ),
+        )),
+      ],
+    );
+  }
+
+
 }

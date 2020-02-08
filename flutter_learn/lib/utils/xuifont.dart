@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 //自定义字体库
 class XUIIcons {
+  XUIIcons._internal();
+
   static const List<IconData> icons = [
     file,
     chat,

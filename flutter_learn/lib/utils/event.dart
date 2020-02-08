@@ -4,6 +4,8 @@ import 'package:event_bus/event_bus.dart';
 
 //EventBus工具类
 class XEvent {
+  XEvent._internal();
+
   static Map<String, EventBus> sEventPool = {};
 
   static Map<String, List<StreamSubscription>> sStreamPool = {};
@@ -65,5 +67,4 @@ class XEvent {
       streams.remove(subscription);
     }
   }
-
 }

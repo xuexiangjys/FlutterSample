@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 
 //状态管理
 class Store {
+  Store._internal();
+  
   //全局初始化
   static init(Widget child) {
     //多个Provider

@@ -3,6 +3,8 @@ import 'package:flutter_bugly/flutter_bugly.dart';
 import 'package:flutter_learn/utils/device.dart';
 
 class Bugly {
+  Bugly._internal();
+
   static const String BUGLY_APP_ID_ANDROID = "ee68b0a303";
   static const String BUGLY_APP_ID_IOS = "79aa609366";
 
@@ -11,10 +13,10 @@ class Bugly {
   ///初始化Bugly
   static void init() {
     FlutterBugly.init(
-      androidAppId: BUGLY_APP_ID_ANDROID,
-      iOSAppId: BUGLY_APP_ID_IOS,
-      channel: "github"
-    ).then((_result) {
+            androidAppId: BUGLY_APP_ID_ANDROID,
+            iOSAppId: BUGLY_APP_ID_IOS,
+            channel: "github")
+        .then((_result) {
       print("Bugly初始化结果: " + _result.appId);
     });
     //初始化UserId

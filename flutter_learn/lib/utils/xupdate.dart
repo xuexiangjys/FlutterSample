@@ -3,6 +3,8 @@ import 'package:flutter_learn/utils/toast.dart';
 import 'package:flutter_xupdate/flutter_xupdate.dart';
 
 class XUpdate {
+  XUpdate._internal();
+
   static const String UPDATE_URL =
       "https://gitee.com/xuexiangjys/FlutterSample/raw/master/flutter_learn/jsonapi/update_api.json";
 

@@ -7,6 +7,8 @@ const String EVENT_NOTIFICATION_OPEN = "event_notification_open";
 const String EVENT_CUSTOM_MESSAGE = "event_custom_message";
 
 class XPush {
+  XPush._internal();
+
   static final JPush jpush = JPush();
 
   //================初始化=====================//

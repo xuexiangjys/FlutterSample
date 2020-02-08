@@ -4,6 +4,8 @@ import 'package:device_info/device_info.dart';
 import 'package:flutter_learn/utils/random.dart';
 
 class DeviceUtils {
+  DeviceUtils._internal();
+  
   static final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
 
   //================================设备全局信息================================================//

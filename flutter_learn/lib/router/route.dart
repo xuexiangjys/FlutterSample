@@ -13,6 +13,7 @@ import 'package:flutter_learn/page/expand/swiper.dart';
 import 'package:flutter_learn/page/expand/web.dart';
 import 'package:flutter_learn/page/utils/battery.dart';
 import 'package:flutter_learn/page/utils/bugly.dart';
+import 'package:flutter_learn/page/utils/camera.dart';
 import 'package:flutter_learn/page/utils/device_info.dart';
 import 'package:flutter_learn/page/utils/event_bus.dart';
 import 'package:flutter_learn/page/utils/jpush.dart';
@@ -21,6 +22,7 @@ import 'package:flutter_learn/page/utils/mmkv.dart';
 import 'package:flutter_learn/page/utils/navigator.dart';
 import 'package:flutter_learn/page/utils/net.dart';
 import 'package:flutter_learn/page/utils/package_info.dart';
+import 'package:flutter_learn/page/utils/path.dart';
 import 'package:flutter_learn/page/utils/provider.dart';
 import 'package:flutter_learn/page/utils/provider_next.dart';
 import 'package:flutter_learn/page/utils/share.dart';
@@ -141,7 +143,9 @@ class RouteMap {
     '/utils/url': (BuildContext context) => UrlPage(),
     '/utils/battery': (BuildContext context) => BatteryPage(),
     '/utils/package_info': (BuildContext context) => PackageInfoPage(),
+    '/utils/file_path': (BuildContext context) => FilePathPage(),
     '/utils/video_player': (BuildContext context) => VideoPlayerPage(),
+    '/utils/camera': (BuildContext context) => CameraPage(),
 
     //============================expand=================================//
 
@@ -207,7 +211,9 @@ class RouteMap {
     ListItem(Icons.format_underlined, "链接", "网页、邮件、电话、短信等链接", '/utils/url'),
     ListItem(Icons.battery_std, "电量", "电量、状态显示", '/utils/battery'),
     ListItem(Icons.apps, "应用包信息", "应用名、包名、版本", '/utils/package_info'),
+    ListItem(Icons.attach_file, "文件路径", "文件路径", '/utils/file_path'),
     ListItem(Icons.video_library, "视频播放", "flutter官方视频播放插件", '/utils/video_player'),
+    ListItem(Icons.camera, "照相机", "拍摄照片", '/utils/camera'),
   ];
 
   ///拓展
