@@ -66,6 +66,7 @@ flutter run
 * [share 分享](https://pub.dev/packages/share)
 * [sqflite (sqlite数据库)](https://pub.dev/packages/sqflite)
 * [url_launcher (链接处理)](https://pub.dev/packages/url_launcher)
+* [video_player (视屏播放)](https://pub.dev/packages/video_player)
 
 ## 非常感谢
 

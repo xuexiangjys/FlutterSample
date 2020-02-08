@@ -28,6 +28,7 @@ import 'package:flutter_learn/page/utils/shared_preferences.dart';
 import 'package:flutter_learn/page/utils/sqlite.dart';
 import 'package:flutter_learn/page/utils/toast.dart';
 import 'package:flutter_learn/page/utils/url.dart';
+import 'package:flutter_learn/page/utils/video.dart';
 import 'package:flutter_learn/page/widget/anim/basic_animation.dart';
 import 'package:flutter_learn/page/widget/anim/stagger_animation.dart';
 import 'package:flutter_learn/page/widget/anim/transition_animations.dart';
@@ -140,6 +141,7 @@ class RouteMap {
     '/utils/url': (BuildContext context) => UrlPage(),
     '/utils/battery': (BuildContext context) => BatteryPage(),
     '/utils/package_info': (BuildContext context) => PackageInfoPage(),
+    '/utils/video_player': (BuildContext context) => VideoPlayerPage(),
 
     //============================expand=================================//
 
@@ -205,6 +207,7 @@ class RouteMap {
     ListItem(Icons.format_underlined, "链接", "网页、邮件、电话、短信等链接", '/utils/url'),
     ListItem(Icons.battery_std, "电量", "电量、状态显示", '/utils/battery'),
     ListItem(Icons.apps, "应用包信息", "应用名、包名、版本", '/utils/package_info'),
+    ListItem(Icons.video_library, "视频播放", "flutter官方视频播放插件", '/utils/video_player'),
   ];
 
   ///拓展
