@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/utils/shared_preferences.dart';
 import 'package:provider/provider.dart';
 
 //状态管理
 class Store {
   Store._internal();
-  
+
   //全局初始化
   static init(Widget child) {
     //多个Provider
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Counter(10)),
-        ChangeNotifierProvider(create: (_) => AppTheme(Colors.blue)),
+        ChangeNotifierProvider(
+            create: (_) =>
+                AppTheme(AppTheme.materialColors[SPUtils.getThemeColorIndex()])),
       ],
       child: child,
     );
@@ -48,6 +51,7 @@ class Counter with ChangeNotifier {
 
 //主题
 class AppTheme with ChangeNotifier {
+
   static final List<MaterialColor> materialColors = [
     Colors.blue,
     Colors.lightBlue,
@@ -73,6 +77,7 @@ class AppTheme with ChangeNotifier {
 
   void changeColor(int index) {
     _themeColor = materialColors[index];
+    SPUtils.saveThemeColorIndex(index);
     notifyListeners();
   }
 

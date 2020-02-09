@@ -14,6 +14,7 @@ class _GridViewPageState extends State<GridViewPage> {
   Widget build(BuildContext context) {
     return Center(
       child: GridView.builder(
+          padding: const EdgeInsets.all(10),
           itemCount: widget.items.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               //横轴元素个数
@@ -36,19 +37,18 @@ class _GridViewPageState extends State<GridViewPage> {
           alignment: Alignment.center,
           child: Column(
             children: <Widget>[
-              SizedBox(height: 10),
               Expanded(
-                flex: 3,
+                flex: 5,
                 child: Icon(
                   item.icon,
                   color: Theme.of(context).primaryColor,
                 ),
               ),
               Expanded(
-                flex: 1,
-                child: Text(item.title),
+                flex: 2,
+                child: Text(item.title, style: TextStyle(fontSize: 12)),
               ),
-              SizedBox(height: 30)
+              SizedBox(height: 15)
             ],
           ),
           decoration: BoxDecoration(

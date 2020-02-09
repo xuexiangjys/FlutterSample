@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class ClickUtils {
@@ -6,7 +7,11 @@ class ClickUtils {
   static DateTime _lastPressedAt; //上次点击时间
 
   //双击返回
-  static Future<bool> exitBy2Click({int duration = 1000}) async {
+  static Future<bool> exitBy2Click({int duration = 1000, ScaffoldState status}) async {
+    if (status != null && status.isDrawerOpen) {
+      return true;
+    }
+
     if (_lastPressedAt == null ||
         DateTime.now().difference(_lastPressedAt) >
             Duration(milliseconds: duration)) {

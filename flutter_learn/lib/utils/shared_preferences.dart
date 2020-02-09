@@ -1,62 +1,50 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SPUtils {
-
-  /// 单例对象
-  static SPUtils _instance;
-  SharedPreferences _spf;
   /// 内部构造方法，可避免外部暴露构造函数，进行实例化
   SPUtils._internal();
 
-  /// 工厂构造方法，这里使用命名构造函数方式进行声明
-  factory SPUtils.getInstance() => _getInstance();
+  static SharedPreferences _spf;
 
-  /// 获取单例内部方法
-  static _getInstance() {
-    // 只能有一个实例
-    if (_instance == null) {
-      _instance = SPUtils._internal();
+  static Future<SharedPreferences> init() async {
+    if (_spf == null) {
+      _spf = await SharedPreferences.getInstance();
     }
-    return _instance;
+    return _spf;
   }
 
-  Future init() async {
-    _spf = await SharedPreferences.getInstance();
-  }
-
-  bool _beforeCheck() {
-    return _spf == null;
-  }
-
-
-  String getString(String key) {
-    if (_beforeCheck()) return null;
+  static String getString(String key) {
     return _spf.getString(key);
   }
 
-  Future < bool > putString(String key, String value) {
-    if (_beforeCheck()) return null;
+  static Future<bool> putString(String key, String value) {
     return _spf.setString(key, value);
   }
 
-  bool getBool(String key) {
-    if (_beforeCheck()) return null;
+  static bool getBool(String key) {
     return _spf.getBool(key);
   }
 
-  Future < bool > putBool(String key, bool value) {
-    if (_beforeCheck()) return null;
+  static Future<bool> putBool(String key, bool value) {
     return _spf.setBool(key, value);
   }
 
-  int getInt(String key) {
-    if (_beforeCheck()) return null;
+  static int getInt(String key) {
     return _spf.getInt(key);
   }
 
-  Future < bool > putInt(String key, int value) {
-    if (_beforeCheck()) return null;
+  static Future<bool> putInt(String key, int value) {
     return _spf.setInt(key, value);
   }
 
+  static Future<bool> saveThemeColorIndex(int value) {
+    return _spf.setInt('key_theme_color', value);
+  }
+
+  static int getThemeColorIndex() {
+    if (_spf.containsKey('key_theme_color')) {
+      return _spf.getInt('key_theme_color');
+    }
+    return 0;
+  }
 }

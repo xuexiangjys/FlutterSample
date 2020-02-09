@@ -16,14 +16,14 @@ import 'package:provider/provider.dart';
 class NormalApp {
   //运行app
   static void run() {
-    runApp(Store.init(MyApp()));
+    WidgetsFlutterBinding.ensureInitialized();
+    SPUtils.init().then((value) => runApp(Store.init(MyApp())));
     initApp();
   }
 
   //程序初始化操作
   static void initApp() {
     XRouter.init();
-    SPUtils.getInstance().init();
     SQLHelper.init();
     XPush.init();
     Bugly.init();
@@ -51,8 +51,8 @@ class MyApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: <Locale>[
-            Locale("en", ""),
             Locale("zh", "CN"),
+            Locale("en", "US"),
           ]);
     });
   }

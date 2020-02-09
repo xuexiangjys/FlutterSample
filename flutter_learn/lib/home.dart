@@ -4,6 +4,7 @@ import 'package:flutter_learn/utils/click.dart';
 import 'package:flutter_learn/utils/provider.dart';
 import 'package:flutter_learn/utils/xupdate.dart';
 import 'package:flutter_learn/view/gridview_page.dart';
+import 'package:flutter_learn/view/home/home_drawer.dart';
 
 class MainHomePage extends StatefulWidget {
   MainHomePage({Key key}) : super(key: key);
@@ -42,35 +43,13 @@ class _MainHomePageState extends State<MainHomePage>
     super.dispose();
   }
 
-  void showColorDialog() {
-    showDialog(
-      context: context,
-      barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return Dialog(
-            child: Container(
-          height: 300,
-          child: ListView.builder(
-            itemCount: AppTheme.materialColors.length,
-            itemBuilder: (context, index) {
-              return GestureDetector(
-                  onTap: () {
-                    Store.value<AppTheme>(context).changeColor(index);
-                    Navigator.of(context).pop();
-                  },
-                  child: Container(
-                      color: AppTheme.materialColors[index], height: 40));
-            },
-          ),
-        ));
-      },
-    );
-  }
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
         child: Scaffold(
+          key: _scaffoldKey,
           appBar: AppBar(
             title: Text(widget.title),
             bottom: TabBar(
@@ -78,21 +57,16 @@ class _MainHomePageState extends State<MainHomePage>
               tabs: mTabs,
             ),
           ),
+          drawer: HomeDrawer(),
           body: TabBarView(
             controller: _tabController,
             children: mTabViews.map((Widget widget) {
               return widget;
             }).toList(),
           ),
-          floatingActionButton: Builder(builder: (context) {
-            return FloatingActionButton(
-              onPressed: showColorDialog,
-              tooltip: '换肤',
-              child: Icon(Icons.color_lens),
-            );
-          }),
         ),
         //监听导航栏返回,类似onKeyEvent
-        onWillPop: ClickUtils.exitBy2Click);
+        onWillPop: () =>
+            ClickUtils.exitBy2Click(status: _scaffoldKey.currentState));
   }
 }
