@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:battery/battery.dart';
-import 'package:camera/camera.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -63,9 +62,6 @@ class Utils {
     };
   }
 
-  //===============camera================//
+  static String timestamp() => DateTime.now().millisecondsSinceEpoch.toString();
 
-  static Future<List<CameraDescription>> getAvailableCameras() {
-    return availableCameras();
-  }
 }

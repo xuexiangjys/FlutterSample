@@ -4,13 +4,14 @@ import 'package:flutter_learn/router/route.dart';
 //右进右出动画
 class SlidePageRoute extends PageRouteBuilder {
   final String routeName;
+  final Widget widget;
 
-  SlidePageRoute(this.routeName)
+  SlidePageRoute({this.routeName, this.widget})
       : super(
             transitionDuration: const Duration(milliseconds: 500),
             pageBuilder: (BuildContext context, Animation<double> animation1,
                 Animation<double> animation2) {
-              return RouteMap.routes[routeName](context);
+              return widget != null ? widget : RouteMap.routes[routeName](context);
             },
             transitionsBuilder: (BuildContext context,
                 Animation<double> animation1,

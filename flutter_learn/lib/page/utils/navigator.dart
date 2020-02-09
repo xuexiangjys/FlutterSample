@@ -57,7 +57,7 @@ class _NavigatorPageState extends State<NavigatorPage> {
                       child: Text('路由动画'),
                       color: Colors.blue,
                       onPressed: () =>
-                          {Navigator.push(context, SlidePageRoute("/empty"))},
+                          {Navigator.push(context, SlidePageRoute(routeName: "/empty"))},
                     ),
                     RaisedButton(
                       child: Text('fluro跳转'),

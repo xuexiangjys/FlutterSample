@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/page/utils/camera_complex.dart';
 import 'package:flutter_learn/router/switch_animation.dart';
 import 'package:flutter_learn/view/web_view_page.dart';
 
@@ -22,7 +23,11 @@ class XRouter {
   }
 
   static void goto(BuildContext context, String pageName) {
-    Navigator.push(context, SlidePageRoute(pageName));
+    Navigator.push(context, SlidePageRoute(routeName: pageName));
+  }
+
+  static void gotoWidget(BuildContext context, Widget widget) {
+    Navigator.push(context, SlidePageRoute(widget: widget));
   }
 }
 

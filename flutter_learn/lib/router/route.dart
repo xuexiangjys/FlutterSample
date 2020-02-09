@@ -13,7 +13,7 @@ import 'package:flutter_learn/page/expand/swiper.dart';
 import 'package:flutter_learn/page/expand/web.dart';
 import 'package:flutter_learn/page/utils/battery.dart';
 import 'package:flutter_learn/page/utils/bugly.dart';
-import 'package:flutter_learn/page/utils/camera.dart';
+import 'package:flutter_learn/page/utils/camera_simple.dart';
 import 'package:flutter_learn/page/utils/device_info.dart';
 import 'package:flutter_learn/page/utils/event_bus.dart';
 import 'package:flutter_learn/page/utils/jpush.dart';
