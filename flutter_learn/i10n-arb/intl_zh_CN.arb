@@ -29,5 +29,20 @@
   "@auto": {
     "type": "text",
     "placeholders": {}
+  },
+  "widget": "组件",
+  "@widget": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "utils": "工具",
+  "@utils": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "expand": "拓展",
+  "@expand": {
+    "type": "text",
+    "placeholders": {}
   }
 }

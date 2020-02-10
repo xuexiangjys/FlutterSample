@@ -14,11 +14,11 @@ class MainHomePage extends StatefulWidget {
 
 class _MainHomePageState extends State<MainHomePage>
     with SingleTickerProviderStateMixin {
-  final List<Tab> mTabs = <Tab>[
-    Tab(text: '组件'),
-    Tab(text: '工具'),
-    Tab(text: '拓展')
-  ];
+  List<Tab> getTabs(BuildContext context) => [
+        Tab(text: Languages.of(context).widget),
+        Tab(text: Languages.of(context).utils),
+        Tab(text: Languages.of(context).expand)
+      ];
 
   final List<Widget> mTabViews = <Widget>[
     GridViewPage(items: RouteMap.widgetItems),
@@ -31,7 +31,7 @@ class _MainHomePageState extends State<MainHomePage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, length: mTabs.length);
+    _tabController = TabController(vsync: this, length: 3);
 
     XUpdate.initAndCheck();
   }
@@ -53,7 +53,7 @@ class _MainHomePageState extends State<MainHomePage>
             title: Text(Languages.of(context).title),
             bottom: TabBar(
               controller: _tabController,
-              tabs: mTabs,
+              tabs: getTabs(context),
             ),
           ),
           drawer: HomeDrawer(),

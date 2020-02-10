@@ -24,8 +24,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "auto" : MessageLookupByLibrary.simpleMessage("Auto"),
     "chinese" : MessageLookupByLibrary.simpleMessage("Chinese"),
     "english" : MessageLookupByLibrary.simpleMessage("English"),
+    "expand" : MessageLookupByLibrary.simpleMessage("Expand"),
     "language" : MessageLookupByLibrary.simpleMessage("Language"),
     "theme" : MessageLookupByLibrary.simpleMessage("Theme"),
-    "title" : MessageLookupByLibrary.simpleMessage("Flutter Learn")
+    "title" : MessageLookupByLibrary.simpleMessage("Flutter Learn"),
+    "utils" : MessageLookupByLibrary.simpleMessage("Utils"),
+    "widget" : MessageLookupByLibrary.simpleMessage("Widget")
   };
 }

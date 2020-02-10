@@ -30,6 +30,12 @@ class Languages {
 
   String get auto => Intl.message('Auto', name: 'auto');
 
+  String get widget => Intl.message('Widget', name: 'widget');
+
+  String get utils => Intl.message('Utils', name: 'utils');
+
+  String get expand => Intl.message('Expand', name: 'expand');
+
 }
 
 //Locale代理类
