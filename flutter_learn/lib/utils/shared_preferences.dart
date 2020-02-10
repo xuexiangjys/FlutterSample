@@ -47,4 +47,14 @@ class SPUtils {
     }
     return 0;
   }
+
+  static Future<bool> saveLocale(String locale) {
+    return _spf.setString('key_locale', locale);
+  }
+
+  static String getLocale() {
+    return _spf.getString('key_locale');
+  }
+
+  
 }

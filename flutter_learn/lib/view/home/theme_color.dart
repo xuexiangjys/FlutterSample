@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/i10n/localization_intl.dart';
 import 'package:flutter_learn/utils/provider.dart';
 
 class ThemeColorPage extends StatefulWidget {
-  final String title = '主题';
   @override
   _ThemeColorPageState createState() => _ThemeColorPageState();
 }
@@ -11,7 +11,7 @@ class _ThemeColorPageState extends State<ThemeColorPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(title: Text(Languages.of(context).theme)),
       body: GridView.builder(
         padding: const EdgeInsets.all(10),
         itemCount: AppTheme.materialColors.length,

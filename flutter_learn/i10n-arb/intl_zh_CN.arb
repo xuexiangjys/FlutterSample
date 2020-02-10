@@ -1,0 +1,33 @@
+{
+  "@@last_modified": "2020-02-10T11:12:16.038734",
+  "title": "Flutter学习",
+  "@title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "theme": "主题",
+  "@theme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "language": "语言",
+  "@language": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chinese": "简体中文",
+  "@chinese": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "english": "英语",
+  "@english": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "auto": "系统默认",
+  "@auto": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

@@ -98,6 +98,9 @@ class _BasicRefreshPageState extends State<BasicRefreshPage> {
             onRefresh: _enableRefresh
                 ? () async {
                     await Future.delayed(Duration(seconds: 2), () {
+                      if (!mounted) {
+                        return;
+                      }
                       setState(() {
                         _count = 20;
                       });
@@ -111,6 +114,9 @@ class _BasicRefreshPageState extends State<BasicRefreshPage> {
             onLoad: _enableLoad
                 ? () async {
                     await Future.delayed(Duration(seconds: 2), () {
+                      if (!mounted) {
+                        return;
+                      }
                       setState(() {
                         _count += 20;
                       });
@@ -233,7 +239,7 @@ class _BasicRefreshPageState extends State<BasicRefreshPage> {
                 // 无限加载
                 ListItem(
                   title: "无限加载",
-                  describe: "滑动到底部自动触发加载",
+                  describe: "滑动到底部自动���发加载",
                   rightWidget: Center(
                     child: Switch(
                       value: _enableInfiniteLoad,

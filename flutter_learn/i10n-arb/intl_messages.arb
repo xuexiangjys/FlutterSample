@@ -1,0 +1,33 @@
+{
+  "@@last_modified": "2020-02-10T16:00:54.318036",
+  "title": "Flutter Learn",
+  "@title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "theme": "Theme",
+  "@theme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "language": "Language",
+  "@language": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chinese": "Chinese",
+  "@chinese": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "english": "English",
+  "@english": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "auto": "Auto",
+  "@auto": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

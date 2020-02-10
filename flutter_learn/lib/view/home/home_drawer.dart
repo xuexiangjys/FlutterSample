@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/router/router.dart';
+import 'package:flutter_learn/view/home/language.dart';
+import 'package:flutter_learn/i10n/localization_intl.dart';
 import 'package:flutter_learn/view/home/theme_color.dart';
 
 class HomeDrawer extends StatelessWidget {
@@ -29,7 +31,7 @@ class HomeDrawer extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Flutter学习",
+                    Languages.of(context).title,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -52,15 +54,13 @@ class HomeDrawer extends StatelessWidget {
               children: <Widget>[
                 ListTile(
                   leading: Icon(Icons.color_lens),
-                  title: Text('主题'),
-                  onTap: () => {
-                    XRouter.gotoWidget(context, ThemeColorPage())
-                  },
+                  title: Text(Languages.of(context).theme),
+                  onTap: () => {XRouter.gotoWidget(context, ThemeColorPage())},
                 ),
                 ListTile(
                   leading: Icon(Icons.language),
-                  title: Text('语言'),
-                  onTap: () => {},
+                  title: Text(Languages.of(context).language),
+                  onTap: () => {XRouter.gotoWidget(context, LanguagePage())},
                 ),
               ],
             ),
