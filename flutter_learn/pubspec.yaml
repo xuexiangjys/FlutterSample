@@ -52,10 +52,7 @@ dependencies:
   video_player: ^0.10.6
   camera: ^0.5.7+3
   path_provider: ^1.6.0
-  flutter_xupdate:
-    git:
-      url: git://github.com/xuexiangjys/flutter_xupdate.git
-      ref: master
+  flutter_xupdate: ^0.0.1
   
 dev_dependencies:
   flutter_test:
