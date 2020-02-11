@@ -6,8 +6,8 @@ import 'package:flutter_learn/router/switch_animation.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class NavigatorPage extends StatefulWidget {
-  NavigatorPage({Key key}) : super(key: key);
-  final String title = "页面路由";
+  NavigatorPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _NavigatorPageState createState() => _NavigatorPageState();
 }

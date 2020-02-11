@@ -5,8 +5,7 @@ import 'package:flutter_learn/utils/random.dart';
 import 'package:provider/provider.dart';
 
 class ProviderNextPage extends StatefulWidget {
-  ProviderNextPage({this.title = "下一页", Key key}) : super(key: key);
-
+  ProviderNextPage(this.title, {Key key}) : super(key: key);
   final String title;
 
   @override

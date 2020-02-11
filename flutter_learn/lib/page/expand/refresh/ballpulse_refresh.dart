@@ -10,8 +10,7 @@ import 'package:flutter_learn/view/list/sample_list_item.dart';
 class BallPulseRefreshPage extends StatefulWidget {
   /// 标题
   final String title;
-  const BallPulseRefreshPage({this.title = "球脉冲样式", Key key})
-      : super(key: key);
+  const BallPulseRefreshPage(this.title, {Key key}) : super(key: key);
 
   @override
   _BallPulseRefreshPageState createState() {

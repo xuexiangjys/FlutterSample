@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ImagePickerPage extends StatefulWidget {
-  ImagePickerPage({this.title = "图片选择", Key key}) : super(key: key);
+  ImagePickerPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _ImagePickerPageState createState() => _ImagePickerPageState();

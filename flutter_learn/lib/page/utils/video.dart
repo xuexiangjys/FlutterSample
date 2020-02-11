@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoPlayerPage extends StatefulWidget {
-  final String title = '视屏播放';
+  final String title;
+  VideoPlayerPage(this.title, {Key key}) : super(key: key);
+
   @override
   _VideoPlayerPageState createState() => _VideoPlayerPageState();
 }

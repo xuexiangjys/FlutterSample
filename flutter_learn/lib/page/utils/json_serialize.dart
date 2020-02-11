@@ -8,7 +8,7 @@ import 'package:flutter_learn/model/sql/app_info.dart';
 * 2.使用在线生成工具: https://javiercbk.github.io/json_to_dart/
 */
 class JsonSerializePage extends StatefulWidget {
-  JsonSerializePage({this.title = "Json序列化", Key key}) : super(key: key);
+  JsonSerializePage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _JsonSerializePageState createState() => _JsonSerializePageState();

@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/xuifont.dart';
 
 class IconFontPage extends StatefulWidget {
-  IconFontPage({this.title = "字体图标", Key key}) : super(key: key);
-
+  IconFontPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _IconFontPageState createState() => _IconFontPageState();
 }

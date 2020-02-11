@@ -70,6 +70,41 @@ class Languages {
   String get combinationWidget => Intl.message('CombinationWidget', name: 'combinationWidget');
   String get drawingWidget => Intl.message('DrawingWidget', name: 'drawingWidget');
 
+  String get battery => Intl.message('Battery', name: 'battery');
+  String get bugly => Intl.message('Bugly', name: 'bugly');
+  String get complexCamera => Intl.message('ComplexCamera', name: 'complexCamera');
+  String get camera => Intl.message('Camera', name: 'camera');
+  String get deviceInfo => Intl.message('DeviceInfo', name: 'deviceInfo');
+  String get eventBus => Intl.message('EventBus', name: 'eventBus');
+  String get jpush => Intl.message('JPush', name: 'jpush');
+  String get jsonSerialize => Intl.message('JsonSerialize', name: 'jsonSerialize');
+  String get mmkv => Intl.message('MMKV', name: 'mmkv');
+  String get navigator => Intl.message('Navigator', name: 'navigator');
+  String get netRequest => Intl.message('NetRequest', name: 'netRequest');
+  String get packageInfo => Intl.message('PackageInfo', name: 'packageInfo');
+  String get filePath => Intl.message('FilePath', name: 'filePath');
+  String get providerNext => Intl.message('ProviderNext', name: 'providerNext');
+  String get provider => Intl.message('Provider', name: 'provider');
+  String get share => Intl.message('Share', name: 'share');
+  String get sharedPreferences => Intl.message('SharedPreferences', name: 'sharedPreferences');
+  String get sqlite => Intl.message('Sqlite', name: 'sqlite');
+  String get toast => Intl.message('Toast', name: 'toast');
+  String get url => Intl.message('Url', name: 'url');
+  String get videoPlayer => Intl.message('VideoPlayer', name: 'videoPlayer');
+
+  String get datePicker => Intl.message('DatePicker', name: 'datePicker');
+  String get iconFont => Intl.message('IconFont', name: 'iconFont');
+  String get imagePicker => Intl.message('ImagePicker', name: 'imagePicker');
+  String get multiImagePicker => Intl.message('MultiImagePicker', name: 'multiImagePicker');
+  String get spinkit => Intl.message('Spinkit', name: 'spinkit');
+  String get swiper => Intl.message('Swiper', name: 'swiper');
+  String get web => Intl.message('Web', name: 'web');
+  String get easyRefresh => Intl.message('EasyRefresh', name: 'easyRefresh');
+  String get ballPulseRefresh => Intl.message('BallPulseRefresh', name: 'ballPulseRefresh');
+  String get basicRefresh => Intl.message('BasicRefresh', name: 'basicRefresh');
+  String get materialRefresh => Intl.message('MaterialRefresh', name: 'materialRefresh');
+  String get userProfile => Intl.message('UserProfile', name: 'userProfile');
+
 }
 
 //Locale代理类

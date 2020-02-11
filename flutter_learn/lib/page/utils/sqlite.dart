@@ -5,8 +5,8 @@ import 'package:flutter_learn/model/sql/user_info.dart';
 import 'package:flutter_learn/utils/random.dart';
 
 class SqlitePage extends StatefulWidget {
-  SqlitePage({Key key}) : super(key: key);
-  final String title = "Sqlite数据库";
+  SqlitePage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _SqlitePageState createState() => _SqlitePageState();
 }

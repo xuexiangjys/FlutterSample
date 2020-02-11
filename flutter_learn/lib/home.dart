@@ -22,8 +22,8 @@ class _MainHomePageState extends State<MainHomePage>
 
   List<Widget> getTabViews(BuildContext context) => <Widget>[
         GridViewPage(items: RouteMap.getWidgetItems(context)),
-        GridViewPage(items: RouteMap.utilsItems),
-        GridViewPage(items: RouteMap.expandItems),
+        GridViewPage(items: RouteMap.getUtilsItems(context)),
+        GridViewPage(items: RouteMap.getExpandItems(context)),
       ];
 
   TabController _tabController;

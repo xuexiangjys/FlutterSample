@@ -3,8 +3,8 @@ import 'package:flutter_learn/utils/toast.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class ToastPage extends StatefulWidget {
-  ToastPage({Key key}) : super(key: key);
-  final String title = "Toast使用";
+  ToastPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _ToastPageState createState() => _ToastPageState();
 }

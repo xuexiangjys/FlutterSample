@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/http.dart';
 
 class NetRequestPage extends StatefulWidget {
-  NetRequestPage({Key key}) : super(key: key);
-  final String title = "网络请求";
+  NetRequestPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _NetRequestPageState createState() => _NetRequestPageState();
 }

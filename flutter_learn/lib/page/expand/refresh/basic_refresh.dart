@@ -9,8 +9,7 @@ import 'package:flutter_learn/view/list/sample_list_item.dart';
 class BasicRefreshPage extends StatefulWidget {
   /// 标题
   final String title;
-
-  const BasicRefreshPage({this.title = "基本使用", Key key}) : super(key: key);
+  const BasicRefreshPage(this.title, {Key key}) : super(key: key);
 
   @override
   _BasicRefreshPageState createState() => _BasicRefreshPageState();

@@ -8,7 +8,9 @@ import 'package:path_provider/path_provider.dart';
 import 'package:video_player/video_player.dart';
 
 class ComplexCameraPage extends StatefulWidget {
-  final String title = '复杂照相机';
+  final String title;
+  ComplexCameraPage(this.title, {Key key}) : super(key: key);
+
   @override
   _ComplexCameraState createState() => _ComplexCameraState();
 }

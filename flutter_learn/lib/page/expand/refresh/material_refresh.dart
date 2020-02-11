@@ -10,8 +10,7 @@ import 'package:flutter_learn/view/list/sample_list_item.dart';
 class MaterialRefreshPage extends StatefulWidget {
   /// 标题
   final String title;
-  const MaterialRefreshPage({this.title = "Material Design风格", Key key})
-      : super(key: key);
+  const MaterialRefreshPage(this.title, {Key key}) : super(key: key);
 
   @override
   _MaterialPageState createState() {

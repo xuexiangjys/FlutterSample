@@ -3,10 +3,8 @@ import 'package:flutter_learn/utils/event.dart';
 import 'package:flutter_learn/utils/random.dart';
 
 class EventBusPage extends StatefulWidget {
-  EventBusPage({this.title = "EventBus", Key key}) : super(key: key);
-
+  EventBusPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _EventBusPageState createState() => _EventBusPageState();
 }

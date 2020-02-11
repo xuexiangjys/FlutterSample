@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
 class SharePage extends StatefulWidget {
-  final String title = '分享';
+  final String title;
+  SharePage(this.title, {Key key}) : super(key: key);
   @override
   _SharePageState createState() => _SharePageState();
 }

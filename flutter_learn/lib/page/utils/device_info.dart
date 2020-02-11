@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/device.dart';
 
 class DeviceInfoPage extends StatefulWidget {
-  DeviceInfoPage({this.title = "设备信息", Key key}) : super(key: key);
   final String title;
+  DeviceInfoPage(this.title, {Key key}) : super(key: key);
   @override
   _DeviceInfoPageState createState() => _DeviceInfoPageState();
 }
 
 class _DeviceInfoPageState extends State<DeviceInfoPage> {
-  
   Map<String, dynamic> _deviceData = <String, dynamic>{};
 
   @override

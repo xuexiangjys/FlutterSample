@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/i10n/localization_intl.dart';
 import 'package:flutter_learn/page/utils/camera_complex.dart';
 import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/utils/camera.dart';
@@ -10,13 +11,13 @@ import 'package:flutter_learn/utils/toast.dart';
 import 'package:flutter_learn/utils/utils.dart';
 
 class CameraPage extends StatefulWidget {
-  final String title = '照相机';
+  final String title;
+  CameraPage(this.title, {Key key}) : super(key: key);
   @override
   _CameraPageState createState() => _CameraPageState();
 }
 
 class _CameraPageState extends State<CameraPage> {
-
   CameraController _controller;
   String _imageFilePath = '';
 
@@ -49,7 +50,8 @@ class _CameraPageState extends State<CameraPage> {
             IconButton(
                 icon: Icon(Icons.view_compact),
                 onPressed: () {
-                  XRouter.gotoWidget(context, ComplexCameraPage());
+                  XRouter.gotoWidget(context,
+                      ComplexCameraPage(Languages.of(context).complexCamera));
                 }),
           ],
         ),

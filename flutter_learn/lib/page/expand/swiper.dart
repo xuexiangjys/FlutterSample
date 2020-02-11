@@ -5,10 +5,8 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
 
 class SwiperPage extends StatefulWidget {
-  SwiperPage({this.title = "轮播图", Key key}) : super(key: key);
-
+  SwiperPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _SwiperPageState createState() => _SwiperPageState();
 }

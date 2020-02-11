@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
 
 class MultiImagePickerPage extends StatefulWidget {
-  MultiImagePickerPage({this.title = "多图片选择器", Key key}) : super(key: key);
-
+  MultiImagePickerPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _MultiImagePickerPageState createState() => _MultiImagePickerPageState();
 }

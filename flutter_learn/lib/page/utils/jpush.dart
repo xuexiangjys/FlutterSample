@@ -6,10 +6,8 @@ import 'package:flutter_learn/utils/push.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class JPushPage extends StatefulWidget {
-  JPushPage({this.title = "极光推送", Key key}) : super(key: key);
-
+  JPushPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _JPushPageState createState() => _JPushPageState();
 }

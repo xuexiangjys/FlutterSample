@@ -249,5 +249,170 @@
   "@drawingWidget": {
     "type": "text",
     "placeholders": {}
+  },
+  "battery": "电量",
+  "@battery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bugly": "Bugly应用统计",
+  "@bugly": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "complexCamera": "复杂照相机",
+  "@complexCamera": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "camera": "照相机",
+  "@camera": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deviceInfo": "设备信息",
+  "@deviceInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "eventBus": "事件总线",
+  "@eventBus": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "jpush": "极光推送",
+  "@jpush": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "jsonSerialize": "Json序列化",
+  "@jsonSerialize": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "mmkv": "MMKV使用",
+  "@mmkv": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "navigator": "路由导航",
+  "@navigator": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "netRequest": "网络请求",
+  "@netRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "packageInfo": "应用包信息",
+  "@packageInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "filePath": "文件路径",
+  "@filePath": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "providerNext": "下一页",
+  "@providerNext": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "provider": "数据共享",
+  "@provider": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "share": "分享",
+  "@share": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sharedPreferences": "SharedPreferences",
+  "@sharedPreferences": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sqlite": "数据库",
+  "@sqlite": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "toast": "Toast使用",
+  "@toast": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "url": "链接",
+  "@url": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "videoPlayer": "视频播放",
+  "@videoPlayer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "datePicker": "时间选择器",
+  "@datePicker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "iconFont": "字体图标",
+  "@iconFont": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "imagePicker": "图片选择",
+  "@imagePicker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "multiImagePicker": "多图片选择器",
+  "@multiImagePicker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "spinkit": "loading动画",
+  "@spinkit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "swiper": "轮播图",
+  "@swiper": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "web": "网页加载",
+  "@web": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "easyRefresh": "下拉刷新",
+  "@easyRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ballPulseRefresh": "球脉冲样式",
+  "@ballPulseRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "basicRefresh": "基本刷新使用",
+  "@basicRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialRefresh": "Material Design风格",
+  "@materialRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "userProfile": "个人中心",
+  "@userProfile": {
+    "type": "text",
+    "placeholders": {}
   }
 }

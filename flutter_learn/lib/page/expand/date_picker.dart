@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
 class DatePickerPage extends StatefulWidget {
-  DatePickerPage({this.title = "时间选择器", Key key}) : super(key: key);
+  DatePickerPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _DatePickerPageState createState() => _DatePickerPageState();

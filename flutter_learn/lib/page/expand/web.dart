@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/view/web_view_page.dart';
 
 class WebPage extends StatefulWidget {
-  WebPage({Key key}) : super(key: key);
-  final String title = "网页加载";
+  WebPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _WebPageState createState() => _WebPageState();
 }

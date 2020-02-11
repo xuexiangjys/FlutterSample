@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/utils.dart';
 
 class UrlPage extends StatefulWidget {
-  final String title = '链接处理';
+  final String title;
+  UrlPage(this.title, {Key key}) : super(key: key);
+
   @override
   _UrlPageState createState() => _UrlPageState();
 }

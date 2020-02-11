@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/shared_preferences.dart';
 
 class SharedPreferencesPage extends StatefulWidget {
-  SharedPreferencesPage({Key key}) : super(key: key);
-  final String title = "SharedPreferences使用";
+  SharedPreferencesPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _SharedPreferencesPageState createState() => _SharedPreferencesPageState();
 }

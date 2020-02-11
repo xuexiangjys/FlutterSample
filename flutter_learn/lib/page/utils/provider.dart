@@ -5,7 +5,7 @@ import 'package:flutter_learn/utils/random.dart';
 import 'package:provider/provider.dart';
 
 class ProviderPage extends StatefulWidget {
-  ProviderPage({this.title = "数据共享", Key key}) : super(key: key);
+  ProviderPage(this.title, {Key key}) : super(key: key);
 
   final String title;
 

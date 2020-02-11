@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-11T16:31:20.187503",
+  "@@last_modified": "2020-02-11T20:02:37.853326",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -247,6 +247,171 @@
   },
   "drawingWidget": "DrawingWidget",
   "@drawingWidget": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "battery": "Battery",
+  "@battery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bugly": "Bugly",
+  "@bugly": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "complexCamera": "ComplexCamera",
+  "@complexCamera": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "camera": "Camera",
+  "@camera": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deviceInfo": "DeviceInfo",
+  "@deviceInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "eventBus": "EventBus",
+  "@eventBus": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "jpush": "JPush",
+  "@jpush": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "jsonSerialize": "JsonSerialize",
+  "@jsonSerialize": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "mmkv": "MMKV",
+  "@mmkv": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "navigator": "Navigator",
+  "@navigator": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "netRequest": "NetRequest",
+  "@netRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "packageInfo": "PackageInfo",
+  "@packageInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "filePath": "FilePath",
+  "@filePath": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "providerNext": "ProviderNext",
+  "@providerNext": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "provider": "Provider",
+  "@provider": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "share": "Share",
+  "@share": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sharedPreferences": "SharedPreferences",
+  "@sharedPreferences": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sqlite": "Sqlite",
+  "@sqlite": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "toast": "Toast",
+  "@toast": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "url": "Url",
+  "@url": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "videoPlayer": "VideoPlayer",
+  "@videoPlayer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "datePicker": "DatePicker",
+  "@datePicker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "iconFont": "IconFont",
+  "@iconFont": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "imagePicker": "ImagePicker",
+  "@imagePicker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "multiImagePicker": "MultiImagePicker",
+  "@multiImagePicker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "spinkit": "Spinkit",
+  "@spinkit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "swiper": "Swiper",
+  "@swiper": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "web": "Web",
+  "@web": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "easyRefresh": "EasyRefresh",
+  "@easyRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ballPulseRefresh": "BallPulseRefresh",
+  "@ballPulseRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "basicRefresh": "BasicRefresh",
+  "@basicRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialRefresh": "MaterialRefresh",
+  "@materialRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "userProfile": "UserProfile",
+  "@userProfile": {
     "type": "text",
     "placeholders": {}
   }

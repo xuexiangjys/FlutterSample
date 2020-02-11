@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/utils.dart';
 
 class BatteryPage extends StatefulWidget {
-  final String title = '电量';
+  final String title;
+  BatteryPage(this.title, {Key key}) : super(key: key);
   @override
   _BatteryPageState createState() => _BatteryPageState();
 }

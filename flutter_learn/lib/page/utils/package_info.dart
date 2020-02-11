@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/utils.dart';
 
 class PackageInfoPage extends StatefulWidget {
-  final String title = '包信息';
+  final String title;
+  PackageInfoPage(this.title, {Key key}) : super(key: key);
   @override
   _PackageInfoPageState createState() => _PackageInfoPageState();
 }

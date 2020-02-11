@@ -3,10 +3,8 @@ import 'package:flutter_learn/utils/bugly.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class BuglyPage extends StatefulWidget {
-  BuglyPage({this.title = "Bugly功能展示", Key key}) : super(key: key);
-
+  BuglyPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _BuglyPageState createState() => _BuglyPageState();
 }

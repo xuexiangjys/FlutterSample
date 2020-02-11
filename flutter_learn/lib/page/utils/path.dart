@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/path.dart';
 
 class FilePathPage extends StatefulWidget {
-  final String title = '文件路径';
+  final String title;
+  FilePathPage(this.title, {Key key}) : super(key: key);
   @override
   _FilePathPageState createState() => _FilePathPageState();
 }

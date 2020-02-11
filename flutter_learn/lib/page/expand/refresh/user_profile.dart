@@ -7,7 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 class UserProfilePage extends StatefulWidget {
   /// 标题
   final String title;
-  const UserProfilePage({this.title = "个人中心", Key key}) : super(key: key);
+  const UserProfilePage(this.title, {Key key}) : super(key: key);
 
   @override
   _UserProfilePageState createState() => _UserProfilePageState();
