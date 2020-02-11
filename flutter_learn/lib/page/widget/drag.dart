@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DragPage extends StatefulWidget {
-  DragPage({this.title = "拖拽动作", Key key}) : super(key: key);
-
+  DragPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _DragPageState createState() => _DragPageState();
 }

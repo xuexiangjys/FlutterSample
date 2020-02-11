@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LinearLayoutPage extends StatefulWidget {
-  LinearLayoutPage({this.title = "线性布局", Key key}) : super(key: key);
+  LinearLayoutPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _LinearLayoutPageState createState() => _LinearLayoutPageState();

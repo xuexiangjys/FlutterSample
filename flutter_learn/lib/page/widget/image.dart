@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ImagePage extends StatefulWidget {
-  ImagePage({Key key}) : super(key: key);
-  final String title = "图片";
+  ImagePage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _ImagePageState createState() => _ImagePageState();
 }

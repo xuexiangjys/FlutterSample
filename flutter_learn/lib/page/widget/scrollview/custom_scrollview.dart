@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomScrollViewPage extends StatefulWidget {
-  CustomScrollViewPage({this.title = "自定义滚动模型", Key key}) : super(key: key);
+  CustomScrollViewPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _CustomScrollViewPageState createState() => _CustomScrollViewPageState();

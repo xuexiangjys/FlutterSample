@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AlignLayoutPage extends StatefulWidget {
-  AlignLayoutPage({this.title = "定位布局", Key key}) : super(key: key);
+  AlignLayoutPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _AlignLayoutPageState createState() => _AlignLayoutPageState();

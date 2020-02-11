@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BasicAnimationPage extends StatefulWidget {
-  BasicAnimationPage({this.title = "动画", Key key}) : super(key: key);
+  BasicAnimationPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _AnimationPageState createState() => _AnimationPageState();

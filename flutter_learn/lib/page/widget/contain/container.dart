@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ContainerPage extends StatefulWidget {
-  ContainerPage({this.title = "万能的Container容器", Key key}) : super(key: key);
+  ContainerPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _ContainerPageState createState() => _ContainerPageState();

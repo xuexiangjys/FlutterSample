@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class InputPage extends StatefulWidget {
-  InputPage({this.title = "输入框", Key key}) : super(key: key);
+  InputPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _InputPageState createState() => _InputPageState();

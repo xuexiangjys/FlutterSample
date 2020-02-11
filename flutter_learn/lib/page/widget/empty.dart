@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class EmptyPage extends StatefulWidget {
-  EmptyPage({this.title = "空页面", Key key}) : super(key: key);
+  EmptyPage({this.title, Key key}) : super(key: key);
 
   final String title;
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ScrollControllerPage extends StatefulWidget {
-  ScrollControllerPage({this.title = "滚动控制", Key key}) : super(key: key);
+  ScrollControllerPage(this.title, { Key key}) : super(key: key);
   final String title;
   @override
   _ScrollControllerPageState createState() => _ScrollControllerPageState();

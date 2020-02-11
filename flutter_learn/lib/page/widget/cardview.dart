@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class CardViewPage extends StatefulWidget {
-  CardViewPage({this.title = "卡片", Key key}) : super(key: key);
-
+  CardViewPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _CardViewPageState createState() => _CardViewPageState();
 }

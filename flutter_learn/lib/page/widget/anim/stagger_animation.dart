@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class StaggerAnimationPage extends StatefulWidget {
-  StaggerAnimationPage({this.title = "交织动画", Key key}) : super(key: key);
+  StaggerAnimationPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _StaggerAnimationPageState createState() => _StaggerAnimationPageState();

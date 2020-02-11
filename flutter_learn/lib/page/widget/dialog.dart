@@ -4,8 +4,8 @@ import 'package:flutter_learn/view/loading_dialog.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class DialogPage extends StatefulWidget {
-  DialogPage({Key key}) : super(key: key);
-  final String title = "对话框";
+  DialogPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _DialogPageState createState() => _DialogPageState();
 }

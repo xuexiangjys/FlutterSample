@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 class WrapLayoutPage extends StatefulWidget {
-  WrapLayoutPage({this.title = "流式布局", Key key}) : super(key: key);
-
+  WrapLayoutPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _WrapLayoutPageState createState() => _WrapLayoutPageState();
 }

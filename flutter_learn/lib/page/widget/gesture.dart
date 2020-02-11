@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 //手势动作
 class GesturePage extends StatefulWidget {
-  GesturePage({this.title = "手势动作", Key key}) : super(key: key);
+  GesturePage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _GesturePageState createState() => _GesturePageState();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ConstrainedBoxPage extends StatefulWidget {
-  ConstrainedBoxPage({this.title = "尺寸限制类容器", Key key}) : super(key: key);
+  ConstrainedBoxPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _ConstrainedBoxPageState createState() => _ConstrainedBoxPageState();

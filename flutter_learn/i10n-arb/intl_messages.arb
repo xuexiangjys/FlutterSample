@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-10T16:41:19.132563",
+  "@@last_modified": "2020-02-11T16:31:20.187503",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -42,6 +42,211 @@
   },
   "expand": "Expand",
   "@expand": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appBar": "AppBar",
+  "@appBar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bottomNavigationBar": "BottomNavigationBar",
+  "@bottomNavigationBar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "button": "Button",
+  "@button": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cardView": "CardView",
+  "@cardView": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "control": "Control",
+  "@control": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dialog": "Dialog",
+  "@dialog": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "drag": "Drag",
+  "@drag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "drawer": "Drawer",
+  "@drawer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "emptyPage": "EmptyPage",
+  "@emptyPage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "form": "Form",
+  "@form": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "futureBuilder": "FutureBuilder",
+  "@futureBuilder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "gesture": "Gesture",
+  "@gesture": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "image": "Image",
+  "@image": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "input": "Input",
+  "@input": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notification": "Notification",
+  "@notification": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "progress": "Progress",
+  "@progress": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "tab": "Tab",
+  "@tab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "text": "Text",
+  "@text": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrollView": "ScrollView",
+  "@scrollView": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "customScrollView": "CustomScrollView",
+  "@customScrollView": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nestedScrollView": "NestedScrollView",
+  "@nestedScrollView": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrollController": "ScrollController",
+  "@scrollController": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "layout": "Layout",
+  "@layout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "alignLayout": "AlignLayout",
+  "@alignLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flexLayout": "FlexLayout",
+  "@flexLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "linearLayout": "LinearLayout",
+  "@linearLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "stackLayout": "StackLayout",
+  "@stackLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "wrapLayout": "WrapLayout",
+  "@wrapLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "containerPage": "Container",
+  "@containerPage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "constrainedBox": "ConstrainedBox",
+  "@constrainedBox": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "container": "Container",
+  "@container": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "decoratedBox": "DecoratedBox",
+  "@decoratedBox": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "transform": "Transform",
+  "@transform": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "clip": "Clip",
+  "@clip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "animation": "Animation",
+  "@animation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "basicAnimation": "BasicAnimation",
+  "@basicAnimation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "staggerAnimation": "StaggerAnimation",
+  "@staggerAnimation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "transitionAnimations": "TransitionAnimations",
+  "@transitionAnimations": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "customWidget": "CustomWidget",
+  "@customWidget": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "combinationWidget": "CombinationWidget",
+  "@combinationWidget": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "drawingWidget": "DrawingWidget",
+  "@drawingWidget": {
     "type": "text",
     "placeholders": {}
   }

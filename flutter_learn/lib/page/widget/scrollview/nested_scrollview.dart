@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NestedScrollViewPage extends StatefulWidget {
-  NestedScrollViewPage({Key key}) : super(key: key);
-  final String title = "NestedScrollView";
+  NestedScrollViewPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _NestedScrollViewPageState createState() => _NestedScrollViewPageState();
 }

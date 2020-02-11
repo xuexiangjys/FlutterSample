@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TransitionAnimationsPage extends StatefulWidget {
-  TransitionAnimationsPage({this.title = "动画过渡组件", Key key}) : super(key: key);
-
+  TransitionAnimationsPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _TransitionAnimationsPageState createState() =>
       _TransitionAnimationsPageState();

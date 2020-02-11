@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProgressPage extends StatefulWidget {
-  ProgressPage({this.title = "进度条", Key key}) : super(key: key);
-
+  ProgressPage(this.title, {Key key}) : super(key: key);
   final String title;
-
   @override
   _ProgressPageState createState() => _ProgressPageState();
 }

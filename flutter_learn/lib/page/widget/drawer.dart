@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class DrawerPage extends StatefulWidget {
-  DrawerPage({Key key}) : super(key: key);
-  final String title = "侧滑菜单";
+  DrawerPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _DrawerPageState createState() => _DrawerPageState();
 }

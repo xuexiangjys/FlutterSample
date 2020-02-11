@@ -4,7 +4,7 @@ import 'package:flutter_learn/view/loading_dialog.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class FormPage extends StatefulWidget {
-  FormPage({this.title = "表单", Key key}) : super(key: key);
+  FormPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _FormPageState createState() => _FormPageState();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ClipPage extends StatefulWidget {
-  ClipPage({this.title = "控件裁剪", Key key}) : super(key: key);
+  ClipPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _ClipPageState createState() => _ClipPageState();

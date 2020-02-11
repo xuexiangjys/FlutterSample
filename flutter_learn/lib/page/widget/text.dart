@@ -5,8 +5,8 @@ import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class TextPage extends StatefulWidget {
-  TextPage({Key key}) : super(key: key);
-  final String title = "文字";
+  TextPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _TextPageState createState() => _TextPageState();
 }

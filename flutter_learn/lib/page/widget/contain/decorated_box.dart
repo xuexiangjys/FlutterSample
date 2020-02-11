@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DecoratedBoxPage extends StatefulWidget {
-  DecoratedBoxPage({this.title = "装饰容器", Key key}) : super(key: key);
+  DecoratedBoxPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _DecoratedBoxPageState createState() => _DecoratedBoxPageState();

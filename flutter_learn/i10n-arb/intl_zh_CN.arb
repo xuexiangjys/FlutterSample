@@ -44,5 +44,210 @@
   "@expand": {
     "type": "text",
     "placeholders": {}
+  },
+  "appBar": "标题栏",
+  "@appBar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bottomNavigationBar": "底部导航栏",
+  "@bottomNavigationBar": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "button": "按钮",
+  "@button": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cardView": "卡片",
+  "@cardView": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "control": "控制开关",
+  "@control": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dialog": "对话框",
+  "@dialog": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "drag": "拖拽动作",
+  "@drag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "drawer": "侧滑菜单",
+  "@drawer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "emptyPage": "空页面",
+  "@emptyPage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "form": "表单",
+  "@form": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "futureBuilder": "异步UI更新",
+  "@futureBuilder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "gesture": "手势动作",
+  "@gesture": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "image": "图片",
+  "@image": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "input": "输入框",
+  "@input": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notification": "冒泡通知",
+  "@notification": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "progress": "进度条",
+  "@progress": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "tab": "选项卡",
+  "@tab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "text": "文字",
+  "@text": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrollView": "列表滚动",
+  "@scrollView": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "customScrollView": "自定义滚动模型",
+  "@customScrollView": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nestedScrollView": "嵌套滚动联动",
+  "@nestedScrollView": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scrollController": "滚动控制",
+  "@scrollController": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "layout": "布局演示",
+  "@layout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "alignLayout": "定位布局",
+  "@alignLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "flexLayout": "弹性布局",
+  "@flexLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "linearLayout": "线性布局",
+  "@linearLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "stackLayout": "层叠布局",
+  "@stackLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "wrapLayout": "流式布局",
+  "@wrapLayout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "containerPage": "容器演示",
+  "@containerPage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "constrainedBox": "尺寸限制类容器",
+  "@constrainedBox": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "container": "万能的Container容器",
+  "@container": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "decoratedBox": "装饰容器",
+  "@decoratedBox": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "transform": "控件变换",
+  "@transform": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "clip": "控件裁剪",
+  "@clip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "animation": "动画",
+  "@animation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "basicAnimation": "基础动画",
+  "@basicAnimation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "staggerAnimation": "交织动画",
+  "@staggerAnimation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "transitionAnimations": "动画过渡组件",
+  "@transitionAnimations": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "customWidget": "自定义组件",
+  "@customWidget": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "combinationWidget": "组合组件",
+  "@combinationWidget": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "drawingWidget": "自绘组件",
+  "@drawingWidget": {
+    "type": "text",
+    "placeholders": {}
   }
 }

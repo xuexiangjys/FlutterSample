@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class ButtonPage extends StatefulWidget {
-  ButtonPage({Key key}) : super(key: key);
-  final String title = "按钮";
+  ButtonPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _ButtonPageState createState() => _ButtonPageState();
 }

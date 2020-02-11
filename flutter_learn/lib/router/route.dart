@@ -69,60 +69,62 @@ import 'package:flutter_learn/page/widget/tab.dart';
 import 'package:flutter_learn/page/widget/text.dart';
 import 'package:flutter_learn/view/listview_page.dart';
 import 'package:flutter_learn/view/simple_list_page.dart';
+import 'package:flutter_learn/i10n/localization_intl.dart';
 
 class RouteMap {
   static final routes = <String, WidgetBuilder>{
     '/home': (BuildContext context) => MainHomePage(),
-    '/empty': (BuildContext context) => EmptyPage(),
+    '/empty': (BuildContext context) => EmptyPage(title: Languages.of(context).emptyPage),
+
 
     //============================widget=================================//
 
-    '/widget/appbar': (BuildContext context) => AppBarPage(),
-    '/widget/button': (BuildContext context) => ButtonPage(),
-    '/widget/control': (BuildContext context) => ControlPage(),
-    '/widget/text': (BuildContext context) => TextPage(),
-    '/widget/input': (BuildContext context) => InputPage(),
-    '/widget/form': (BuildContext context) => FormPage(),
-    '/widget/image': (BuildContext context) => ImagePage(),
-    '/widget/tab': (BuildContext context) => TabPage(),
-    '/widget/navigation': (BuildContext context) => BottomNavigationBarPage(),
-    '/widget/dialog': (BuildContext context) => DialogPage(),
-    '/widget/drawer': (BuildContext context) => DrawerPage(),
-    '/widget/progress': (BuildContext context) => ProgressPage(),
-    '/widget/cardview': (BuildContext context) => CardViewPage(),
-    '/widget/gesture': (BuildContext context) => GesturePage(),
-    '/widget/drag': (BuildContext context) => DragPage(),
-    '/widget/future_builder': (BuildContext context) => FutureBuilderPage(),
+    '/widget/appbar': (BuildContext context) => AppBarPage(Languages.of(context).appBar),
+    '/widget/button': (BuildContext context) => ButtonPage(Languages.of(context).button),
+    '/widget/bottom_navigation_bar': (BuildContext context) => BottomNavigationBarPage(Languages.of(context).bottomNavigationBar),
+    '/widget/cardview': (BuildContext context) => CardViewPage(Languages.of(context).cardView),
+    '/widget/control': (BuildContext context) => ControlPage(Languages.of(context).control),
+    '/widget/text': (BuildContext context) => TextPage(Languages.of(context).text),
+    '/widget/input': (BuildContext context) => InputPage(Languages.of(context).input),
+    '/widget/form': (BuildContext context) => FormPage(Languages.of(context).form),
+    '/widget/image': (BuildContext context) => ImagePage(Languages.of(context).image),
+    '/widget/tab': (BuildContext context) => TabPage(Languages.of(context).tab),
+    '/widget/dialog': (BuildContext context) => DialogPage(Languages.of(context).dialog),
+    '/widget/drawer': (BuildContext context) => DrawerPage(Languages.of(context).drawer),
+    '/widget/progress': (BuildContext context) => ProgressPage(Languages.of(context).progress),
+    '/widget/gesture': (BuildContext context) => GesturePage(Languages.of(context).gesture),
+    '/widget/drag': (BuildContext context) => DragPage(Languages.of(context).drag),
+    '/widget/future_builder': (BuildContext context) => FutureBuilderPage(Languages.of(context).futureBuilder),
+    '/widget/notification': (BuildContext context) => NotificationPage(Languages.of(context).notification),
 
-    '/widget/scrollview': (BuildContext context) => SimpleListPage("列表滚动", scrollViewItems),
-    '/widget/nested_scrollview': (BuildContext context) => NestedScrollViewPage(),
-    '/widget/custom_scrollview': (BuildContext context) => CustomScrollViewPage(),
-    '/widget/scroll_controller': (BuildContext context) => ScrollControllerPage(),
+    '/widget/scrollview': (BuildContext context) => SimpleListPage(Languages.of(context).scrollView, scrollViewItems(context)),
+    '/widget/nested_scrollview': (BuildContext context) => NestedScrollViewPage(Languages.of(context).nestedScrollView),
+    '/widget/custom_scrollview': (BuildContext context) => CustomScrollViewPage(Languages.of(context).customScrollView),
+    '/widget/scroll_controller': (BuildContext context) => ScrollControllerPage(Languages.of(context).scrollController),
 
-    '/widget/layout': (BuildContext context) => SimpleListPage("布局演示", layoutItems),
-    '/widget/layout_linear': (BuildContext context) => LinearLayoutPage(),
-    '/widget/layout_flex': (BuildContext context) => FlexLayoutPage(),
-    '/widget/layout_wrap': (BuildContext context) => WrapLayoutPage(),
-    '/widget/layout_stack': (BuildContext context) => StackLayoutPage(),
-    '/widget/layout_align': (BuildContext context) => AlignLayoutPage(),
+    '/widget/layout': (BuildContext context) => SimpleListPage(Languages.of(context).layout, layoutItems(context)),
+    '/widget/layout_linear': (BuildContext context) => LinearLayoutPage(Languages.of(context).linearLayout),
+    '/widget/layout_flex': (BuildContext context) => FlexLayoutPage(Languages.of(context).flexLayout),
+    '/widget/layout_wrap': (BuildContext context) => WrapLayoutPage(Languages.of(context).wrapLayout),
+    '/widget/layout_stack': (BuildContext context) => StackLayoutPage(Languages.of(context).stackLayout),
+    '/widget/layout_align': (BuildContext context) => AlignLayoutPage(Languages.of(context).alignLayout),
     
-    '/widget/contain': (BuildContext context) => SimpleListPage("容器演示", containerItems),
-    '/widget/constrained_box': (BuildContext context) => ConstrainedBoxPage(),
-    '/widget/decorated_box': (BuildContext context) => DecoratedBoxPage(),
-    '/widget/transform': (BuildContext context) => TransformPage(),
-    '/widget/container': (BuildContext context) => ContainerPage(),
-    '/widget/clip': (BuildContext context) => ClipPage(),
+    '/widget/contain': (BuildContext context) => SimpleListPage(Languages.of(context).containerPage, containerItems(context)),
+    '/widget/constrained_box': (BuildContext context) => ConstrainedBoxPage(Languages.of(context).constrainedBox),
+    '/widget/decorated_box': (BuildContext context) => DecoratedBoxPage(Languages.of(context).decoratedBox),
+    '/widget/transform': (BuildContext context) => TransformPage(Languages.of(context).transform),
+    '/widget/container': (BuildContext context) => ContainerPage(Languages.of(context).container),
+    '/widget/clip': (BuildContext context) => ClipPage(Languages.of(context).clip),
 
-    '/widget/animation': (BuildContext context) => SimpleListPage("动画", animItems),
-    '/widget/basic_animation': (BuildContext context) => BasicAnimationPage(),
-    '/widget/stagger_animation': (BuildContext context) => StaggerAnimationPage(),
-    '/widget/transition_animations': (BuildContext context) => TransitionAnimationsPage(),
+    '/widget/animation': (BuildContext context) => SimpleListPage(Languages.of(context).animation, animItems(context)),
+    '/widget/basic_animation': (BuildContext context) => BasicAnimationPage(Languages.of(context).basicAnimation),
+    '/widget/stagger_animation': (BuildContext context) => StaggerAnimationPage(Languages.of(context).staggerAnimation),
+    '/widget/transition_animations': (BuildContext context) => TransitionAnimationsPage(Languages.of(context).transitionAnimations),
 
-    '/widget/custom_widget': (BuildContext context) => SimpleListPage("自定义组件", customWidgetItems),
-    '/widget/combination_widget': (BuildContext context) => CombinationWidgetPage(),
-    '/widget/drawing_widget': (BuildContext context) => DrawingWidgetPage(),
+    '/widget/custom_widget': (BuildContext context) => SimpleListPage(Languages.of(context).customWidget, customWidgetItems(context)),
+    '/widget/combination_widget': (BuildContext context) => CombinationWidgetPage(Languages.of(context).combinationWidget),
+    '/widget/drawing_widget': (BuildContext context) => DrawingWidgetPage(Languages.of(context).drawingWidget),
 
-    '/widget/notification': (BuildContext context) => NotificationPage(),
 
     //============================utils=================================//
 
@@ -168,29 +170,29 @@ class RouteMap {
   };
 
   ///组件
-  static final List<ListItem> widgetItems = [
-    ListItem(Icons.title, "标题", "简单的标题使用", '/widget/appbar'),
-    ListItem(Icons.radio_button_checked, "按钮", "简单的按钮使用", '/widget/button'),
-    ListItem(Icons.check_box, "控制开关", "简单的控制组件使用", '/widget/control'),
-    ListItem(Icons.text_fields, "文字", "简单的文字使用", '/widget/text'),
-    ListItem(Icons.input, "输入框", "简单的输入框使用", '/widget/input'),
-    ListItem(Icons.input, "表单输入", "简单的表单使用", '/widget/form'),
-    ListItem(Icons.image, "图片", "简单的图片使用", '/widget/image'),
-    ListItem(Icons.tab, "选项卡", "简单的选项卡使用", '/widget/tab'),
-    ListItem(Icons.navigation, "底部导航栏", "简单的底部导航栏使用", '/widget/navigation'),
-    ListItem(Icons.notifications, "对话框", "简单的对话框使用", '/widget/dialog'),
-    ListItem(Icons.menu, "侧滑菜单", "简单侧滑菜单的使用", '/widget/drawer'),
-    ListItem(Icons.refresh, "进度条显示", "简单的进度条使用", '/widget/progress'),
-    ListItem(Icons.credit_card, "卡片", "简单的卡片使用", '/widget/cardview'),
-    ListItem(Icons.gesture, "手势动作", "单击、双击、长按、缩放等手势动作", '/widget/gesture'),
-    ListItem(Icons.gesture, "拖拽动作", "简单的拖拽动作", '/widget/drag'),
-    ListItem(Icons.sync, "异步UI更新", "对于一些耗时数据的加载展示可以使用FutureBuilder构建", '/widget/future_builder'),
-    ListItem(Icons.list, "列表滚动", "嵌套滚动、自定义滚动、滚动控制和滚动监听", '/widget/scrollview'),
-    ListItem(Icons.layers, "布局演示", "线性布局、弹性布局、流式布局、框架布局和定位布局", '/widget/layout'),
-    ListItem(Icons.check_box_outline_blank, "容器演示", "尺寸限制容器、装饰容器、控件变换、万能容器和控件裁剪", '/widget/contain'),
-    ListItem(Icons.brightness_auto, "动画", "基础动画、交织(复杂)动画和动画过渡组件等", '/widget/animation'),
-    ListItem(Icons.notifications, "冒泡通知", "通知（Notification）是Flutter中一个重要的机制，在widget树中，每一个节点都可以分发通知，通知会沿着当前节点向上传递，所有父节点都可以通过NotificationListener来监听通知。", '/widget/notification'),
-    ListItem(Icons.widgets, "自定义组件", "自定义组件的三个方法: 通过组合其它组件、自绘和实现RenderObject", '/widget/custom_widget'),
+  static List<ListItem> getWidgetItems(BuildContext context) => [
+    ListItem(Icons.title, Languages.of(context).appBar, "简单的标题使用", '/widget/appbar'),
+    ListItem(Icons.radio_button_checked, Languages.of(context).button, "简单的按钮使用", '/widget/button'),
+    ListItem(Icons.navigation, Languages.of(context).bottomNavigationBar, "简单的底部导航栏使用", '/widget/bottom_navigation_bar'),
+    ListItem(Icons.check_box, Languages.of(context).control, "简单的控制组件使用", '/widget/control'),
+    ListItem(Icons.text_fields, Languages.of(context).text, "简单的文字使用", '/widget/text'),
+    ListItem(Icons.input, Languages.of(context).input, "简单的输入框使用", '/widget/input'),
+    ListItem(Icons.input, Languages.of(context).form, "简单的表单使用", '/widget/form'),
+    ListItem(Icons.image, Languages.of(context).image, "简单的图片使用", '/widget/image'),
+    ListItem(Icons.tab, Languages.of(context).tab, "简单的选项卡使用", '/widget/tab'),
+    ListItem(Icons.notifications, Languages.of(context).dialog, "简单的对话框使用", '/widget/dialog'),
+    ListItem(Icons.menu, Languages.of(context).drawer, "简单侧滑菜单的使用", '/widget/drawer'),
+    ListItem(Icons.refresh, Languages.of(context).progress, "简单的进度条使用", '/widget/progress'),
+    ListItem(Icons.credit_card, Languages.of(context).cardView, "简单的卡片使用", '/widget/cardview'),
+    ListItem(Icons.gesture, Languages.of(context).gesture, "单击、双击、长按、缩放等手势动作", '/widget/gesture'),
+    ListItem(Icons.gesture, Languages.of(context).drag, "简单的拖拽动作", '/widget/drag'),
+    ListItem(Icons.sync, Languages.of(context).futureBuilder, "对于一些耗时数据的加载展示可以使用FutureBuilder构建", '/widget/future_builder'),
+    ListItem(Icons.notifications, Languages.of(context).notification, "通知（Notification）是Flutter中一个重要的机制，在widget树中，每一个节点都可以分发通知，通知会沿着当前节点向上传递，所有父节点都可以通过NotificationListener来监听通知。", '/widget/notification'),
+    ListItem(Icons.list, Languages.of(context).scrollView, "嵌套滚动、自定义滚动、滚动控制和滚动监听", '/widget/scrollview'),
+    ListItem(Icons.layers, Languages.of(context).layout, "线性布局、弹性布局、流式布局、框架布局和定位布局", '/widget/layout'),
+    ListItem(Icons.check_box_outline_blank, Languages.of(context).containerPage, "尺寸限制容器、装饰容器、控件变换、万能容器和控件裁剪", '/widget/contain'),
+    ListItem(Icons.brightness_auto, Languages.of(context).animation, "基础动画、交织(复杂)动画和动画过渡组件等", '/widget/animation'),
+    ListItem(Icons.widgets, Languages.of(context).customWidget, "自定义组件的三个方法: 通过组合其它组件、自绘和实现RenderObject", '/widget/custom_widget'),
   ];
 
   ///工具
@@ -229,41 +231,41 @@ class RouteMap {
   ];
 
    ///列表滚动演示
-  static final List<ListItem> scrollViewItems = [
-    ListItem(Icons.list, "NestedScrollView", "嵌套滚动联动的使用", '/widget/nested_scrollview'),
-    ListItem(Icons.list, "CustomScrollView", "自定义滚动模型", '/widget/custom_scrollview'),
-    ListItem(Icons.list, "ScrollController", "滚动控制、滚动监听", '/widget/scroll_controller'),
+  static List<ListItem> scrollViewItems (BuildContext context) =>  [
+    ListItem(Icons.list, Languages.of(context).nestedScrollView, "嵌套滚动联动的使用", '/widget/nested_scrollview'),
+    ListItem(Icons.list, Languages.of(context).customScrollView, "自定义滚动模型", '/widget/custom_scrollview'),
+    ListItem(Icons.list, Languages.of(context).scrollController, "滚动控制、滚动监听", '/widget/scroll_controller'),
   ];
 
   ///布局演示
-  static final List<ListItem> layoutItems = [
-    ListItem(Icons.layers, "线性布局", "Flutter中通过Row和Column来实现线性布局，类似于Android中的LinearLayout控件", '/widget/layout_linear'),
-    ListItem(Icons.layers, "弹性(权重)布局", "Flutter中的弹性布局主要通过Flex和Expanded来配合实现", '/widget/layout_flex'),
-    ListItem(Icons.layers, "流式布局", "Flutter中通过Wrap和Flow来支持流式布局", '/widget/layout_wrap'),
-    ListItem(Icons.layers, "层叠(框架)布局", "类似于Android中的FrameLayout布局，子组件可以根据距父容器四个角的位置来确定自身的位置。", '/widget/layout_stack'),
-    ListItem(Icons.layers, "定位布局", "Flutter中只想简单的调整一个子元素在父元素中的位置,只需使用Align即可.", '/widget/layout_align'),
+  static List<ListItem> layoutItems (BuildContext context) => [
+    ListItem(Icons.layers, Languages.of(context).linearLayout, "Flutter中通过Row和Column来实现线性布局，类似于Android中的LinearLayout控件", '/widget/layout_linear'),
+    ListItem(Icons.layers, Languages.of(context).flexLayout, "Flutter中的弹性布局主要通过Flex和Expanded来配合实现", '/widget/layout_flex'),
+    ListItem(Icons.layers, Languages.of(context).wrapLayout, "Flutter中通过Wrap和Flow来支持流式布局", '/widget/layout_wrap'),
+    ListItem(Icons.layers, Languages.of(context).stackLayout, "类似于Android中的FrameLayout布局，子组件可以根据距父容器四个角的位置来确定自身的位置。", '/widget/layout_stack'),
+    ListItem(Icons.layers, Languages.of(context).alignLayout, "Flutter中只想简单的调整一个子元素在父元素中的位置,只需使用Align即可.", '/widget/layout_align'),
   ];
 
   ///容器演示
-  static final List<ListItem> containerItems = [
-    ListItem(Icons.check_box_outline_blank, "尺寸限制类容器", "尺寸限制类容器用于限制容器大小，Flutter中提供了多种这样的容器，如ConstrainedBox、SizedBox、UnconstrainedBox、AspectRatio等", '/widget/constrained_box'),
-    ListItem(Icons.check_box_outline_blank, "装饰容器", "可以在其子组件绘制前(或后)绘制一些装饰（Decoration），如背景、边框、渐变等", '/widget/decorated_box'),
-    ListItem(Icons.transform, "控件变换", "Transform可以在其子组件绘制时对其应用一些矩阵变换来实现一些特效.", '/widget/transform'),
-    ListItem(Icons.check_box_outline_blank, "万能的Container容器", "Container是一个组合类容器，它是DecoratedBox、ConstrainedBox、Transform、Padding、Align等组件组合的一个多功能容器.", '/widget/container'),
-    ListItem(Icons.content_cut, "控件裁剪", "Flutter中提供了ClipOval(圆形)、ClipRRect(圆角矩形)和ClipRect(矩形).", '/widget/clip'),
+  static List<ListItem> containerItems (BuildContext context) =>  [
+    ListItem(Icons.check_box_outline_blank, Languages.of(context).constrainedBox, "尺寸限制类容器用于限制容器大小，Flutter中提供了多种这样的容器，如ConstrainedBox、SizedBox、UnconstrainedBox、AspectRatio等", '/widget/constrained_box'),
+    ListItem(Icons.check_box_outline_blank, Languages.of(context).decoratedBox, "可以在其子组件绘制前(或后)绘制一些装饰（Decoration），如背景、边框、渐变等", '/widget/decorated_box'),
+    ListItem(Icons.transform, Languages.of(context).transform, "Transform可以在其子组件绘制时对其应用一些矩阵变换来实现一些特效.", '/widget/transform'),
+    ListItem(Icons.check_box_outline_blank, Languages.of(context).container, "Container是一个组合类容器，它是DecoratedBox、ConstrainedBox、Transform、Padding、Align等组件组合的一个多功能容器.", '/widget/container'),
+    ListItem(Icons.content_cut, Languages.of(context).clip, "Flutter中提供了ClipOval(圆形)、ClipRRect(圆角矩形)和ClipRect(矩形).", '/widget/clip'),
   ];
 
   ///动画演示
-  static final List<ListItem> animItems = [
-    ListItem(Icons.brightness_auto, "基础动画", "使用AnimatedBuilder构建动画。", '/widget/basic_animation'),
-    ListItem(Icons.brightness_auto, "交织(复杂)动画", "由一个动画序列或重叠的动画组成的复杂动画", '/widget/stagger_animation'),
-    ListItem(Icons.brightness_auto, "动画过渡组件", "动画过渡组件在Widget属性发生变化时会执行过渡动画", '/widget/transition_animations'),
+  static List<ListItem> animItems (BuildContext context) => [
+    ListItem(Icons.brightness_auto, Languages.of(context).basicAnimation, "使用AnimatedBuilder构建动画。", '/widget/basic_animation'),
+    ListItem(Icons.brightness_auto, Languages.of(context).staggerAnimation, "由一个动画序列或重叠的动画组成的复杂动画", '/widget/stagger_animation'),
+    ListItem(Icons.brightness_auto, Languages.of(context).transitionAnimations, "动画过渡组件在Widget属性发生变化时会执行过渡动画", '/widget/transition_animations'),
   ];
 
   ///自定义组件演示
-  static final List<ListItem> customWidgetItems = [
-    ListItem(Icons.widgets, "组合组件", "通过组合其它组件完成封装", '/widget/combination_widget'),
-    ListItem(Icons.widgets, "自绘组件", "在Flutter中，提供了一个CustomPaint 组件，它可以结合画笔CustomPainter来实现自定义图形绘制。", '/widget/drawing_widget'),
+  static List<ListItem> customWidgetItems (BuildContext context) => [
+    ListItem(Icons.widgets, Languages.of(context).combinationWidget, "通过组合其它组件完成封装", '/widget/combination_widget'),
+    ListItem(Icons.widgets, Languages.of(context).drawingWidget, "在Flutter中，提供了一个CustomPaint 组件，它可以结合画笔CustomPainter来实现自定义图形绘制。", '/widget/drawing_widget'),
   ];
 
 

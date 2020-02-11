@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/random.dart';
 
 class ControlPage extends StatefulWidget {
-  ControlPage({this.title = "控制开关", Key key}) : super(key: key);
+  ControlPage(this.title, {Key key}) : super(key: key);
 
   final String title;
 

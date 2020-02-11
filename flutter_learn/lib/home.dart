@@ -20,11 +20,11 @@ class _MainHomePageState extends State<MainHomePage>
         Tab(text: Languages.of(context).expand)
       ];
 
-  final List<Widget> mTabViews = <Widget>[
-    GridViewPage(items: RouteMap.widgetItems),
-    GridViewPage(items: RouteMap.utilsItems),
-    GridViewPage(items: RouteMap.expandItems),
-  ];
+  List<Widget> getTabViews(BuildContext context) => <Widget>[
+        GridViewPage(items: RouteMap.getWidgetItems(context)),
+        GridViewPage(items: RouteMap.utilsItems),
+        GridViewPage(items: RouteMap.expandItems),
+      ];
 
   TabController _tabController;
 
@@ -59,7 +59,7 @@ class _MainHomePageState extends State<MainHomePage>
           drawer: HomeDrawer(),
           body: TabBarView(
             controller: _tabController,
-            children: mTabViews.map((Widget widget) {
+            children: getTabViews(context).map((Widget widget) {
               return widget;
             }).toList(),
           ),

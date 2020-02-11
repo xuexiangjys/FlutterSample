@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
 class CombinationWidgetPage extends StatefulWidget {
-  CombinationWidgetPage({this.title = "组合组件", Key key}) : super(key: key);
+  CombinationWidgetPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _CombinationWidgetPageState createState() => _CombinationWidgetPageState();

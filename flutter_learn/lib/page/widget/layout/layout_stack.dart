@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class StackLayoutPage extends StatefulWidget {
-  StackLayoutPage({this.title = "层叠布局", Key key}) : super(key: key);
+  StackLayoutPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _StackLayoutPageState createState() => _StackLayoutPageState();

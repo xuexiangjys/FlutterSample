@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TabPage extends StatefulWidget {
-  TabPage({Key key}) : super(key: key);
-  final String title = "选项卡";
+  TabPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _TabPageState createState() => _TabPageState();
 }

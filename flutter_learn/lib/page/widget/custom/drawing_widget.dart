@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class DrawingWidgetPage extends StatefulWidget {
-  DrawingWidgetPage({this.title = "自绘组件", Key key}) : super(key: key);
+  DrawingWidgetPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _DrawingWidgetPageState createState() => _DrawingWidgetPageState();

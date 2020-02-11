@@ -3,7 +3,7 @@ import 'dart:math' as math;
 
 ///Transform的变换是应用在绘制阶段，而并不是应用在布局(layout)阶段，所以无论对子组件应用何种变化，其占用空间的大小和在屏幕上的位置都是固定不变的，因为这些是在布局阶段就确定的。
 class TransformPage extends StatefulWidget {
-  TransformPage({this.title = "控件变换", Key key}) : super(key: key);
+  TransformPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _TransformPageState createState() => _TransformPageState();

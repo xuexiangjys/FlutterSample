@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BottomNavigationBarPage extends StatefulWidget {
-  BottomNavigationBarPage({Key key}) : super(key: key);
-  final String title = "底部导航栏";
+  BottomNavigationBarPage(this.title, {Key key}) : super(key: key);
+  final String title;
   @override
   _BottomNavigationBarPageState createState() =>
       _BottomNavigationBarPageState();

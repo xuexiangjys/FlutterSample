@@ -3,8 +3,8 @@ import 'package:flutter_learn/utils/toast.dart';
 import 'package:flutter_learn/view/titlebar.dart';
 
 class AppBarPage extends StatefulWidget {
-  AppBarPage({Key key}) : super(key: key);
-  final String title = "标题栏";
+  final String title;
+  AppBarPage(this.title, {key}) : super(key: key);
   @override
   _AppBarPageState createState() => _AppBarPageState();
 }
@@ -24,10 +24,8 @@ class _AppBarPageState extends State<AppBarPage> {
               }),
           PopupMenuButton<String>(
               itemBuilder: (BuildContext context) => <PopupMenuItem<String>>[
-                    PopupMenuItem<String>(
-                        value: "about", child: Text('关于')),
-                    PopupMenuItem<String>(
-                        value: "setting", child: Text('设置')),
+                    PopupMenuItem<String>(value: "about", child: Text('关于')),
+                    PopupMenuItem<String>(value: "setting", child: Text('设置')),
                   ],
               onSelected: (String action) {
                 switch (action) {
@@ -45,9 +43,7 @@ class _AppBarPageState extends State<AppBarPage> {
           padding: const EdgeInsets.only(top: 10),
           child: ListView(
             scrollDirection: Axis.vertical, // 水平listView
-            children: <Widget>[
-              TitleBar.backAppbar(context, '个人资料')
-            ],
+            children: <Widget>[TitleBar.backAppbar(context, '个人资料')],
           )),
     );
   }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FlexLayoutPage extends StatefulWidget {
-  FlexLayoutPage({this.title = "弹性布局", Key key}) : super(key: key);
-
+  FlexLayoutPage(this.title, {Key key}) : super(key: key);
   final String title;
 
   @override

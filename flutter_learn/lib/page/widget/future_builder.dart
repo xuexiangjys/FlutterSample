@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FutureBuilderPage extends StatefulWidget {
-  FutureBuilderPage({this.title = "异步UI更新", Key key}) : super(key: key);
+  FutureBuilderPage(this.title, {Key key}) : super(key: key);
   final String title;
   @override
   _FutureBuilderPageState createState() => _FutureBuilderPageState();
