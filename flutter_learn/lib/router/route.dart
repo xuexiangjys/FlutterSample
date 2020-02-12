@@ -53,7 +53,9 @@ import 'package:flutter_learn/page/widget/empty.dart';
 import 'package:flutter_learn/page/widget/form.dart';
 import 'package:flutter_learn/page/widget/future_builder.dart';
 import 'package:flutter_learn/page/widget/gesture.dart';
-import 'package:flutter_learn/page/widget/image.dart';
+import 'package:flutter_learn/page/widget/image/cached_network_image.dart';
+import 'package:flutter_learn/page/widget/image/image.dart';
+import 'package:flutter_learn/page/widget/image/image_zoom.dart';
 import 'package:flutter_learn/page/widget/input.dart';
 import 'package:flutter_learn/page/widget/layout/layout_align.dart';
 import 'package:flutter_learn/page/widget/layout/layout_flex.dart';
@@ -87,7 +89,6 @@ class RouteMap {
     '/widget/text': (BuildContext context) => TextPage(Languages.of(context).text),
     '/widget/input': (BuildContext context) => InputPage(Languages.of(context).input),
     '/widget/form': (BuildContext context) => FormPage(Languages.of(context).form),
-    '/widget/image': (BuildContext context) => ImagePage(Languages.of(context).image),
     '/widget/tab': (BuildContext context) => TabPage(Languages.of(context).tab),
     '/widget/dialog': (BuildContext context) => DialogPage(Languages.of(context).dialog),
     '/widget/drawer': (BuildContext context) => DrawerPage(Languages.of(context).drawer),
@@ -96,6 +97,11 @@ class RouteMap {
     '/widget/drag': (BuildContext context) => DragPage(Languages.of(context).drag),
     '/widget/future_builder': (BuildContext context) => FutureBuilderPage(Languages.of(context).futureBuilder),
     '/widget/notification': (BuildContext context) => NotificationPage(Languages.of(context).notification),
+
+    '/widget/image': (BuildContext context) => SimpleListPage(Languages.of(context).image, imageItems(context)),
+    '/widget/image/image': (BuildContext context) => ImagePage(Languages.of(context).image),
+    '/widget/image/cached_network_image': (BuildContext context) => CachedNetWorkImagePage(Languages.of(context).cachedNetWorkImage),
+    '/widget/image/zoom': (BuildContext context) => ImageZoomPage(Languages.of(context).imageZoom),
 
     '/widget/scrollview': (BuildContext context) => SimpleListPage(Languages.of(context).scrollView, scrollViewItems(context)),
     '/widget/scrollview/nested_scrollview': (BuildContext context) => NestedScrollViewPage(Languages.of(context).nestedScrollView),
@@ -176,7 +182,7 @@ class RouteMap {
     ListItem(Icons.text_fields, Languages.of(context).text, "简单的文字使用", '/widget/text'),
     ListItem(Icons.input, Languages.of(context).input, "简单的输入框使用", '/widget/input'),
     ListItem(Icons.input, Languages.of(context).form, "简单的表单使用", '/widget/form'),
-    ListItem(Icons.image, Languages.of(context).image, "简单的图片使用", '/widget/image'),
+    ListItem(Icons.image, Languages.of(context).image, "图片使用", '/widget/image'),
     ListItem(Icons.tab, Languages.of(context).tab, "简单的选项卡使用", '/widget/tab'),
     ListItem(Icons.notifications, Languages.of(context).dialog, "简单的对话框使用", '/widget/dialog'),
     ListItem(Icons.menu, Languages.of(context).drawer, "简单侧滑菜单的使用", '/widget/drawer'),
@@ -228,7 +234,14 @@ class RouteMap {
     ListItem(Icons.system_update, Languages.of(context).easyRefresh, "使用EasyRefresh构建丰富的下拉刷新样式", '/expand/easy_refresh'),
   ];
 
-   ///列表滚动演示
+  ///图片演示
+  static List<ListItem> imageItems (BuildContext context) =>  [
+    ListItem(Icons.image, Languages.of(context).image, "简单的图片使用", '/widget/image/image'),
+    ListItem(Icons.image, Languages.of(context).cachedNetWorkImage, "网络图片加载, 可设置placeholder和errorWidget", '/widget/image/cached_network_image'),
+    ListItem(Icons.image, Languages.of(context).imageZoom, "可根据手势放大和缩小图片", '/widget/image/zoom'),
+  ];
+
+  ///列表滚动演示
   static List<ListItem> scrollViewItems (BuildContext context) =>  [
     ListItem(Icons.list, Languages.of(context).nestedScrollView, "嵌套滚动联动的使用", '/widget/scrollview/nested_scrollview'),
     ListItem(Icons.list, Languages.of(context).customScrollView, "自定义滚动模型", '/widget/scrollview/custom_scrollview'),
@@ -274,4 +287,6 @@ class RouteMap {
     ListItem(Icons.list, Languages.of(context).ballPulseRefresh, "球脉冲样式", '/expand/easy_refresh/ball_pulse'),
     ListItem(Icons.person, Languages.of(context).userProfile, "带回弹效果的个人中心", '/expand/easy_refresh/user_profile'),
   ];
+
+
 }

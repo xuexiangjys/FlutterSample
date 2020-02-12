@@ -41,6 +41,8 @@ class Languages {
   String get futureBuilder => Intl.message('FutureBuilder', name: 'futureBuilder');
   String get gesture => Intl.message('Gesture', name: 'gesture');
   String get image => Intl.message('Image', name: 'image');
+  String get cachedNetWorkImage => Intl.message('CachedNetWorkImage', name: 'cachedNetWorkImage');
+  String get imageZoom => Intl.message('ImageZoom', name: 'imageZoom');
   String get input => Intl.message('Input', name: 'input');
   String get notification => Intl.message('Notification', name: 'notification');
   String get progress => Intl.message('Progress', name: 'progress');

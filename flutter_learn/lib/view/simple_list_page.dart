@@ -17,7 +17,6 @@ class _SimpleListPageState extends State<SimpleListPage> {
           title: Text(widget.title),
         ),
         body: Container(
-            padding: const EdgeInsets.all(10),
             child: ListViewPage(items: widget.items)));
   }
 }

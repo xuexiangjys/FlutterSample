@@ -44,10 +44,12 @@ flutter run
 
 ## 依赖库说明
 
+* [cached_network_image (网络缓存图片)](https://pub.dev/packages/cached_network_image)
 * [camera (照相机)](https://pub.dev/packages/camera)
 * [dio (非常好用的网络请求库)](https://pub.dev/packages/dio)
 * [device_info (设备信息)](https://pub.dev/packages/device_info)
 * [event_bus (事件工具)](https://pub.dev/packages/event_bus)
+* [extended_image (图片拓展)](https://pub.dev/packages/extended_image)
 * [FlutterToast](https://pub.dev/packages/fluttertoast)
 * [fluro (页面路由神器)](https://pub.dev/packages/fluro)
 * [flutter_webview_plugin (网页加载)](https://pub.dev/packages/flutter_webview_plugin)

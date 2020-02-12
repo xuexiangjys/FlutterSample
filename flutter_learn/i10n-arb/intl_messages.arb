@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-11T20:02:37.853326",
+  "@@last_modified": "2020-02-12T12:14:58.455846",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -107,6 +107,16 @@
   },
   "image": "Image",
   "@image": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cachedNetWorkImage": "CachedNetWorkImage",
+  "@cachedNetWorkImage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "imageZoom": "ImageZoom",
+  "@imageZoom": {
     "type": "text",
     "placeholders": {}
   },

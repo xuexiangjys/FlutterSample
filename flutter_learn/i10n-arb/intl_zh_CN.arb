@@ -110,6 +110,16 @@
     "type": "text",
     "placeholders": {}
   },
+  "cachedNetWorkImage": "网络缓存图片",
+  "@cachedNetWorkImage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "imageZoom": "图片缩放",
+  "@imageOperation": {
+    "type": "text",
+    "placeholders": {}
+  },
   "input": "输入框",
   "@input": {
     "type": "text",
