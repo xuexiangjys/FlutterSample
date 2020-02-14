@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-14T11:09:46.762566",
+  "@@last_modified": "2020-02-14T21:34:17.619878",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -390,8 +390,23 @@
     "type": "text",
     "placeholders": {}
   },
+  "picker": "Picker",
+  "@picker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cityPicker": "CityPicker",
+  "@cityPicker": {
+    "type": "text",
+    "placeholders": {}
+  },
   "datePicker": "DatePicker",
   "@datePicker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "classPicker": "ClassPicker",
+  "@classPicker": {
     "type": "text",
     "placeholders": {}
   },

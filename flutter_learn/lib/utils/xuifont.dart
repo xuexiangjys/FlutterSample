@@ -21,7 +21,9 @@ class XUIIcons {
     complete,
     complete1,
     collect,
-    emoj
+    emoj,
+    boy,
+    girl
   ];
 
   static const IconData file =
@@ -58,4 +60,8 @@ class XUIIcons {
       const IconData(0xe77f, fontFamily: 'xuifont', matchTextDirection: true);
   static const IconData emoj =
       const IconData(0xe628, fontFamily: 'xuifont', matchTextDirection: true);
+  static const IconData boy =
+      const IconData(0xe6c5, fontFamily: 'xuifont', matchTextDirection: true);
+  static const IconData girl =
+      const IconData(0xe61b, fontFamily: 'xuifont', matchTextDirection: true);
 }

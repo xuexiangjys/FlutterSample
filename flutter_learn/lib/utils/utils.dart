@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:battery/battery.dart';
+import 'package:date_format/date_format.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -63,5 +64,7 @@ class Utils {
   }
 
   static String timestamp() => DateTime.now().millisecondsSinceEpoch.toString();
+
+  static String formatDateTime(DateTime dateTime) => formatDate(dateTime, [yyyy, '-', mm, '-', dd]);
 
 }

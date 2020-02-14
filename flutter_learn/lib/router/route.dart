@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/home.dart';
+import 'package:flutter_learn/page/expand/city_picker.dart';
 import 'package:flutter_learn/page/expand/date_picker.dart';
 import 'package:flutter_learn/page/expand/iconfont.dart';
 import 'package:flutter_learn/page/expand/image_picker.dart';
 import 'package:flutter_learn/page/expand/multi_image_picker.dart';
+import 'package:flutter_learn/page/expand/picker.dart';
 import 'package:flutter_learn/page/expand/refresh/ballpulse_refresh.dart';
 import 'package:flutter_learn/page/expand/refresh/basic_refresh.dart';
 import 'package:flutter_learn/page/expand/refresh/material_refresh.dart';
@@ -161,6 +163,8 @@ class RouteMap {
     '/expand/image_picker': (BuildContext context) => ImagePickerPage(Languages.of(context).imagePicker),
     '/expand/multi_image_picker': (BuildContext context) => MultiImagePickerPage(Languages.of(context).multiImagePicker),
     '/expand/date_picker': (BuildContext context) => DatePickerPage(Languages.of(context).datePicker),
+    '/expand/city_picker': (BuildContext context) => CityPickerPage(Languages.of(context).cityPicker),
+    '/expand/picker': (BuildContext context) => PickerPage(Languages.of(context).picker),
     '/expand/iconfont': (BuildContext context) => IconFontPage(Languages.of(context).iconFont),
     '/expand/spinkit': (BuildContext context) => SpinkitPage(Languages.of(context).spinkit),
     '/expand/swiper': (BuildContext context) => SwiperPage(Languages.of(context).swiper),
@@ -228,6 +232,8 @@ class RouteMap {
     ListItem(Icons.image, Languages.of(context).imagePicker, "单图片选择的简单使用", '/expand/image_picker'),
     ListItem(Icons.image, Languages.of(context).multiImagePicker, "多图片选择的简单使用", '/expand/multi_image_picker'),
     ListItem(Icons.date_range, Languages.of(context).datePicker, "日期选择器的简单使用", '/expand/date_picker'),
+    ListItem(Icons.location_city, Languages.of(context).cityPicker, "省市区三级选择器使用", '/expand/city_picker'),
+    ListItem(Icons.view_list, Languages.of(context).picker, "通用选择器使用", '/expand/picker'),
     ListItem(Icons.font_download, Languages.of(context).iconFont, "使用自定义的字体图标", '/expand/iconfont'),
     ListItem(Icons.refresh, Languages.of(context).spinkit, "使用更多有趣的loading动画", '/expand/spinkit'),
     ListItem(Icons.pages, Languages.of(context).swiper, "使用Swiper构建丰富多彩的轮播图", '/expand/swiper'),

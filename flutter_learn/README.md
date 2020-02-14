@@ -46,7 +46,9 @@ flutter run
 
 * [cached_network_image (网络缓存图片)](https://pub.dev/packages/cached_network_image)
 * [camera (照相机)](https://pub.dev/packages/camera)
+* [city_pickers (城市选择)](https://pub.dev/packages/city_pickers)
 * [dio (非常好用的网络请求库)](https://pub.dev/packages/dio)
+* [date_format (日期格式化)](https://pub.dev/packages/date_format)
 * [device_info (设备信息)](https://pub.dev/packages/device_info)
 * [event_bus (事件工具)](https://pub.dev/packages/event_bus)
 * [extended_image (图片拓展)](https://pub.dev/packages/extended_image)

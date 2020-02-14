@@ -99,7 +99,10 @@ class Languages {
   String get url => Intl.message('Url', name: 'url');
   String get videoPlayer => Intl.message('VideoPlayer', name: 'videoPlayer');
 
+  String get picker => Intl.message('Picker', name: 'picker');
+  String get cityPicker => Intl.message('CityPicker', name: 'cityPicker');
   String get datePicker => Intl.message('DatePicker', name: 'datePicker');
+  String get classPicker => Intl.message('ClassPicker', name: 'classPicker');
   String get iconFont => Intl.message('IconFont', name: 'iconFont');
   String get imagePicker => Intl.message('ImagePicker', name: 'imagePicker');
   String get multiImagePicker => Intl.message('MultiImagePicker', name: 'multiImagePicker');

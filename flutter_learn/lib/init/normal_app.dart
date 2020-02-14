@@ -11,6 +11,7 @@ import 'package:flutter_learn/utils/shared_preferences.dart';
 import 'package:flutter_learn/utils/sql_helper.dart';
 import 'package:flutter_learn/utils/umeng.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_picker/flutter_picker.dart';
 import 'package:provider/provider.dart';
 
 //普通App的启动
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
           const Locale('zh', 'CN'), // 中文简体
         ],
         localizationsDelegates: [
+          PickerLocalizationsDelegate.delegate, // 如果要使用本地化，请添加此行，则可以显示中文按钮
           GlobalEasyRefreshLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,

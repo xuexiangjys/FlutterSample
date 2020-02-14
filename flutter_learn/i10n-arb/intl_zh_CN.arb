@@ -390,8 +390,23 @@
     "type": "text",
     "placeholders": {}
   },
+  "picker": "选择器",
+  "@picker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cityPicker": "城市选择",
+  "@cityPicker": {
+    "type": "text",
+    "placeholders": {}
+  },
   "datePicker": "时间选择器",
   "@datePicker": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "classPicker": "班级选择",
+  "@classPicker": {
     "type": "text",
     "placeholders": {}
   },
