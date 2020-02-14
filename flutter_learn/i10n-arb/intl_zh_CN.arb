@@ -45,6 +45,31 @@
     "type": "text",
     "placeholders": {}
   },
+  "about": "关于",
+  "@about": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "versionName": "版本号",
+  "@versionName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "author": "作者",
+  "@author": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "qqgroup": "QQ群",
+  "@qqgroup": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appupdate": "版本更新",
+  "@appupdate": {
+    "type": "text",
+    "placeholders": {}
+  },
   "appBar": "标题栏",
   "@appBar": {
     "type": "text",

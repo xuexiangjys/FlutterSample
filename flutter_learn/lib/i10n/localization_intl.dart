@@ -27,6 +27,11 @@ class Languages {
   String get widget => Intl.message('Widget', name: 'widget');
   String get utils => Intl.message('Utils', name: 'utils');
   String get expand => Intl.message('Expand', name: 'expand');
+  String get about => Intl.message('About', name: 'about');
+  String get versionName => Intl.message('Version', name: 'versionName');
+  String get author => Intl.message('Author', name: 'author');
+  String get qqgroup => Intl.message('QQ Group', name: 'qqgroup');
+  String get appupdate => Intl.message('AppUpdate', name: 'appupdate');
 
   String get appBar => Intl.message('AppBar', name: 'appBar');
   String get bottomNavigationBar => Intl.message('BottomNavigationBar', name: 'bottomNavigationBar');

@@ -21,9 +21,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "about" : MessageLookupByLibrary.simpleMessage("关于"),
     "alignLayout" : MessageLookupByLibrary.simpleMessage("定位布局"),
     "animation" : MessageLookupByLibrary.simpleMessage("动画"),
     "appBar" : MessageLookupByLibrary.simpleMessage("标题栏"),
+    "appupdate" : MessageLookupByLibrary.simpleMessage("版本更新"),
+    "author" : MessageLookupByLibrary.simpleMessage("作者"),
     "auto" : MessageLookupByLibrary.simpleMessage("系统默认"),
     "ballPulseRefresh" : MessageLookupByLibrary.simpleMessage("球脉冲样式"),
     "basicAnimation" : MessageLookupByLibrary.simpleMessage("基础动画"),
@@ -83,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "progress" : MessageLookupByLibrary.simpleMessage("进度条"),
     "provider" : MessageLookupByLibrary.simpleMessage("数据共享"),
     "providerNext" : MessageLookupByLibrary.simpleMessage("下一页"),
+    "qqgroup" : MessageLookupByLibrary.simpleMessage("QQ群"),
     "scrollController" : MessageLookupByLibrary.simpleMessage("滚动控制"),
     "scrollView" : MessageLookupByLibrary.simpleMessage("列表滚动"),
     "share" : MessageLookupByLibrary.simpleMessage("分享"),
@@ -102,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "url" : MessageLookupByLibrary.simpleMessage("链接"),
     "userProfile" : MessageLookupByLibrary.simpleMessage("个人中心"),
     "utils" : MessageLookupByLibrary.simpleMessage("工具"),
+    "versionName" : MessageLookupByLibrary.simpleMessage("版本号"),
     "videoPlayer" : MessageLookupByLibrary.simpleMessage("视频播放"),
     "web" : MessageLookupByLibrary.simpleMessage("网页加载"),
     "widget" : MessageLookupByLibrary.simpleMessage("组件"),

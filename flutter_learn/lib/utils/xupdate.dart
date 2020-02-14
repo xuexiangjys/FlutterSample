@@ -47,4 +47,20 @@ class XUpdate {
   static void checkUpdate(String url) {
     FlutterXUpdate.checkUpdate(url: url, widthRatio: 0.7);
   }
+
+  ///初始化XUpdate
+  static void checkUpdateWithErrorTip({String url = UPDATE_URL}) {
+    FlutterXUpdate.setErrorHandler(
+        onUpdateError: (Map<String, dynamic> message) async {
+      ///4000是下载失败
+      if (message['code'] == 4000) {
+        FlutterXUpdate.showRetryUpdateTipDialog(
+            retryContent: "Github被墙无法继续下载，是否考虑切换蒲公英下载？",
+            retryUrl: "https://www.pgyer.com/flutter_learn");
+      } else {
+        XToast.error(message['message']);
+      }
+    });
+    FlutterXUpdate.checkUpdate(url: url, widthRatio: 0.7);
+  }
 }

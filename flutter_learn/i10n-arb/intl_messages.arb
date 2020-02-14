@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-12T12:14:58.455846",
+  "@@last_modified": "2020-02-14T11:09:46.762566",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -42,6 +42,31 @@
   },
   "expand": "Expand",
   "@expand": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "about": "About",
+  "@about": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "versionName": "Version",
+  "@versionName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "author": "Author",
+  "@author": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "qqgroup": "QQ Group",
+  "@qqgroup": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appupdate": "AppUpdate",
+  "@appupdate": {
     "type": "text",
     "placeholders": {}
   },

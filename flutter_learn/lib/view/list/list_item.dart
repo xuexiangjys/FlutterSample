@@ -11,6 +11,7 @@ class ListItem extends StatefulWidget {
   final Color titleColor;
   // 描述
   final String describe;
+  final double describeSpace;
   final Color describeColor;
   // 右侧控件
   final Widget rightWidget;
@@ -23,6 +24,7 @@ class ListItem extends StatefulWidget {
     this.title,
     this.titleColor: Colors.black,
     this.describe,
+    this.describeSpace: 3.0,
     this.describeColor: Colors.grey,
     this.rightWidget,
   }) : super(key: key);
@@ -76,12 +78,14 @@ class _ListItemState extends State<ListItem> {
                           )
                         : Container(),
                     widget.describe != null
-                        ? Text(
-                            widget.describe,
-                            maxLines: 2,
-                            style: TextStyle(
-                                color: widget.describeColor, fontSize: 12.0),
-                          )
+                        ? Padding(
+                            padding: EdgeInsets.only(top: widget.describeSpace),
+                            child: Text(
+                              widget.describe,
+                              maxLines: 2,
+                              style: TextStyle(
+                                  color: widget.describeColor, fontSize: 12.0),
+                            ))
                         : Container(),
                   ],
                 ),

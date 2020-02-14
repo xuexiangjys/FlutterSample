@@ -21,9 +21,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "about" : MessageLookupByLibrary.simpleMessage("About"),
     "alignLayout" : MessageLookupByLibrary.simpleMessage("AlignLayout"),
     "animation" : MessageLookupByLibrary.simpleMessage("Animation"),
     "appBar" : MessageLookupByLibrary.simpleMessage("AppBar"),
+    "appupdate" : MessageLookupByLibrary.simpleMessage("AppUpdate"),
+    "author" : MessageLookupByLibrary.simpleMessage("Author"),
     "auto" : MessageLookupByLibrary.simpleMessage("Auto"),
     "ballPulseRefresh" : MessageLookupByLibrary.simpleMessage("BallPulseRefresh"),
     "basicAnimation" : MessageLookupByLibrary.simpleMessage("BasicAnimation"),
@@ -83,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "progress" : MessageLookupByLibrary.simpleMessage("Progress"),
     "provider" : MessageLookupByLibrary.simpleMessage("Provider"),
     "providerNext" : MessageLookupByLibrary.simpleMessage("ProviderNext"),
+    "qqgroup" : MessageLookupByLibrary.simpleMessage("QQ Group"),
     "scrollController" : MessageLookupByLibrary.simpleMessage("ScrollController"),
     "scrollView" : MessageLookupByLibrary.simpleMessage("ScrollView"),
     "share" : MessageLookupByLibrary.simpleMessage("Share"),
@@ -102,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "url" : MessageLookupByLibrary.simpleMessage("Url"),
     "userProfile" : MessageLookupByLibrary.simpleMessage("UserProfile"),
     "utils" : MessageLookupByLibrary.simpleMessage("Utils"),
+    "versionName" : MessageLookupByLibrary.simpleMessage("Version"),
     "videoPlayer" : MessageLookupByLibrary.simpleMessage("VideoPlayer"),
     "web" : MessageLookupByLibrary.simpleMessage("Web"),
     "widget" : MessageLookupByLibrary.simpleMessage("Widget"),
