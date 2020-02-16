@@ -9,6 +9,8 @@ PODS:
   - Bugly (2.5.2)
   - camera (0.0.1):
     - Flutter
+  - city_pickers (0.0.1):
+    - Flutter
   - device_info (0.0.1):
     - Flutter
   - Flutter (1.0.0)
@@ -77,6 +79,7 @@ PODS:
 DEPENDENCIES:
   - battery (from `.symlinks/plugins/battery/ios`)
   - camera (from `.symlinks/plugins/camera/ios`)
+  - city_pickers (from `.symlinks/plugins/city_pickers/ios`)
   - device_info (from `.symlinks/plugins/device_info/ios`)
   - Flutter (from `Flutter`)
   - flutter_bugly (from `.symlinks/plugins/flutter_bugly/ios`)
@@ -120,6 +123,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/battery/ios"
   camera:
     :path: ".symlinks/plugins/camera/ios"
+  city_pickers:
+    :path: ".symlinks/plugins/city_pickers/ios"
   device_info:
     :path: ".symlinks/plugins/device_info/ios"
   Flutter:
@@ -176,6 +181,7 @@ SPEC CHECKSUMS:
   BSImageView: a149459433a2687157d034c78e059d30ac7f2544
   Bugly: dbac48b55ad469a97cc4321045cd50df8f63d44f
   camera: 38cc83ae9a5667bb5a71c7d9edaf60a91920fd4e
+  city_pickers: b0370f4c35c201723b5b7fcce10ec29b59d5bc35
   device_info: cbf09d2ec12aa7110e0b09fabe54b5bd6c8efe74
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_bugly: c9800f4d5bc5bdc27ffdde3417a26ba44266e0c3
