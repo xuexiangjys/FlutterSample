@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-14T21:34:17.619878",
+  "@@last_modified": "2020-02-17T13:09:58.587076",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -387,6 +387,11 @@
   },
   "videoPlayer": "VideoPlayer",
   "@videoPlayer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "permissionApply": "PermissionApply",
+  "@permissionApply": {
     "type": "text",
     "placeholders": {}
   },

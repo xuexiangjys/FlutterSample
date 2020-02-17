@@ -85,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "netRequest" : MessageLookupByLibrary.simpleMessage("NetRequest"),
     "notification" : MessageLookupByLibrary.simpleMessage("Notification"),
     "packageInfo" : MessageLookupByLibrary.simpleMessage("PackageInfo"),
+    "permissionApply" : MessageLookupByLibrary.simpleMessage("PermissionApply"),
     "picker" : MessageLookupByLibrary.simpleMessage("Picker"),
     "progress" : MessageLookupByLibrary.simpleMessage("Progress"),
     "provider" : MessageLookupByLibrary.simpleMessage("Provider"),

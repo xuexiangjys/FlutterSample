@@ -60,7 +60,8 @@ dependencies:
   image_picker_saver: ^0.3.0
   flutter_colorpicker: ^0.3.2
   flutter_xupdate: ^0.0.2
-  
+  permission_handler: '^4.2.0+hotfix.3'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

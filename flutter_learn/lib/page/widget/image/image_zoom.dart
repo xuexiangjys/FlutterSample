@@ -1,7 +1,9 @@
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/utils/permission.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:image_picker_saver/image_picker_saver.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class ImageZoomPage extends StatefulWidget {
   final String title;
@@ -60,14 +62,6 @@ class _ImageZoomPageState extends State<ImageZoomPage> {
             FlatButton(
               child: const Text('确定'),
               onPressed: () {
-                saveNetworkImageToPhoto(IMAGE_URL)
-                    .then((value) => {
-                          if (value != null && value.isNotEmpty)
-                            {XToast.success("图片保存成功: $value")}
-                          else
-                            {XToast.error("图片保存失败!")}
-                        })
-                    .catchError((onError) => {XToast.error("图片保存失败:$onError")});
                 Navigator.of(context).pop();
               },
             ),
@@ -75,6 +69,23 @@ class _ImageZoomPageState extends State<ImageZoomPage> {
         );
       },
     );
+  }
+
+  ///保存网络图片
+  void saveImage() {
+    PermissionUtils.requestPermission(PermissionGroup.storage).then((value) {
+      if (PermissionStatus.granted == value) {
+        saveNetworkImageToPhoto(IMAGE_URL).then((value) {
+          if (value != null && value.isNotEmpty) {
+            XToast.success("图片保存成功: $value");
+          } else {
+            XToast.error("图片保存失败!");
+          }
+        }).catchError((onError) => {XToast.error("图片保存失败:$onError")});
+      } else {
+        XToast.error("权限申请失败!");
+      }
+    });
   }
 
   Future<String> saveNetworkImageToPhoto(String url,

@@ -85,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "netRequest" : MessageLookupByLibrary.simpleMessage("网络请求"),
     "notification" : MessageLookupByLibrary.simpleMessage("冒泡通知"),
     "packageInfo" : MessageLookupByLibrary.simpleMessage("应用包信息"),
+    "permissionApply" : MessageLookupByLibrary.simpleMessage("权限申请"),
     "picker" : MessageLookupByLibrary.simpleMessage("选择器"),
     "progress" : MessageLookupByLibrary.simpleMessage("进度条"),
     "provider" : MessageLookupByLibrary.simpleMessage("数据共享"),

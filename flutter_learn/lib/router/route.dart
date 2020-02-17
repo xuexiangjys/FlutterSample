@@ -25,6 +25,7 @@ import 'package:flutter_learn/page/utils/navigator.dart';
 import 'package:flutter_learn/page/utils/net.dart';
 import 'package:flutter_learn/page/utils/package_info.dart';
 import 'package:flutter_learn/page/utils/path.dart';
+import 'package:flutter_learn/page/utils/permission_apply.dart';
 import 'package:flutter_learn/page/utils/provider.dart';
 import 'package:flutter_learn/page/utils/provider_next.dart';
 import 'package:flutter_learn/page/utils/share.dart';
@@ -156,6 +157,7 @@ class RouteMap {
     '/utils/file_path': (BuildContext context) => FilePathPage(Languages.of(context).filePath),
     '/utils/video_player': (BuildContext context) => VideoPlayerPage(Languages.of(context).videoPlayer),
     '/utils/camera': (BuildContext context) => CameraPage(Languages.of(context).camera),
+    '/utils/permission_apply': (BuildContext context) => PermissionApplyPage(Languages.of(context).permissionApply),
 
     //============================expand=================================//
 
@@ -224,6 +226,7 @@ class RouteMap {
     ListItem(Icons.attach_file, Languages.of(context).filePath, "文件路径", '/utils/file_path'),
     ListItem(Icons.video_library, Languages.of(context).videoPlayer, "flutter官方视频播放插件", '/utils/video_player'),
     ListItem(Icons.camera, Languages.of(context).camera, "拍摄照片", '/utils/camera'),
+    ListItem(Icons.settings, Languages.of(context).permissionApply, "权限申请", '/utils/permission_apply'),
   ];
 
   ///拓展

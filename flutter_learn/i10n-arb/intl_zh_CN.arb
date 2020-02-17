@@ -390,6 +390,11 @@
     "type": "text",
     "placeholders": {}
   },
+  "permissionApply": "权限申请",
+  "@permissionApply": {
+    "type": "text",
+    "placeholders": {}
+  },
   "picker": "选择器",
   "@picker": {
     "type": "text",
