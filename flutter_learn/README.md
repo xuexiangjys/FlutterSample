@@ -54,6 +54,7 @@ flutter run
 * [extended_image (图片拓展)](https://pub.dev/packages/extended_image)
 * [FlutterToast](https://pub.dev/packages/fluttertoast)
 * [fluro (页面路由神器)](https://pub.dev/packages/fluro)
+* [flutter_colorpicker (颜色选择器)](https://pub.dev/packages/flutter_colorpicker)
 * [flutter_webview_plugin (网页加载)](https://pub.dev/packages/flutter_webview_plugin)
 * [flutter_spinkit (loading加载动画)](https://pub.dev/packages/flutter_spinkit)
 * [flutter_swiper (轮播图组件)](https://pub.dev/packages/flutter_swiper)

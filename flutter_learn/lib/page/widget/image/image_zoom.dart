@@ -1,5 +1,7 @@
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/utils/toast.dart';
+import 'package:image_picker_saver/image_picker_saver.dart';
 
 class ImageZoomPage extends StatefulWidget {
   final String title;
@@ -9,15 +11,20 @@ class ImageZoomPage extends StatefulWidget {
 }
 
 class _ImageZoomPageState extends State<ImageZoomPage> {
+  static const IMAGE_URL =
+      "https://pic4.zhimg.com/v2-1236d741cbb3aabf5a9910a5e4b73e4c_1200x500.jpg";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text(widget.title)),
+        appBar: AppBar(title: Text(widget.title), actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.save), onPressed: showSaveImageConfirmDialog),
+        ]),
         body: Container(
             padding: const EdgeInsets.all(10),
             child: Center(
                 child: ExtendedImage.network(
-              "https://pic4.zhimg.com/v2-1236d741cbb3aabf5a9910a5e4b73e4c_1200x500.jpg",
+              IMAGE_URL,
               fit: BoxFit.contain,
               //enableLoadState: false,
               mode: ExtendedImageMode.gesture,
@@ -35,5 +42,44 @@ class _ImageZoomPageState extends State<ImageZoomPage> {
                 );
               },
             ))));
+  }
+
+  void showSaveImageConfirmDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content: Text("是否保存当前图片?"),
+          actions: <Widget>[
+            FlatButton(
+              child: const Text('取消'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            FlatButton(
+              child: const Text('确定'),
+              onPressed: () {
+                saveNetworkImageToPhoto(IMAGE_URL)
+                    .then((value) => {
+                          if (value != null && value.isNotEmpty)
+                            {XToast.success("图片保存成功: $value")}
+                          else
+                            {XToast.error("图片保存失败!")}
+                        })
+                    .catchError((onError) => {XToast.error("图片保存失败:$onError")});
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<String> saveNetworkImageToPhoto(String url,
+      {bool useCache: true}) async {
+    var data = await getNetworkImageData(url, useCache: useCache);
+    return await ImagePickerSaver.saveFile(fileData: data);
   }
 }

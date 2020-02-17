@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart' as ColorPicker;
 import 'package:flutter_learn/i10n/localization_intl.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:flutter_learn/utils/utils.dart';
@@ -121,6 +122,27 @@ class _PickerPageState extends State<PickerPage> {
                     child: Text(_pickerSelect8),
                     color: Colors.blue,
                     onPressed: () => showPickerDateRange(context),
+                  ),
+                ],
+              ),
+              ButtonBar(
+                alignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text('颜色选择1'),
+                    color: _currentColor,
+                    onPressed: () => showColorPickerDialog(context, 0),
+                  ),
+                  RaisedButton(
+                    child: Text('颜色选择2'),
+                    color: _currentColor,
+                    onPressed: () => showColorPickerDialog(context, 1),
+                  ),
+                  RaisedButton(
+                    child: Text('颜色选择3'),
+                    color: _currentColor,
+                    onPressed: () => showColorPickerDialog(context, 2),
                   ),
                 ],
               )
@@ -383,5 +405,62 @@ class _PickerPageState extends State<PickerPage> {
     setState(() {
       _pickerSelect8 = "$_start ~ $_end";
     });
+  }
+
+  //=========================//
+
+  Color pickerColor = Colors.blue;
+  Color _currentColor = Colors.blue;
+
+// ValueChanged<Color> callback
+  void changeColor(Color color) {
+    setState(() => pickerColor = color);
+  }
+
+  void showColorPickerDialog(BuildContext context, int type) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+              titlePadding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+              title: Text('颜色选择'),
+              contentPadding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
+              content: SingleChildScrollView(
+                child: getColorPicker(type),
+              ),
+              actionsPadding: const EdgeInsets.all(0),
+              actions: <Widget>[
+                FlatButton(
+                  child: const Text('确定'),
+                  onPressed: () {
+                    setState(() => _currentColor = pickerColor);
+                    Navigator.of(context).pop();
+                  },
+                )
+              ]);
+        });
+  }
+
+  Widget getColorPicker(int type) {
+    if (type == 0) {
+      return ColorPicker.ColorPicker(
+        pickerColor: pickerColor,
+        onColorChanged: changeColor,
+        showLabel: true,
+        pickerAreaHeightPercent: 0.8,
+      );
+    } else if (type == 1) {
+      // Use Material color picker:
+      return ColorPicker.MaterialPicker(
+        pickerColor: pickerColor,
+        onColorChanged: changeColor,
+      );
+    } else {
+      // Use Block color picker:
+      return ColorPicker.BlockPicker(
+        pickerColor: _currentColor,
+        onColorChanged: changeColor,
+      );
+    }
   }
 }
