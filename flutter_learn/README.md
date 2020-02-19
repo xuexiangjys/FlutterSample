@@ -86,4 +86,4 @@ flutter run
 
 > 你的打赏是我维护的动力，我将会列出所有打赏人员的清单在下方作为凭证，打赏前请留下打赏项目的备注！
 
-![](./art/alipay.png) &emsp; ![](./art/wxpay.png)
+![](./art/alipay.jpeg) &emsp; ![](./art/wxpay.jpeg)
