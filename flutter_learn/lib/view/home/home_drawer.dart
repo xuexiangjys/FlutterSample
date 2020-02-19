@@ -3,6 +3,7 @@ import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/view/home/about.dart';
 import 'package:flutter_learn/view/home/language.dart';
 import 'package:flutter_learn/i10n/localization_intl.dart';
+import 'package:flutter_learn/view/home/sponsor.dart';
 import 'package:flutter_learn/view/home/theme_color.dart';
 
 class HomeDrawer extends StatelessWidget {
@@ -62,6 +63,11 @@ class HomeDrawer extends StatelessWidget {
                   leading: Icon(Icons.language),
                   title: Text(Languages.of(context).language),
                   onTap: () => {XRouter.gotoWidget(context, LanguagePage())},
+                ),
+                ListTile(
+                  leading: Icon(Icons.attach_money),
+                  title: Text(Languages.of(context).sponsor),
+                  onTap: () => {XRouter.gotoWidget(context, SponsorPage())},
                 ),
                 ListTile(
                   leading: Icon(Icons.error_outline),

@@ -70,6 +70,16 @@
     "type": "text",
     "placeholders": {}
   },
+  "sponsor": "赞助",
+  "@sponsor": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sponsorDescription": "你的打赏是我维护的动力，我将会列出所有打赏人员的清单在Github上作为凭证.",
+  "@sponsorDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
   "appBar": "标题栏",
   "@appBar": {
     "type": "text",
@@ -397,6 +407,11 @@
   },
   "appBadge": "应用消息徽章",
   "@appBadge": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "badge": "小徽章",
+  "@badge": {
     "type": "text",
     "placeholders": {}
   },

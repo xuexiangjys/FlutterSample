@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/home.dart';
+import 'package:flutter_learn/page/expand/badge.dart';
 import 'package:flutter_learn/page/expand/city_picker.dart';
 import 'package:flutter_learn/page/expand/date_picker.dart';
 import 'package:flutter_learn/page/expand/iconfont.dart';
@@ -163,6 +164,7 @@ class RouteMap {
 
     //============================expand=================================//
 
+    '/expand/badge': (BuildContext context) => BadgePage(Languages.of(context).badge),
     '/expand/web_page': (BuildContext context) => WebPage(Languages.of(context).web),
     '/expand/image_picker': (BuildContext context) => ImagePickerPage(Languages.of(context).imagePicker),
     '/expand/multi_image_picker': (BuildContext context) => MultiImagePickerPage(Languages.of(context).multiImagePicker),
@@ -234,6 +236,7 @@ class RouteMap {
 
   ///拓展
   static List<ListItem> getExpandItems(BuildContext context) => [
+    ListItem(Icons.apps, Languages.of(context).badge, "小徽章控件", '/expand/badge'),
     ListItem(Icons.radio_button_checked, Languages.of(context).web, "简单的网页加载", '/expand/web_page'),
     ListItem(Icons.image, Languages.of(context).imagePicker, "单图片选择的简单使用", '/expand/image_picker'),
     ListItem(Icons.image, Languages.of(context).multiImagePicker, "多图片选择的简单使用", '/expand/multi_image_picker'),

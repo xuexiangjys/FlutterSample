@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-19T15:55:17.080127",
+  "@@last_modified": "2020-02-19T17:59:05.578788",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -67,6 +67,16 @@
   },
   "appupdate": "AppUpdate",
   "@appupdate": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sponsor": "Sponsor",
+  "@sponsor": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sponsorDescription": "Your reward is the motivation for me to maintain. I will make a list of all reward staff on GitHub as a voucher.",
+  "@sponsorDescription": {
     "type": "text",
     "placeholders": {}
   },
@@ -397,6 +407,11 @@
   },
   "appBadge": "AppBadge",
   "@appBadge": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "badge": "Badge",
+  "@badge": {
     "type": "text",
     "placeholders": {}
   },

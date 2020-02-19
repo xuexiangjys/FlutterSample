@@ -32,6 +32,8 @@ class Languages {
   String get author => Intl.message('Author', name: 'author');
   String get qqgroup => Intl.message('QQ Group', name: 'qqgroup');
   String get appupdate => Intl.message('AppUpdate', name: 'appupdate');
+  String get sponsor => Intl.message('Sponsor', name: 'sponsor');
+  String get sponsorDescription => Intl.message('Your reward is the motivation for me to maintain. I will make a list of all reward staff on GitHub as a voucher.', name: 'sponsorDescription');
 
   String get appBar => Intl.message('AppBar', name: 'appBar');
   String get bottomNavigationBar => Intl.message('BottomNavigationBar', name: 'bottomNavigationBar');
@@ -101,6 +103,7 @@ class Languages {
   String get permissionApply => Intl.message('PermissionApply', name: 'permissionApply');
   String get appBadge => Intl.message('AppBadge', name: 'appBadge');
 
+  String get badge => Intl.message('Badge', name: 'badge');
   String get picker => Intl.message('Picker', name: 'picker');
   String get cityPicker => Intl.message('CityPicker', name: 'cityPicker');
   String get datePicker => Intl.message('DatePicker', name: 'datePicker');
