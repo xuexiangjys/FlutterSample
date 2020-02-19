@@ -38,10 +38,16 @@ Flutter使用指南,包含众多组件和插件的使用
 * [MMKV(键值对保存)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/mmkv.dart)
 * [Navigator(导航路由)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/navigator.dart)
 * [Net(网络请求)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/net.dart)
+* [Path(文件路径)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/path.dart)
+* [Permission(权限申请)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/permission_apply.dart)
 * [Provider(数据共享)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/provider.dart)
+* [Share(系统分享)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/share.dart)
 * [SharedPreferences(持久化)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/shared_preferences.dart)
 * [Sqlite(数据库)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/sqlite.dart)
 * [Toast(吐司提示)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/toast.dart)
+* [Url(链接处理))](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/url.dart)
+* [Video(视频播放))](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/video.dart)
+* [XUpdate(应用内版本更新)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/utils/xupdate.dart)
 
 ### 第三方插件
 
@@ -50,6 +56,7 @@ Flutter使用指南,包含众多组件和插件的使用
 * [IconFont(字体图标)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/iconfont.dart)
 * [ImagePicker(单图片选择)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/image_picker.dart)
 * [MultiImagePicker(多图片选择)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/multi_image_picker.dart)
+* [Picker(通用选择器)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/picker.dart)
 * [Spinkit(loading动画)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/spinkit.dart)
 * [Swiper(轮播图)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/swiper.dart)
 * [Web(网页加载)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/expand/web.dart)

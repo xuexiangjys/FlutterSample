@@ -80,3 +80,10 @@ flutter run
 
 * [阿里巴巴的入门级项目 flutter-go](https://github.com/alibaba/flutter-go)
 * [flutter实战](https://book.flutterchina.club/)
+
+
+## 如果觉得项目还不错，可以考虑打赏一波
+
+> 你的打赏是我维护的动力，我将会列出所有打赏人员的清单在下方作为凭证，打赏前请留下打赏项目的备注！
+
+![](./art/alipay.png) &emsp; ![](./art/wxpay.png)
