@@ -28,12 +28,10 @@ class _BuglyPageState extends State<BuglyPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('版本更新检查'),
-                      color: Colors.blue,
                       onPressed: _checkUpdate,
                     ),
                     RaisedButton(
                       child: Text('自定义异常信息上传'),
-                      color: Colors.blue,
                       onPressed: _uploadException,
                     ),
                   ],

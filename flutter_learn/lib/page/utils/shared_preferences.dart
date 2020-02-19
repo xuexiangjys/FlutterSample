@@ -40,7 +40,6 @@ class _SharedPreferencesPageState extends State<SharedPreferencesPage> {
                     // Button集合
                     RaisedButton(
                       child: Text('设置String'),
-                      color: Colors.blue,
                       onPressed: () => {
                         SPUtils.putString("username", "xuexiang123").then(
                             (result) =>
@@ -49,7 +48,6 @@ class _SharedPreferencesPageState extends State<SharedPreferencesPage> {
                     ),
                     RaisedButton(
                       child: Text('获取String'),
-                      color: Colors.blue,
                       onPressed: () =>
                           {updateResult(SPUtils.getString("username"))},
                     ),
@@ -63,7 +61,6 @@ class _SharedPreferencesPageState extends State<SharedPreferencesPage> {
                     // Button集合
                     RaisedButton(
                       child: Text('设置Int随机数'),
-                      color: Colors.blue,
                       onPressed: () => {
                         random = Random().nextInt(100),
                         SPUtils.putInt("int_key", random).then((result) =>
@@ -72,7 +69,6 @@ class _SharedPreferencesPageState extends State<SharedPreferencesPage> {
                     ),
                     RaisedButton(
                       child: Text('获取Int'),
-                      color: Colors.blue,
                       onPressed: () => {
                         updateResult(
                             '获得的数字:' + SPUtils.getInt("int_key").toString())

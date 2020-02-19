@@ -11,11 +11,12 @@ class SpinkitPage extends StatefulWidget {
 class _SpinkitPageState extends State<SpinkitPage> {
   @override
   Widget build(BuildContext context) {
+    Color _color = Theme.of(context).primaryColor;
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -24,94 +25,94 @@ class _SpinkitPageState extends State<SpinkitPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitRotatingCircle(color: Colors.white),
-                  SpinKitRotatingPlain(color: Colors.white),
-                  SpinKitChasingDots(color: Colors.white),
+                  SpinKitRotatingCircle(color: _color),
+                  SpinKitRotatingPlain(color: _color),
+                  SpinKitChasingDots(color: _color),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitPumpingHeart(color: Colors.white),
-                  SpinKitPulse(color: Colors.white),
-                  SpinKitDoubleBounce(color: Colors.white),
+                  SpinKitPumpingHeart(color: _color),
+                  SpinKitPulse(color: _color),
+                  SpinKitDoubleBounce(color: _color),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitWave(color: Colors.white, type: SpinKitWaveType.start),
+                  SpinKitWave(color: _color, type: SpinKitWaveType.start),
                   SpinKitWave(
-                      color: Colors.white, type: SpinKitWaveType.center),
-                  SpinKitWave(color: Colors.white, type: SpinKitWaveType.end),
+                      color: _color, type: SpinKitWaveType.center),
+                  SpinKitWave(color: _color, type: SpinKitWaveType.end),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitThreeBounce(color: Colors.white),
-                  SpinKitWanderingCubes(color: Colors.white),
+                  SpinKitThreeBounce(color: _color),
+                  SpinKitWanderingCubes(color: _color),
                   SpinKitWanderingCubes(
-                      color: Colors.white, shape: BoxShape.circle),
+                      color: _color, shape: BoxShape.circle),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitCircle(color: Colors.white),
-                  SpinKitFadingFour(color: Colors.white),
+                  SpinKitCircle(color: _color),
+                  SpinKitFadingFour(color: _color),
                   SpinKitFadingFour(
-                      color: Colors.white, shape: BoxShape.rectangle),
+                      color: _color, shape: BoxShape.rectangle),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitFadingCube(color: Colors.white),
-                  SpinKitCubeGrid(size: 51.0, color: Colors.white),
-                  SpinKitFoldingCube(color: Colors.white),
+                  SpinKitFadingCube(color: _color),
+                  SpinKitCubeGrid(size: 51.0, color: _color),
+                  SpinKitFoldingCube(color: _color),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitRing(color: Colors.white),
-                  SpinKitDualRing(color: Colors.white),
-                  SpinKitRipple(color: Colors.white),
+                  SpinKitRing(color: _color),
+                  SpinKitDualRing(color: _color),
+                  SpinKitRipple(color: _color),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitFadingGrid(color: Colors.white),
+                  SpinKitFadingGrid(color: _color),
                   SpinKitFadingGrid(
-                      color: Colors.white, shape: BoxShape.rectangle),
-                  SpinKitSquareCircle(color: Colors.white),
+                      color: _color, shape: BoxShape.rectangle),
+                  SpinKitSquareCircle(color: _color),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitSpinningCircle(color: Colors.white),
+                  SpinKitSpinningCircle(color: _color),
                   SpinKitSpinningCircle(
-                      color: Colors.white, shape: BoxShape.rectangle),
-                  SpinKitFadingCircle(color: Colors.white),
+                      color: _color, shape: BoxShape.rectangle),
+                  SpinKitFadingCircle(color: _color),
                 ],
               ),
               SizedBox(height: 48.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SpinKitHourGlass(color: Colors.white),
-                  SpinKitPouringHourglass(color: Colors.white),
+                  SpinKitHourGlass(color: _color),
+                  SpinKitPouringHourglass(color: _color),
                 ],
               ),
               SizedBox(height: 64.0),

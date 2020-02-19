@@ -24,7 +24,7 @@ class _GesturePageState extends State<GesturePage> {
           child: GestureDetector(
             child: Container(
               alignment: Alignment.center,
-              color: Colors.blue,
+              color: Theme.of(context).primaryColor,
               width: _width,
               height: _height,
               child: Text(

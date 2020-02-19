@@ -40,17 +40,14 @@ class _SqlitePageState extends State<SqlitePage> {
                 // Button集合
                 RaisedButton(
                   child: Text('增加'),
-                  color: Colors.blue,
                   onPressed: () => {doInsert()},
                 ),
                 RaisedButton(
                   child: Text('查询'),
-                  color: Colors.blue,
                   onPressed: () => {doQuery()},
                 ),
                 RaisedButton(
                   child: Text('删除所有'),
-                  color: Colors.blue,
                   onPressed: () => {doDeleteAll()},
                 ),
               ],
@@ -80,12 +77,10 @@ class _SqlitePageState extends State<SqlitePage> {
                         // Button集合
                         RaisedButton(
                           child: Text('修改'),
-                          color: Colors.blue,
                           onPressed: () => {doUpdate(index, users[index])},
                         ),
                         RaisedButton(
                           child: Text('删除'),
-                          color: Colors.blue,
                           onPressed: () => {doDelete(users[index].id)},
                         ),
                       ],

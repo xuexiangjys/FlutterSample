@@ -46,7 +46,7 @@ class _ProgressPageState extends State<ProgressPage>
                 SizedBox(height: 10),
                 FlatButton(
                   child: Text('增加进度', style: TextStyle(color: Colors.white)),
-                  color: Colors.blue,
+                  color: Theme.of(context).primaryColor,
                   onPressed: increase,
                 ),
                 Container(

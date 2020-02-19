@@ -90,12 +90,10 @@ class _JPushPageState extends State<JPushPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('恢复推送'),
-                      color: Colors.blue,
                       onPressed: resumePush,
                     ),
                     RaisedButton(
                       child: Text('停止推送'),
-                      color: Colors.blue,
                       onPressed: stopPush,
                     ),
                   ],
@@ -115,12 +113,10 @@ class _JPushPageState extends State<JPushPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('绑定'),
-                      color: Colors.blue,
                       onPressed: setAlias,
                     ),
                     RaisedButton(
                       child: Text('解绑'),
-                      color: Colors.blue,
                       onPressed: deleteAlias,
                     ),
                   ],
@@ -141,17 +137,14 @@ class _JPushPageState extends State<JPushPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('添加(增量)'),
-                      color: Colors.blue,
                       onPressed: addTags,
                     ),
                     RaisedButton(
                       child: Text('删除'),
-                      color: Colors.blue,
                       onPressed: deleteTags,
                     ),
                     RaisedButton(
                       child: Text('获取'),
-                      color: Colors.blue,
                       onPressed: getTags,
                     ),
                   ],
@@ -163,12 +156,10 @@ class _JPushPageState extends State<JPushPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('设置(全量)'),
-                      color: Colors.blue,
                       onPressed: setTags,
                     ),
                     RaisedButton(
                       child: Text('清除'),
-                      color: Colors.blue,
                       onPressed: cleanTags,
                     ),
                   ],

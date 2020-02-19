@@ -24,6 +24,7 @@ class _DrawerPageState extends State<DrawerPage> {
             children: <Widget>[
               RaisedButton(
                 child: Text('点我试试呼出SnackBar&Drawer'),
+                textColor: Colors.white,
                 onPressed: () {
                   _scaffoldKey.currentState.openDrawer();
                   _scaffoldKey.currentState.showSnackBar(const SnackBar(
@@ -32,6 +33,7 @@ class _DrawerPageState extends State<DrawerPage> {
               ),
               RaisedButton(
                 child: Text('返回'),
+                textColor: Colors.white,
                 onPressed: () {
                   Navigator.pop(context);
                 },

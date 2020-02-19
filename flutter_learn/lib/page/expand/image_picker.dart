@@ -48,12 +48,10 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('选择图片'),
-                      color: Colors.blue,
                       onPressed: getImage,
                     ),
                     RaisedButton(
                       child: Text('拍照片'),
-                      color: Colors.blue,
                       onPressed: takeImage,
                     ),
                   ],

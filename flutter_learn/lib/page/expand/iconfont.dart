@@ -25,7 +25,7 @@ class _IconFontPageState extends State<IconFontPage> {
                   childAspectRatio: 1),
               itemCount: XUIIcons.icons.length,
               itemBuilder: (BuildContext context, int index) {
-                return Icon(XUIIcons.icons[index], color: Colors.lightBlue);
+                return Icon(XUIIcons.icons[index], color: Theme.of(context).primaryColor);
               },
             )));
   }

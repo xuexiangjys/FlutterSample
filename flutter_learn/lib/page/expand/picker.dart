@@ -67,12 +67,10 @@ class _PickerPageState extends State<PickerPage> {
                 children: <Widget>[
                   RaisedButton(
                     child: Text(_pickerSelect1),
-                    color: Colors.blue,
                     onPressed: () => showPicker1(context),
                   ),
                   RaisedButton(
                     child: Text(_pickerSelect2),
-                    color: Colors.blue,
                     onPressed: () => showPicker2(context),
                   ),
                 ],
@@ -83,12 +81,10 @@ class _PickerPageState extends State<PickerPage> {
                 children: <Widget>[
                   RaisedButton(
                     child: Text(_pickerSelect3),
-                    color: Colors.blue,
                     onPressed: () => showPicker3(context),
                   ),
                   RaisedButton(
                     child: Text(_pickerSelect4),
-                    color: Colors.blue,
                     onPressed: () => showPicker4(context),
                   ),
                 ],
@@ -99,12 +95,10 @@ class _PickerPageState extends State<PickerPage> {
                 children: <Widget>[
                   RaisedButton(
                     child: Text(_pickerSelect5),
-                    color: Colors.blue,
                     onPressed: () => showPicker5(context),
                   ),
                   RaisedButton(
                     child: Text(_pickerSelect6),
-                    color: Colors.blue,
                     onPressed: () => showPicker6(context),
                   ),
                 ],
@@ -115,12 +109,10 @@ class _PickerPageState extends State<PickerPage> {
                 children: <Widget>[
                   RaisedButton(
                     child: Text(_pickerSelect7),
-                    color: Colors.blue,
                     onPressed: () => showPicker7(context),
                   ),
                   RaisedButton(
                     child: Text(_pickerSelect8),
-                    color: Colors.blue,
                     onPressed: () => showPickerDateRange(context),
                   ),
                 ],
@@ -302,8 +294,8 @@ class _PickerPageState extends State<PickerPage> {
   showPicker6(BuildContext context) {
     Picker(
         adapter: PickerDataAdapter(data: [
-          PickerItem(text: Icon(XUIIcons.boy, color: Colors.blue), value: "男"),
-          PickerItem(text: Icon(XUIIcons.girl, color: Colors.blue), value: "女"),
+          PickerItem(text: Icon(XUIIcons.boy, color: Theme.of(context).primaryColor), value: "男"),
+          PickerItem(text: Icon(XUIIcons.girl, color: Theme.of(context).primaryColor), value: "女"),
         ]),
         selecteds: _selected6,
         itemExtent: 40,

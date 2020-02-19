@@ -55,17 +55,14 @@ class _NetRequestPageState extends State<NetRequestPage> {
                     // Button集合
                     RaisedButton(
                       child: Text('Get请求'),
-                      color: Colors.blue,
                       onPressed: doGet,
                     ),
                     RaisedButton(
                       child: Text('参数请求'),
-                      color: Colors.blue,
                       onPressed: doParam,
                     ),
                     RaisedButton(
                       child: Text('post请求'),
-                      color: Colors.blue,
                       onPressed: doPost,
                     ),
                   ],

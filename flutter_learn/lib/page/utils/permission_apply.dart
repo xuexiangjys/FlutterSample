@@ -32,7 +32,6 @@ class _PermissionApplyPageState extends State<PermissionApplyPage> {
                 children: <Widget>[
                   RaisedButton(
                     child: Text('相机权限申请'),
-                    color: Colors.blue,
                     onPressed: () {
                       PermissionUtils.requestPermission(PermissionGroup.camera).then((value) => {
                         XToast.toast("申请结果:$value")
@@ -41,7 +40,6 @@ class _PermissionApplyPageState extends State<PermissionApplyPage> {
                   ),
                   RaisedButton(
                     child: Text('相机权限检查'),
-                    color: Colors.blue,
                     onPressed: () {
                       PermissionUtils.checkPermissionStatus(PermissionGroup.camera).then((value)  => {
                         XToast.toast("检查结果:$value")

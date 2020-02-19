@@ -40,7 +40,6 @@ class _MMKVPageState extends State<MMKVPage> {
                     // Button集合
                     RaisedButton(
                       child: Text('设置String'),
-                      color: Colors.blue,
                       onPressed: () => {
                         MMKV.putString("username", "xuexiang").then((result) =>
                             {updateResult(result ? '设置成功' : '设置失败')})
@@ -48,7 +47,6 @@ class _MMKVPageState extends State<MMKVPage> {
                     ),
                     RaisedButton(
                       child: Text('获取String'),
-                      color: Colors.blue,
                       onPressed: () => {
                         MMKV
                             .getString("username")
@@ -65,7 +63,6 @@ class _MMKVPageState extends State<MMKVPage> {
                     // Button集合
                     RaisedButton(
                       child: Text('设置Int随机数'),
-                      color: Colors.blue,
                       onPressed: () => {
                         random = Random().nextInt(100),
                         MMKV.putInt("int_key", random).then((result) =>
@@ -74,7 +71,6 @@ class _MMKVPageState extends State<MMKVPage> {
                     ),
                     RaisedButton(
                       child: Text('获取Int'),
-                      color: Colors.blue,
                       onPressed: () => {
                         MMKV.getInt("int_key").then((number) =>
                             {updateResult('获得的数字:' + number.toString())})

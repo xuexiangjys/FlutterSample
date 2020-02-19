@@ -1,3 +1,4 @@
+import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/utils/toast.dart';
 
@@ -26,7 +27,7 @@ class _CardViewPageState extends State<CardViewPage> {
   Widget getCardView1() {
     return Card(
       clipBehavior: Clip.antiAlias, // 根据设置裁剪内容
-      color: Colors.lightBlue, //  卡片背景颜色
+      color: Theme.of(context).primaryColor, //  卡片背景颜色
       elevation: 20.0, // 卡片的z坐标,控制卡片下面的阴影大小
       margin: EdgeInsets.all(20.0),
       //  margin: EdgeInsetsDirectional.only(bottom: 30.0, top: 30.0, start: 30.0),// 边距
@@ -93,15 +94,12 @@ class _CardViewPageState extends State<CardViewPage> {
             Row(
               children: <Widget>[
                 ClipOval(
-                  child: FadeInImage.assetNetwork(
-                    placeholder: "assets/images/normal_user_icon.png", //预览图
-                    fit: BoxFit.fitWidth,
-                    image:
-                        "http://img.wxcha.com/file/201806/06/520cba4626.jpg?down",
-                    width: 40,
-                    height: 40,
-                  ),
-                ),
+                    child: ExtendedImage.network(
+                  "https://gitee.com/xuexiangjys/Resource/raw/master/img/avatar/avatar_github.jpg",
+                  fit: BoxFit.fitWidth,
+                  width: 40,
+                  height: 40,
+                )),
                 SizedBox(width: 10),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -157,21 +155,27 @@ class _CardViewPageState extends State<CardViewPage> {
                       icon: Icon(Icons.thumb_up, size: 20, color: Colors.grey),
                       label: const Text('99',
                           style: TextStyle(color: Colors.grey, fontSize: 12)),
-                      onPressed: () {XToast.toast("点赞");}),
+                      onPressed: () {
+                        XToast.toast("点赞");
+                      }),
                 ),
                 Expanded(
                   child: FlatButton.icon(
                       icon: Icon(Icons.comment, size: 20, color: Colors.grey),
                       label: const Text('25',
                           style: TextStyle(color: Colors.grey, fontSize: 12)),
-                      onPressed: () {XToast.toast("评论");}),
+                      onPressed: () {
+                        XToast.toast("评论");
+                      }),
                 ),
                 Expanded(
                   child: FlatButton.icon(
                       icon: Icon(Icons.share, size: 20, color: Colors.grey),
                       label: const Text('分享',
                           style: TextStyle(color: Colors.grey, fontSize: 12)),
-                      onPressed: () {XToast.toast("分享");}),
+                      onPressed: () {
+                        XToast.toast("分享");
+                      }),
                 )
               ],
             )

@@ -39,6 +39,7 @@ class _NotificationPageState extends State<NotificationPage> {
                       onPressed: () =>
                           TestNotification("这是通知内容~~").dispatch(context),
                       child: Text("发出通知"),
+                      textColor: Colors.white,
                     );
                   },
                 ),

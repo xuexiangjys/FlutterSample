@@ -53,12 +53,10 @@ class _JsonSerializePageState extends State<JsonSerializePage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('反序列化'),
-                      color: Colors.blue,
                       onPressed: deSerialize,
                     ),
                     RaisedButton(
                       child: Text('序列化'),
-                      color: Colors.blue,
                       onPressed: serialize,
                     ),
                   ],

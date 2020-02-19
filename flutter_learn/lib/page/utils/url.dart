@@ -24,22 +24,18 @@ class _UrlPageState extends State<UrlPage> {
                   // Button集合
                   RaisedButton(
                     child: Text("网页"),
-                    color: Colors.blue,
                     onPressed: web,
                   ),
                   RaisedButton(
                     child: Text('邮件'),
-                    color: Colors.blue,
                     onPressed: email,
                   ),
                   RaisedButton(
                     child: Text('电话'),
-                    color: Colors.blue,
                     onPressed: phone,
                   ),
                   RaisedButton(
                     child: Text('短信'),
-                    color: Colors.blue,
                     onPressed: message,
                   ),
                 ],

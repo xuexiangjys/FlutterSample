@@ -23,38 +23,34 @@ class _ToastPageState extends State<ToastPage> {
               children: <Widget>[
                 ButtonBar(
                   alignment: MainAxisAlignment
-                      .spaceAround, //布局方向，默认MainAxisAlignment.end
+                      .start, //布局方向，默认MainAxisAlignment.end
                   mainAxisSize: MainAxisSize.max, //主轴大小，默认MainAxisSize.max
                   children: <Widget>[
                     // Button集合
                     RaisedButton(
                       child: Text('普通toast'),
-                      color: Colors.blue,
                       onPressed: () => {XToast.toast("这是一个普通的Toast")},
                     ),
                     RaisedButton(
                       child: Text('警告toast'),
-                      color: Colors.blue,
                       onPressed: () => {XToast.waring("这是一个警告Toast")},
                     ),
                   ],
                 ),
                 ButtonBar(
                   alignment: MainAxisAlignment
-                      .spaceAround, //布局方向，默认MainAxisAlignment.end
+                      .start, //布局方向，默认MainAxisAlignment.end
                   mainAxisSize: MainAxisSize.max, //主轴大小，默认MainAxisSize.max
                   children: <Widget>[
                     // Button集合
                     RaisedButton(
                       child: Text('错误toast'),
-                      color: Colors.blue,
                       onPressed: () => {
                         XToast.error("这是一个错误Toast", length: Toast.LENGTH_LONG)
                       },
                     ),
                     RaisedButton(
                       child: Text('成功toast'),
-                      color: Colors.blue,
                       onPressed: () => {XToast.success("这是一个成功Toast")},
                     ),
                   ],

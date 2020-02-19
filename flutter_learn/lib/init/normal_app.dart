@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Learn',
         theme: ThemeData(
           primarySwatch: appTheme.themeColor,
+          buttonColor : appTheme.themeColor
         ),
         home: SplashPage(),
         onGenerateRoute: XRouter.router.generator,

@@ -71,7 +71,6 @@ class _MultiImagePickerPageState extends State<MultiImagePickerPage> {
               children: <Widget>[
                 RaisedButton(
                     child: Text("选择图片"),
-                    color: Colors.blue,
                     textColor: Colors.white,
                     onPressed: () {
                       loadAssets(context);

@@ -36,17 +36,14 @@ class _DatePickerPageState extends State<DatePickerPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text(_date),
-                      color: Colors.blue,
                       onPressed: onShowDatePicker,
                     ),
                     RaisedButton(
                       child: Text(_time1),
-                      color: Colors.blue,
                       onPressed: showTimePicker1,
                     ),
                     RaisedButton(
                       child: Text(_time2),
-                      color: Colors.blue,
                       onPressed: showTimePicker2,
                     ),
                   ],
@@ -58,13 +55,11 @@ class _DatePickerPageState extends State<DatePickerPage> {
                   children: <Widget>[
                     RaisedButton(
                         child: Text(_dateSystem),
-                        color: Colors.blue,
                         onPressed: () {
                           showDatePickerSystem(context);
                         }),
                     RaisedButton(
                         child: Text(_timeSystem),
-                        color: Colors.blue,
                         onPressed: () {
                           showTimePickerSystem(context);
                         }),

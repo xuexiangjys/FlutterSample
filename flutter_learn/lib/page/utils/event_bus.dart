@@ -71,7 +71,6 @@ class _EventBusPageState extends State<EventBusPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('改变标题栏的背景颜色'),
-                      color: Colors.blue,
                       onPressed: () => {
                         XEvent.post(
                             EVENT_CHANGE_COLOR, RandomUtils.getRandomColor())
@@ -79,7 +78,6 @@ class _EventBusPageState extends State<EventBusPage> {
                     ),
                     RaisedButton(
                       child: Text(_isSubscription ? '取消订阅' : "订阅"),
-                      color: Colors.blue,
                       onPressed: switchEvent,
                     ),
                   ],

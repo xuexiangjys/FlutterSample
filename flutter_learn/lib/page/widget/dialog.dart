@@ -174,12 +174,10 @@ class _DialogPageState extends State<DialogPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('AlertDialog'),
-                      color: Colors.blue,
                       onPressed: showAlertDialog,
                     ),
                     RaisedButton(
                       child: Text('SimpleDialog'),
-                      color: Colors.blue,
                       onPressed: showSimpleDialog,
                     ),
                   ],
@@ -191,12 +189,10 @@ class _DialogPageState extends State<DialogPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('CustomDialog'),
-                      color: Colors.blue,
                       onPressed: showCustomDialog,
                     ),
                     RaisedButton(
                       child: Text('AboutDialog'),
-                      color: Colors.blue,
                       onPressed: showAboutDialog,
                     ),
                   ],
@@ -208,12 +204,10 @@ class _DialogPageState extends State<DialogPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('LoadingDialog1'),
-                      color: Colors.blue,
                       onPressed: () => {showLoadingDialog1(context)},
                     ),
                     RaisedButton(
                       child: Text('LoadingDialog2'),
-                      color: Colors.blue,
                       onPressed: () => {showLoadingDialog2(context)},
                     ),
                   ],

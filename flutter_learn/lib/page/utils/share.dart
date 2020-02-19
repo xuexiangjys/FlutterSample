@@ -24,12 +24,10 @@ class _SharePageState extends State<SharePage> {
                   // Button集合
                   RaisedButton(
                     child: Text('文本分享1'),
-                    color: Colors.blue,
                     onPressed: share1,
                   ),
                   RaisedButton(
                     child: Text('文本分享2'),
-                    color: Colors.blue,
                     onPressed: share2,
                   ),
                 ],

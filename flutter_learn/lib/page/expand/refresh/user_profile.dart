@@ -1,3 +1,4 @@
+import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 import 'package:flutter_learn/view/list/list_item.dart';
@@ -92,12 +93,9 @@ class _UserProfilePageState extends State<UserProfilePage> {
                             child: PreferredSize(
                               child: Container(
                                 child: ClipOval(
-                                  child: FadeInImage.assetNetwork(
-                                    placeholder:
-                                        "assets/images/normal_user_icon.png", //预览图
+                                  child: ExtendedImage.network(
+                                    "https://gitee.com/xuexiangjys/Resource/raw/master/img/avatar/avatar_github.jpg",
                                     fit: BoxFit.fill,
-                                    image:
-                                        "http://img.wxcha.com/file/201806/06/520cba4626.jpg?down",
                                   ),
                                 ),
                               ),

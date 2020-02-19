@@ -27,17 +27,14 @@ class _CityPickerPageState extends State<CityPickerPage> {
                 children: <Widget>[
                   RaisedButton(
                     child: Text(_data1),
-                    color: Colors.blue,
                     onPressed: () => showPicker1(context),
                   ),
                   RaisedButton(
                     child: Text(_data2),
-                    color: Colors.blue,
                     onPressed: () => showPicker2(context),
                   ),
                   RaisedButton(
                     child: Text(_data3),
-                    color: Colors.blue,
                     onPressed: () => showPicker3(context),
                   ),
                 ],

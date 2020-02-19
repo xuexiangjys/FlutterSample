@@ -67,7 +67,6 @@ class _InputPageState extends State<InputPage> {
                     // Button集合
                     RaisedButton(
                       child: Text('登录'),
-                      color: Colors.blue,
                       onPressed: () => {
                         XToast.success(
                             "用户名:" + _nameController.text + ", 密码:" + _password)

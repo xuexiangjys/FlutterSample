@@ -29,7 +29,6 @@ class _NavigatorPageState extends State<NavigatorPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('命名路由'),
-                      color: Colors.blue,
                       onPressed: () => {
                         //不可以传参数
                         Navigator.pushNamed(context, "/empty")
@@ -37,7 +36,6 @@ class _NavigatorPageState extends State<NavigatorPage> {
                     ),
                     RaisedButton(
                       child: Text('构建路由'),
-                      color: Colors.blue,
                       onPressed: () => {
                         Navigator.push(context, new MaterialPageRoute(
                             builder: (BuildContext context) {
@@ -55,13 +53,11 @@ class _NavigatorPageState extends State<NavigatorPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('路由动画'),
-                      color: Colors.blue,
                       onPressed: () =>
                           {Navigator.push(context, SlidePageRoute(routeName: "/empty"))},
                     ),
                     RaisedButton(
                       child: Text('fluro跳转'),
-                      color: Colors.blue,
                       onPressed: () => {
                         XRouter.router.navigateTo(context,
                             "/web?url=${Uri.encodeComponent("https://www.baidu.com/")}&title=${Uri.encodeComponent("百度")}",

@@ -27,7 +27,6 @@ class _WebPageState extends State<WebPage> {
                   children: <Widget>[
                     RaisedButton(
                       child: Text('访问百度'),
-                      color: Colors.blue,
                       onPressed: () => {gotoBaidu(context)},
                     ),
                   ],
