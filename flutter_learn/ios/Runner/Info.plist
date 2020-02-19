@@ -43,6 +43,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIBackgroundModes</key>
+    <array>
+        <string>remote-notification</string>
+    </array>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>应用需要访问您的照片</string>
     <key>NSCameraUsageDescription</key>

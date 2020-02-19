@@ -61,6 +61,7 @@ dependencies:
   flutter_colorpicker: ^0.3.2
   flutter_xupdate: ^0.0.2
   permission_handler: '^4.2.0+hotfix.3'
+  flutter_app_badger: ^1.1.2
 
 dev_dependencies:
   flutter_test:

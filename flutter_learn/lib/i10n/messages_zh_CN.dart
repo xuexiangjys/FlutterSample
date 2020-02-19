@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "about" : MessageLookupByLibrary.simpleMessage("关于"),
     "alignLayout" : MessageLookupByLibrary.simpleMessage("定位布局"),
     "animation" : MessageLookupByLibrary.simpleMessage("动画"),
+    "appBadge" : MessageLookupByLibrary.simpleMessage("应用消息徽章"),
     "appBar" : MessageLookupByLibrary.simpleMessage("标题栏"),
     "appupdate" : MessageLookupByLibrary.simpleMessage("版本更新"),
     "author" : MessageLookupByLibrary.simpleMessage("作者"),

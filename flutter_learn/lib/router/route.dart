@@ -13,6 +13,7 @@ import 'package:flutter_learn/page/expand/refresh/user_profile.dart';
 import 'package:flutter_learn/page/expand/spinkit.dart';
 import 'package:flutter_learn/page/expand/swiper.dart';
 import 'package:flutter_learn/page/expand/web.dart';
+import 'package:flutter_learn/page/utils/app_badge.dart';
 import 'package:flutter_learn/page/utils/battery.dart';
 import 'package:flutter_learn/page/utils/bugly.dart';
 import 'package:flutter_learn/page/utils/camera_simple.dart';
@@ -158,6 +159,7 @@ class RouteMap {
     '/utils/video_player': (BuildContext context) => VideoPlayerPage(Languages.of(context).videoPlayer),
     '/utils/camera': (BuildContext context) => CameraPage(Languages.of(context).camera),
     '/utils/permission_apply': (BuildContext context) => PermissionApplyPage(Languages.of(context).permissionApply),
+    '/utils/app_badge': (BuildContext context) => AppBadgePage(Languages.of(context).appBadge),
 
     //============================expand=================================//
 
@@ -227,6 +229,7 @@ class RouteMap {
     ListItem(Icons.video_library, Languages.of(context).videoPlayer, "flutter官方视频播放插件", '/utils/video_player'),
     ListItem(Icons.camera, Languages.of(context).camera, "拍摄照片", '/utils/camera'),
     ListItem(Icons.settings, Languages.of(context).permissionApply, "权限申请", '/utils/permission_apply'),
+    ListItem(Icons.notifications, Languages.of(context).appBadge, "应用消息数量徽章的设置和更新", '/utils/app_badge'),
   ];
 
   ///拓展

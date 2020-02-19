@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-17T13:09:58.587076",
+  "@@last_modified": "2020-02-19T15:55:17.080127",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -392,6 +392,11 @@
   },
   "permissionApply": "PermissionApply",
   "@permissionApply": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appBadge": "AppBadge",
+  "@appBadge": {
     "type": "text",
     "placeholders": {}
   },

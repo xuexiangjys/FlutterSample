@@ -99,6 +99,7 @@ class Languages {
   String get url => Intl.message('Url', name: 'url');
   String get videoPlayer => Intl.message('VideoPlayer', name: 'videoPlayer');
   String get permissionApply => Intl.message('PermissionApply', name: 'permissionApply');
+  String get appBadge => Intl.message('AppBadge', name: 'appBadge');
 
   String get picker => Intl.message('Picker', name: 'picker');
   String get cityPicker => Intl.message('CityPicker', name: 'cityPicker');

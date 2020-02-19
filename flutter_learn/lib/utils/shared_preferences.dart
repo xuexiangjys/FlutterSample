@@ -56,5 +56,14 @@ class SPUtils {
     return _spf.getString('key_locale');
   }
 
+  static Future<bool> saveAppBadgeNumber(int number) {
+    return _spf.setInt('key_App_Badge_number', number);
+  }
+
+  static int getAppBadgeNumber() {
+    int result = _spf.getInt('key_App_Badge_number');
+    return result == null ? 0 : result;
+  }
+
   
 }

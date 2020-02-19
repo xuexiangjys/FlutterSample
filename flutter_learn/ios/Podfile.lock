@@ -14,6 +14,8 @@ PODS:
   - device_info (0.0.1):
     - Flutter
   - Flutter (1.0.0)
+  - flutter_app_badger (0.0.1):
+    - Flutter
   - flutter_bugly (0.0.1):
     - Bugly
     - Flutter
@@ -29,6 +31,8 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - image_picker (0.0.1):
+    - Flutter
+  - image_picker_saver (0.0.1):
     - Flutter
   - JCore (2.1.8)
   - JPush (3.2.8):
@@ -50,6 +54,8 @@ PODS:
   - package_info (0.0.1):
     - Flutter
   - path_provider (0.0.1):
+    - Flutter
+  - "permission_handler (4.2.0+hotfix.3)":
     - Flutter
   - share (0.5.2):
     - Flutter
@@ -82,18 +88,21 @@ DEPENDENCIES:
   - city_pickers (from `.symlinks/plugins/city_pickers/ios`)
   - device_info (from `.symlinks/plugins/device_info/ios`)
   - Flutter (from `Flutter`)
+  - flutter_app_badger (from `.symlinks/plugins/flutter_app_badger/ios`)
   - flutter_bugly (from `.symlinks/plugins/flutter_bugly/ios`)
   - flutter_plugin_android_lifecycle (from `.symlinks/plugins/flutter_plugin_android_lifecycle/ios`)
   - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
   - flutter_xupdate (from `.symlinks/plugins/flutter_xupdate/ios`)
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - image_picker (from `.symlinks/plugins/image_picker/ios`)
+  - image_picker_saver (from `.symlinks/plugins/image_picker_saver/ios`)
   - jpush_flutter (from `.symlinks/plugins/jpush_flutter/ios`)
   - lcfarm_flutter_umeng (from `.symlinks/plugins/lcfarm_flutter_umeng/ios`)
   - mmkv_flutter (from `.symlinks/plugins/mmkv_flutter/ios`)
   - multi_image_picker (from `.symlinks/plugins/multi_image_picker/ios`)
   - package_info (from `.symlinks/plugins/package_info/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
   - share (from `.symlinks/plugins/share/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
   - shared_preferences_macos (from `.symlinks/plugins/shared_preferences_macos/ios`)
@@ -129,6 +138,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/device_info/ios"
   Flutter:
     :path: Flutter
+  flutter_app_badger:
+    :path: ".symlinks/plugins/flutter_app_badger/ios"
   flutter_bugly:
     :path: ".symlinks/plugins/flutter_bugly/ios"
   flutter_plugin_android_lifecycle:
@@ -141,6 +152,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/fluttertoast/ios"
   image_picker:
     :path: ".symlinks/plugins/image_picker/ios"
+  image_picker_saver:
+    :path: ".symlinks/plugins/image_picker_saver/ios"
   jpush_flutter:
     :path: ".symlinks/plugins/jpush_flutter/ios"
   lcfarm_flutter_umeng:
@@ -153,6 +166,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/package_info/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
+  permission_handler:
+    :path: ".symlinks/plugins/permission_handler/ios"
   share:
     :path: ".symlinks/plugins/share/ios"
   shared_preferences:
@@ -184,6 +199,7 @@ SPEC CHECKSUMS:
   city_pickers: b0370f4c35c201723b5b7fcce10ec29b59d5bc35
   device_info: cbf09d2ec12aa7110e0b09fabe54b5bd6c8efe74
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_app_badger: 65de4d6f0c34a891df49e6cfb8a1c0496426fa68
   flutter_bugly: c9800f4d5bc5bdc27ffdde3417a26ba44266e0c3
   flutter_plugin_android_lifecycle: 47de533a02850f070f5696a623995e93eddcdb9b
   flutter_webview_plugin: ed9e8a6a96baf0c867e90e1bce2673913eeac694
@@ -191,6 +207,7 @@ SPEC CHECKSUMS:
   fluttertoast: b644586ef3b16f67fae9a1f8754cef6b2d6b634b
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   image_picker: e3eacd46b94694dde7cf2705955cece853aa1a8f
+  image_picker_saver: 4f28bd70e1efdca68ad88beab0f11d22cffe04f6
   JCore: a7f1dead960d77a97717c73ea8b0aa5b33706491
   JPush: 8ce888d6dedfa417e90c8b6bc87405a16ce2e699
   jpush_flutter: d7e3a79466eb9447fd940233f02661b514f137c6
@@ -200,6 +217,7 @@ SPEC CHECKSUMS:
   multi_image_picker: 9fe118993be074708a1a2d3152ea48259d422988
   package_info: 48b108e75b8802c2d5e126f208ef540561c98aef
   path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
+  permission_handler: 40520ab8ad1bb78a282b832464e995ec87f77ec6
   share: bae0a282aab4483288913fc4dc0b935d4b491f2e
   shared_preferences: 430726339841afefe5142b9c1f50cb6bd7793e01
   shared_preferences_macos: f3f29b71ccbb56bf40c9dd6396c9acf15e214087

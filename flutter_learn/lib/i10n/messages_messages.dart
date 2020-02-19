@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "about" : MessageLookupByLibrary.simpleMessage("About"),
     "alignLayout" : MessageLookupByLibrary.simpleMessage("AlignLayout"),
     "animation" : MessageLookupByLibrary.simpleMessage("Animation"),
+    "appBadge" : MessageLookupByLibrary.simpleMessage("AppBadge"),
     "appBar" : MessageLookupByLibrary.simpleMessage("AppBar"),
     "appupdate" : MessageLookupByLibrary.simpleMessage("AppUpdate"),
     "author" : MessageLookupByLibrary.simpleMessage("Author"),
