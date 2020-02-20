@@ -5,6 +5,7 @@ import 'package:flutter_learn/init/splash.dart';
 import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/utils/bugly.dart';
+import 'package:flutter_learn/utils/http.dart';
 import 'package:flutter_learn/utils/provider.dart';
 import 'package:flutter_learn/utils/push.dart';
 import 'package:flutter_learn/utils/shared_preferences.dart';
@@ -25,6 +26,7 @@ class NormalApp {
 
   //程序初始化操作
   static void initApp() {
+    XHttp.init();
     XRouter.init();
     SQLHelper.init();
     XPush.init();
@@ -43,7 +45,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Learn',
         theme: ThemeData(
           primarySwatch: appTheme.themeColor,
-          buttonColor : appTheme.themeColor
+          buttonColor : appTheme.themeColor,
         ),
         home: SplashPage(),
         onGenerateRoute: XRouter.router.generator,

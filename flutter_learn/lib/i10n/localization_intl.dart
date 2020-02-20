@@ -19,6 +19,19 @@ class Languages {
   }
 
   String get title => Intl.message('Flutter Learn', name: 'title');
+  String get login => Intl.message('Login', name: 'login');
+  String get logout => Intl.message('Logout', name: 'logout');
+  String get loginName => Intl.message('LoginName', name: 'loginName');
+  String get loginNameHint => Intl.message('Please enter your login name or email', name: 'loginNameHint');
+  String get loginNameError => Intl.message('LoginName cannot be empty!', name: 'loginNameError');
+  String get password => Intl.message('Password', name: 'password');
+  String get passwordHint => Intl.message('Please enter your password', name: 'passwordHint');
+  String get passwordError => Intl.message('Password cannot be less than 6 digits!', name: 'passwordError');
+  String get repeatPassword => Intl.message('Repeat Password', name: 'repeatPassword');
+  String get passwordsInconsistent => Intl.message('Passwords are inconsistent!', name: 'passwordsInconsistent');
+  String get register => Intl.message('Register', name: 'register');
+  String get loginSuccess => Intl.message('Login Success', name: 'loginSuccess');
+  String get registerSuccess => Intl.message('Register Success', name: 'registerSuccess');
   String get theme => Intl.message('Theme', name: 'theme');
   String get language => Intl.message('Language', name: 'language');
   String get chinese => Intl.message('Chinese', name: 'chinese');

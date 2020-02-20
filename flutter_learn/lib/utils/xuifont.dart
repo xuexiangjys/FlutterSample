@@ -23,7 +23,10 @@ class XUIIcons {
     collect,
     emoj,
     boy,
-    girl
+    girl,
+    eye_on,
+    eye_off,
+    logout
   ];
 
   static const IconData file =
@@ -64,4 +67,10 @@ class XUIIcons {
       const IconData(0xe6c5, fontFamily: 'xuifont', matchTextDirection: true);
   static const IconData girl =
       const IconData(0xe61b, fontFamily: 'xuifont', matchTextDirection: true);
+  static const IconData eye_on =
+      const IconData(0xe632, fontFamily: 'xuifont', matchTextDirection: true);
+  static const IconData eye_off =
+      const IconData(0xe749, fontFamily: 'xuifont', matchTextDirection: true);
+  static const IconData logout =
+      const IconData(0xe723, fontFamily: 'xuifont', matchTextDirection: true);
 }

@@ -14,6 +14,7 @@ class Store {
         ChangeNotifierProvider(create: (_) => Counter(10)),
         ChangeNotifierProvider(create: (_) => AppTheme(getDefaultTheme())),
         ChangeNotifierProvider.value(value: LocaleModel(SPUtils.getLocale())),
+        ChangeNotifierProvider.value(value: UserProfile(SPUtils.getNickName())),
       ],
       child: child,
     );
@@ -52,7 +53,7 @@ MaterialColor getDefaultTheme() {
   return AppTheme.materialColors[SPUtils.getThemeColorIndex()];
 }
 
-//主题
+///主题
 class AppTheme with ChangeNotifier {
   static final List<MaterialColor> materialColors = [
     Colors.blue,
@@ -87,6 +88,7 @@ class AppTheme with ChangeNotifier {
   get themeColor => _themeColor;
 }
 
+///语言
 class LocaleModel with ChangeNotifier {
   // 获取当前用户的APP语言配置Locale类，如果为null，则语言跟随系统语言
   Locale getLocale() {
@@ -109,5 +111,20 @@ class LocaleModel with ChangeNotifier {
       SPUtils.saveLocale(_locale);
       notifyListeners();
     }
+  }
+}
+
+///用户账户信息
+class UserProfile with ChangeNotifier {
+  String _nickName;
+
+  UserProfile(this._nickName);
+
+  String get nickName => _nickName;
+
+  set nickName(String nickName) {
+    _nickName = nickName;
+    SPUtils.saveNickName(nickName);
+    notifyListeners();
   }
 }

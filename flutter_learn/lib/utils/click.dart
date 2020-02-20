@@ -7,9 +7,10 @@ class ClickUtils {
   static DateTime _lastPressedAt; //上次点击时间
 
   //双击返回
-  static Future<bool> exitBy2Click({int duration = 1000, ScaffoldState status}) async {
+  static Future<bool> exitBy2Click(
+      {int duration = 1000, ScaffoldState status}) async {
     if (status != null && status.isDrawerOpen) {
-      return true;
+      return Future.value(true);
     }
 
     if (_lastPressedAt == null ||
@@ -18,8 +19,8 @@ class ClickUtils {
       //两次点击间隔超过1秒则重新计时
       XToast.toast("再按一次退出程序");
       _lastPressedAt = DateTime.now();
-      return false;
+      return Future.value(false);
     }
-    return true;
+    return Future.value(true);
   }
 }

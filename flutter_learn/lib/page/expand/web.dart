@@ -29,6 +29,14 @@ class _WebPageState extends State<WebPage> {
                       child: Text('访问百度'),
                       onPressed: () => {gotoBaidu(context)},
                     ),
+                    RaisedButton(
+                      child: Text('访问我的Github'),
+                      onPressed: () => {gotoGithub(context)},
+                    ),
+                    RaisedButton(
+                      child: Text('访问我的博客'),
+                      onPressed: () => {gotoBlog(context)},
+                    ),
                   ],
                 ),
               ],
@@ -38,6 +46,18 @@ class _WebPageState extends State<WebPage> {
   void gotoBaidu(BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return WebViewPage("https://www.baidu.com/", "百度");
+    }));
+  }
+
+  void gotoGithub(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return WebViewPage("https://github.com/xuexiangjys", "Github");
+    }));
+  }
+
+   void gotoBlog(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return WebViewPage("https://juejin.im/user/598feef55188257d592e56ed", "博客");
     }));
   }
 }

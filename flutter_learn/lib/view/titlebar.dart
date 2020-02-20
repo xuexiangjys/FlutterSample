@@ -36,7 +36,7 @@ class TitleBar {
         Container(
           width: 44,
           padding: EdgeInsets.all(0),
-          child: new IconButton(
+          child: IconButton(
             padding: EdgeInsets.only(left: 16, right: 16),
             icon: Icon(Icons.chevron_left),
             onPressed: () {

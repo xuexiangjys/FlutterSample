@@ -29,6 +29,8 @@ dependencies:
   device_info: ^0.4.1+4
   intl: ^0.16.1
   dio: ^3.0.6
+  dio_cookie_manager: ^1.0.0
+  cookie_jar: ^1.0.1
   url_launcher: ^5.4.1
   mmkv_flutter: ^1.0.10
   shared_preferences: ^0.5.6

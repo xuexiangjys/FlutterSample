@@ -130,7 +130,7 @@ class _DialogPageState extends State<DialogPage> {
         context: context,
         barrierDismissible: false,
         builder: (BuildContext context) {
-          return new LoadingDialog(
+          return LoadingDialog(
             content: "加载中…",
             loadingView: SpinKitCircle(color: Colors.lightBlue),
           );
@@ -145,7 +145,7 @@ class _DialogPageState extends State<DialogPage> {
         context: context,
         barrierDismissible: false,
         builder: (BuildContext context) {
-          return new LoadingDialog(
+          return LoadingDialog(
             showContent: false,
             backgroundColor: Colors.black38,
             loadingView: SpinKitCircle(color: Colors.white),

@@ -1,7 +1,72 @@
 {
-  "@@last_modified": "2020-02-19T17:59:05.578788",
+  "@@last_modified": "2020-02-20T17:08:11.916438",
   "title": "Flutter Learn",
   "@title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Login",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logout": "Logout",
+  "@logout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginName": "LoginName",
+  "@loginName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginNameHint": "Please enter your login name or email",
+  "@loginNameHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginNameError": "LoginName cannot be empty!",
+  "@loginNameError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "Password",
+  "@password": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordHint": "Please enter your password",
+  "@passwordHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordError": "Password cannot be less than 6 digits!",
+  "@passwordError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "repeatPassword": "Repeat Password",
+  "@repeatPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordsInconsistent": "Passwords are inconsistent!",
+  "@passwordsInconsistent": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "register": "Register",
+  "@register": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginSuccess": "Login Success",
+  "@loginSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerSuccess": "Register Success",
+  "@registerSuccess": {
     "type": "text",
     "placeholders": {}
   },

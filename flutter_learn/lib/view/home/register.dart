@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/i10n/localization_intl.dart';
+import 'package:flutter_learn/utils/http.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:flutter_learn/view/loading_dialog.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-class FormPage extends StatefulWidget {
-  FormPage(this.title, {Key key}) : super(key: key);
-  final String title;
+class RegisterPage extends StatefulWidget {
   @override
-  _FormPageState createState() => _FormPageState();
+  _RegisterPageState createState() => _RegisterPageState();
 }
 
-class _FormPageState extends State<FormPage> {
+class _RegisterPageState extends State<RegisterPage> {
   // 响应空白处的焦点的Node
   bool _isShowPassWord = false;
+  bool _isShowPassWordRepeat = false;
   FocusNode blankNode = FocusNode();
   TextEditingController _unameController = TextEditingController();
   TextEditingController _pwdController = TextEditingController();
+  TextEditingController _pwdRepeatController = TextEditingController();
   GlobalKey _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: AppBar(title: Text(Languages.of(context).register)),
       body: GestureDetector(
         onTap: () {
           // 点击空白页面关闭键盘
@@ -44,41 +44,63 @@ class _FormPageState extends State<FormPage> {
       autovalidate: true, //开启自动校验
       child: Column(
         children: <Widget>[
-          Center(
-              heightFactor: 1.5,
-              child: Image(
-                image: AssetImage('assets/images/flutter.png'),
-                height: 64,
-                width: 64,
-              )),
           TextFormField(
               autofocus: false,
               controller: _unameController,
               decoration: InputDecoration(
-                  labelText: "用户名",
-                  hintText: "用户名或邮箱",
+                  labelText: Languages.of(context).loginName,
+                  hintText: Languages.of(context).loginNameHint,
                   icon: Icon(Icons.person)),
               //校验用户名
               validator: (v) {
-                return v.trim().length > 0 ? null : "用户名不能为空";
+                return v.trim().length > 0
+                    ? null
+                    : Languages.of(context).loginNameError;
               }),
           TextFormField(
               controller: _pwdController,
               decoration: InputDecoration(
-                  labelText: "密码",
-                  hintText: "您的登录密码",
+                  labelText: Languages.of(context).password,
+                  hintText: Languages.of(context).passwordHint,
                   icon: Icon(Icons.lock),
                   suffixIcon: IconButton(
                       icon: Icon(
-                        _isShowPassWord ? Icons.visibility : Icons.visibility_off,
+                        _isShowPassWord
+                            ? Icons.visibility
+                            : Icons.visibility_off,
                         color: Colors.black,
                       ),
                       onPressed: showPassWord)),
               obscureText: !_isShowPassWord,
               //校验密码
               validator: (v) {
-                return v.trim().length >= 8 ? null : "密码不能少于8位";
+                return v.trim().length >= 6
+                    ? null
+                    : Languages.of(context).passwordError;
               }),
+
+          TextFormField(
+              controller: _pwdRepeatController,
+              decoration: InputDecoration(
+                  labelText: Languages.of(context).repeatPassword,
+                  hintText: Languages.of(context).passwordHint,
+                  icon: Icon(Icons.lock),
+                  suffixIcon: IconButton(
+                      icon: Icon(
+                        _isShowPassWordRepeat
+                            ? Icons.visibility
+                            : Icons.visibility_off,
+                        color: Colors.black,
+                      ),
+                      onPressed: showPassWordRepeat)),
+              obscureText: !_isShowPassWordRepeat,
+              //校验密码
+              validator: (v) {
+                return v.trim().length >= 6
+                    ? null
+                    : Languages.of(context).passwordError;
+              }),
+
           // 登录按钮
           Padding(
             padding: const EdgeInsets.only(top: 28.0),
@@ -87,7 +109,7 @@ class _FormPageState extends State<FormPage> {
                 Expanded(child: Builder(builder: (context) {
                   return RaisedButton(
                     padding: EdgeInsets.all(15.0),
-                    child: Text("登录"),
+                    child: Text(Languages.of(context).register),
                     color: Theme.of(context).primaryColor,
                     textColor: Colors.white,
                     onPressed: () {
@@ -113,6 +135,13 @@ class _FormPageState extends State<FormPage> {
     });
   }
 
+  ///点击控制密码是否显示
+  void showPassWordRepeat() {
+    setState(() {
+      _isShowPassWordRepeat = !_isShowPassWordRepeat;
+    });
+  }
+
   void closeKeyboard(BuildContext context) {
     FocusScope.of(context).requestFocus(blankNode);
   }
@@ -126,14 +155,27 @@ class _FormPageState extends State<FormPage> {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return LoadingDialog(
-            content: "登录中…",
-            loadingView: SpinKitCircle(color: Colors.lightBlue),
+            showContent: false,
+            backgroundColor: Colors.black38,
+            loadingView: SpinKitCircle(color: Colors.white),
           );
         });
-    Future.delayed(Duration(seconds: 2), () {
+
+    XHttp.post("/user/register", {
+      "username": _unameController.text,
+      "password": _pwdController.text,
+      "repassword": _pwdRepeatController.text
+    }).then((response) {
       Navigator.pop(context);
-      XToast.success(
-          "用户名:" + _unameController.text + ",密码:" + _pwdController.text);
+      if (response['errorCode'] == 0) {
+        XToast.toast(Languages.of(context).registerSuccess);
+        Navigator.of(context).pop();
+      } else {
+        XToast.error(response['errorMsg']);
+      }
+    }).catchError((onError) {
+      Navigator.of(context).pop();
+      XToast.error(onError);
     });
   }
 }

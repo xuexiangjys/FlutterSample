@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/utils/shared_preferences.dart';
 
 //类似广告启动页
 class SplashPage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: new BoxDecoration(
+        decoration: BoxDecoration(
           color: Colors.white,
         ),
         child: Center(
@@ -35,6 +36,11 @@ class _SplashPageState extends State<SplashPage> {
 
   //页面跳转
   void goHomePage() {
-    Navigator.of(context).pushReplacementNamed('/home');
+    String nickName = SPUtils.getNickName();
+    if (nickName != null && nickName.isNotEmpty) {
+      Navigator.of(context).pushReplacementNamed('/home');
+    } else {
+      Navigator.of(context).pushReplacementNamed('/login');
+    }
   }
 }

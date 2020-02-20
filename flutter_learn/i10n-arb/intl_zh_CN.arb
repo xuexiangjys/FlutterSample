@@ -5,6 +5,71 @@
     "type": "text",
     "placeholders": {}
   },
+  "login": "登录",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logout": "登出",
+  "@logout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginName": "用户名",
+  "@loginName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginNameHint": "请输入您的用户名或邮箱",
+  "@loginNameHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginNameError": "用户名不能为空!",
+  "@loginNameError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "密码",
+  "@password": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordHint": "请输入您的密码",
+  "@passwordHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordError": "密码不能少于6位!",
+  "@passwordError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "repeatPassword": "重复密码",
+  "@repeatPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordsInconsistent": "密码前后输入不一致!",
+  "@passwordsInconsistent": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "register": "注册",
+  "@register": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginSuccess": "登录成功",
+  "@loginSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerSuccess": "注册成功",
+  "@registerSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
   "theme": "主题",
   "@theme": {
     "type": "text",
