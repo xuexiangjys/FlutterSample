@@ -2,11 +2,11 @@
   "Code": 0,
   "Msg": "",
   "UpdateStatus": 1,
-  "VersionCode": 2,
-  "VersionName": "1.0.1",
-  "UploadTime": "2020-02-10 08:00:00",
-  "ModifyContent": "\r\n1、优化现有案例。\r\n2、新增更多丰富的案例。",
+  "VersionCode": 3,
+  "VersionName": "1.0.2",
+  "UploadTime": "2020-02-20 08:00:00",
+  "ModifyContent": "\r\n1、增加了账号系统。\r\n2、增加了语言和皮肤主题的切换功能。\r\n3、还有更多新增的案例待你去发现。",
   "DownloadUrl": "https://raw.githubusercontent.com/xuexiangjys/FlutterSample/master/flutter_learn/apk/app-release.apk",
-  "ApkSize": 21245,
-  "ApkMd5": "D87D0A1B3DD7FED0B5090FB6DAF788BC"
+  "ApkSize": 23338,
+  "ApkMd5": "29385F984CC427632514ADA4435928EC"
 }

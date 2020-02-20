@@ -44,6 +44,7 @@ flutter run
 
 ## 依赖库说明
 
+* [badges (消息徽章)](https://pub.dev/packages/badges)
 * [cached_network_image (网络缓存图片)](https://pub.dev/packages/cached_network_image)
 * [camera (照相机)](https://pub.dev/packages/camera)
 * [city_pickers (城市选择)](https://pub.dev/packages/city_pickers)
