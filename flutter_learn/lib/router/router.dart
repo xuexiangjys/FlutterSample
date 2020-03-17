@@ -7,12 +7,12 @@ class XRouter {
   static Router router;
 
   static void init() {
-    router = new Router();
+    router = Router();
     configureRoutes(router);
   }
 
   static void configureRoutes(Router router) {
-    router.notFoundHandler = new Handler(
+    router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       print("route is not find !");
       return null;
@@ -30,9 +30,9 @@ class XRouter {
   }
 }
 
-Handler webViewPageHand = new Handler(
+Handler webViewPageHand = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   String title = params['title']?.first;
   String url = params['url']?.first;
-  return new WebViewPage(url, title);
+  return WebViewPage(url, title);
 });

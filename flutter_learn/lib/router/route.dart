@@ -22,7 +22,6 @@ import 'package:flutter_learn/page/utils/device_info.dart';
 import 'package:flutter_learn/page/utils/event_bus.dart';
 import 'package:flutter_learn/page/utils/jpush.dart';
 import 'package:flutter_learn/page/utils/json_serialize.dart';
-import 'package:flutter_learn/page/utils/mmkv.dart';
 import 'package:flutter_learn/page/utils/navigator.dart';
 import 'package:flutter_learn/page/utils/net.dart';
 import 'package:flutter_learn/page/utils/package_info.dart';
@@ -144,7 +143,6 @@ class RouteMap {
     '/utils/navigator': (BuildContext context) => NavigatorPage(Languages.of(context).navigator),
     '/utils/net': (BuildContext context) => NetRequestPage(Languages.of(context).netRequest),
     '/utils/toast': (BuildContext context) => ToastPage(Languages.of(context).toast),
-    '/utils/mmkv': (BuildContext context) => MMKVPage(Languages.of(context).mmkv),
     '/utils/shared_preferences': (BuildContext context) => SharedPreferencesPage(Languages.of(context).sharedPreferences),
     '/utils/sqlite': (BuildContext context) => SqlitePage(Languages.of(context).sqlite),
     '/utils/event_bus': (BuildContext context) => EventBusPage(Languages.of(context).eventBus),

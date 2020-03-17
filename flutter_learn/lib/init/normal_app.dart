@@ -6,6 +6,7 @@ import 'package:flutter_learn/router/route.dart';
 import 'package:flutter_learn/router/router.dart';
 import 'package:flutter_learn/utils/bugly.dart';
 import 'package:flutter_learn/utils/http.dart';
+import 'package:flutter_learn/utils/oktoast.dart';
 import 'package:flutter_learn/utils/provider.dart';
 import 'package:flutter_learn/utils/push.dart';
 import 'package:flutter_learn/utils/shared_preferences.dart';
@@ -41,11 +42,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer2<AppTheme, LocaleModel>(
         builder: (context, appTheme, localeModel, _) {
-      return MaterialApp(
+      return ToastUtils.init(MaterialApp(
         title: 'Flutter Learn',
         theme: ThemeData(
           primarySwatch: appTheme.themeColor,
-          buttonColor : appTheme.themeColor,
+          buttonColor: appTheme.themeColor,
         ),
         home: SplashPage(),
         onGenerateRoute: XRouter.router.generator,
@@ -80,7 +81,7 @@ class MyApp extends StatelessWidget {
             return locale;
           }
         },
-      );
+      ));
     });
   }
 }

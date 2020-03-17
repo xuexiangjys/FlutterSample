@@ -35,7 +35,6 @@ Flutter使用指南,包含众多组件和插件的使用
 * [EventBus(事件总线)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/event_bus.dart)
 * [JPush(极光推送)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/jpush.dart)
 * [JsonSerialize(序列化)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/json_serialize.dart)
-* [MMKV(键值对保存)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/mmkv.dart)
 * [Navigator(导航路由)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/navigator.dart)
 * [Net(网络请求)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/net.dart)
 * [Path(文件路径)](https://github.com/xuexiangjys/FlutterSample/blob/master/flutter_learn/lib/page/utils/path.dart)

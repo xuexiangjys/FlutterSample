@@ -54,6 +54,7 @@ flutter run
 * [event_bus (事件工具)](https://pub.dev/packages/event_bus)
 * [extended_image (图片拓展)](https://pub.dev/packages/extended_image)
 * [FlutterToast](https://pub.dev/packages/fluttertoast)
+* [oktoast](https://pub.dev/packages/oktoast)
 * [fluro (页面路由神器)](https://pub.dev/packages/fluro)
 * [flutter_app_badger (应用消息徽章)](https://pub.dev/packages/flutter_app_badger)
 * [flutter_colorpicker (颜色选择器)](https://pub.dev/packages/flutter_colorpicker)
