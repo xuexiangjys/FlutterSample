@@ -420,7 +420,6 @@ class _PickerPageState extends State<PickerPage> {
               content: SingleChildScrollView(
                 child: getColorPicker(type),
               ),
-              actionsPadding: const EdgeInsets.all(0),
               actions: <Widget>[
                 FlatButton(
                   child: const Text('确定'),
