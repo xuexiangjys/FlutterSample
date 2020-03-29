@@ -72,6 +72,7 @@ flutter run
 * [mmkv_flutter](https://pub.dev/packages/mmkv_flutter)
 * [package_info (应用包信息)](https://pub.dev/packages/url_launcher)
 * [path_provider (路径)](https://pub.dev/packages/path_provider)
+* [permission_handler 权限申请](https://pub.dev/packages/permission_handler)
 * [provider (非常好用的数据共享工具)](https://pub.dev/packages/provider)
 * [shared_preferences](https://pub.dev/packages/shared_preferences)
 * [share (分享)](https://pub.dev/packages/share)

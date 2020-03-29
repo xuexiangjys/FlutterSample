@@ -78,7 +78,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget buildForm(BuildContext context) {
     return Form(
       key: _formKey, //设置globalKey，用于后面获取FormState
-      autovalidate: true, //开启自动校验
       child: Column(
         children: <Widget>[
           Center(
@@ -94,16 +93,20 @@ class _LoginPageState extends State<LoginPage> {
               decoration: InputDecoration(
                   labelText: Languages.of(context).loginName,
                   hintText: Languages.of(context).loginNameHint,
+                  hintStyle: TextStyle(fontSize: 12),
                   icon: Icon(Icons.person)),
               //校验用户名
               validator: (v) {
-                return v.trim().length > 0 ? null : Languages.of(context).loginNameError;
+                return v.trim().length > 0
+                    ? null
+                    : Languages.of(context).loginNameError;
               }),
           TextFormField(
               controller: _pwdController,
               decoration: InputDecoration(
                   labelText: Languages.of(context).password,
                   hintText: Languages.of(context).passwordHint,
+                  hintStyle: TextStyle(fontSize: 12),
                   icon: Icon(Icons.lock),
                   suffixIcon: IconButton(
                       icon: Icon(
@@ -116,7 +119,9 @@ class _LoginPageState extends State<LoginPage> {
               obscureText: !_isShowPassWord,
               //校验密码
               validator: (v) {
-                return v.trim().length >= 6 ? null : Languages.of(context).passwordError;
+                return v.trim().length >= 6
+                    ? null
+                    : Languages.of(context).passwordError;
               }),
           // 登录按钮
           Padding(
