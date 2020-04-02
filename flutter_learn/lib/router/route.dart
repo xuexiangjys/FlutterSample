@@ -22,6 +22,7 @@ import 'package:flutter_learn/page/utils/device_info.dart';
 import 'package:flutter_learn/page/utils/event_bus.dart';
 import 'package:flutter_learn/page/utils/jpush.dart';
 import 'package:flutter_learn/page/utils/json_serialize.dart';
+import 'package:flutter_learn/page/utils/local_notification.dart';
 import 'package:flutter_learn/page/utils/navigator.dart';
 import 'package:flutter_learn/page/utils/net.dart';
 import 'package:flutter_learn/page/utils/package_info.dart';
@@ -161,6 +162,7 @@ class RouteMap {
     '/utils/camera': (BuildContext context) => CameraPage(Languages.of(context).camera),
     '/utils/permission_apply': (BuildContext context) => PermissionApplyPage(Languages.of(context).permissionApply),
     '/utils/app_badge': (BuildContext context) => AppBadgePage(Languages.of(context).appBadge),
+    '/utils/local_notification': (BuildContext context) => LocalNotificationPage(Languages.of(context).localNotification),
 
     //============================expand=================================//
 
@@ -232,6 +234,7 @@ class RouteMap {
     ListItem(Icons.camera, Languages.of(context).camera, "拍摄照片", '/utils/camera'),
     ListItem(Icons.settings, Languages.of(context).permissionApply, "权限申请", '/utils/permission_apply'),
     ListItem(Icons.notifications, Languages.of(context).appBadge, "应用消息数量徽章的设置和更新", '/utils/app_badge'),
+    ListItem(Icons.notifications, Languages.of(context).localNotification, "通知栏消息的使用", '/utils/local_notification'),
   ];
 
   ///拓展

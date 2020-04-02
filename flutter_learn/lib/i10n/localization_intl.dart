@@ -115,6 +115,7 @@ class Languages {
   String get videoPlayer => Intl.message('VideoPlayer', name: 'videoPlayer');
   String get permissionApply => Intl.message('PermissionApply', name: 'permissionApply');
   String get appBadge => Intl.message('AppBadge', name: 'appBadge');
+  String get localNotification => Intl.message('Notification', name: 'localNotification');
 
   String get badge => Intl.message('Badge', name: 'badge');
   String get picker => Intl.message('Picker', name: 'picker');

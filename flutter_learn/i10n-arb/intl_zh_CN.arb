@@ -475,6 +475,11 @@
     "type": "text",
     "placeholders": {}
   },
+  "localNotification": "通知栏消息",
+  "@localNotification": {
+    "type": "text",
+    "placeholders": {}
+  },
   "badge": "小徽章",
   "@badge": {
     "type": "text",

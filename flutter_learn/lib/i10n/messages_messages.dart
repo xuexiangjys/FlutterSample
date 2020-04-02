@@ -79,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "language" : MessageLookupByLibrary.simpleMessage("Language"),
     "layout" : MessageLookupByLibrary.simpleMessage("Layout"),
     "linearLayout" : MessageLookupByLibrary.simpleMessage("LinearLayout"),
+    "localNotification" : MessageLookupByLibrary.simpleMessage("Notification"),
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
     "loginName" : MessageLookupByLibrary.simpleMessage("LoginName"),
     "loginNameError" : MessageLookupByLibrary.simpleMessage("LoginName cannot be empty!"),

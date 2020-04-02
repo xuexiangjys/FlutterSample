@@ -79,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "language" : MessageLookupByLibrary.simpleMessage("语言"),
     "layout" : MessageLookupByLibrary.simpleMessage("布局演示"),
     "linearLayout" : MessageLookupByLibrary.simpleMessage("线性布局"),
+    "localNotification" : MessageLookupByLibrary.simpleMessage("通知栏消息"),
     "login" : MessageLookupByLibrary.simpleMessage("登录"),
     "loginName" : MessageLookupByLibrary.simpleMessage("用户名"),
     "loginNameError" : MessageLookupByLibrary.simpleMessage("用户名不能为空!"),

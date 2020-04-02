@@ -65,6 +65,7 @@ dependencies:
   permission_handler: ^4.4.0
   flutter_app_badger: ^1.1.2
   badges: ^1.1.1
+  flutter_local_notifications: ^1.3.0
 
 dev_dependencies:
   flutter_test:

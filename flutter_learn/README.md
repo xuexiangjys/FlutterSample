@@ -58,6 +58,7 @@ flutter run
 * [fluro (页面路由神器)](https://pub.dev/packages/fluro)
 * [flutter_app_badger (应用消息徽章)](https://pub.dev/packages/flutter_app_badger)
 * [flutter_colorpicker (颜色选择器)](https://pub.dev/packages/flutter_colorpicker)
+* [flutter_local_notifications (本地通知栏消息)](https://pub.dev/packages/flutter_local_notifications)
 * [flutter_webview_plugin (网页加载)](https://pub.dev/packages/flutter_webview_plugin)
 * [flutter_spinkit (loading加载动画)](https://pub.dev/packages/flutter_spinkit)
 * [flutter_swiper (轮播图组件)](https://pub.dev/packages/flutter_swiper)
