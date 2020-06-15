@@ -1,6 +1,5 @@
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/utils/permission.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:image_picker_saver/image_picker_saver.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -73,7 +72,7 @@ class _ImageZoomPageState extends State<ImageZoomPage> {
 
   ///保存网络图片
   void saveImage() {
-    PermissionUtils.requestPermission(PermissionGroup.storage).then((value) {
+    Permission.storage.request().then((value) {
       if (PermissionStatus.granted == value) {
         saveNetworkImageToPhoto(IMAGE_URL).then((value) {
           if (value != null && value.isNotEmpty) {

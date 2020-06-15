@@ -1,7 +1,6 @@
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/i10n/localization_intl.dart';
-import 'package:flutter_learn/utils/permission.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:flutter_learn/utils/utils.dart';
 import 'package:image_picker_saver/image_picker_saver.dart';
@@ -85,7 +84,7 @@ class _SponsorPageState extends State<SponsorPage> {
 
   ///保存网络图片
   void saveImage(String url) {
-    PermissionUtils.requestPermission(PermissionGroup.storage).then((value) {
+    Permission.storage.request().then((value) {
       if (PermissionStatus.granted == value) {
         saveNetworkImageToPhoto(url).then((value) {
           if (value != null && value.isNotEmpty) {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/utils/permission.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -18,7 +17,7 @@ class _PermissionApplyPageState extends State<PermissionApplyPage> {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              PermissionUtils.openAppSettings().then((bool hasOpened) =>
+              openAppSettings().then((bool hasOpened) =>
                   debugPrint('App Settings opened: ' + hasOpened.toString()));
             },
           )
@@ -33,33 +32,20 @@ class _PermissionApplyPageState extends State<PermissionApplyPage> {
                   RaisedButton(
                     child: Text('相机权限申请'),
                     onPressed: () {
-                      PermissionUtils.requestPermission(PermissionGroup.camera).then((value) => {
-                        XToast.toast("申请结果:$value")
-                      });
+                      Permission.camera
+                          .request()
+                          .then((value) => {XToast.toast("申请结果:$value")});
                     },
                   ),
                   RaisedButton(
                     child: Text('相机权限检查'),
                     onPressed: () {
-                      PermissionUtils.checkPermissionStatus(PermissionGroup.camera).then((value)  => {
-                        XToast.toast("检查结果:$value")
-                      });
+                      Permission.camera.status
+                          .then((value) => {XToast.toast("检查结果:$value")});
                     },
                   ),
                 ],
               )
             ])));
   }
-
-  void checkServiceStatus(BuildContext context, PermissionGroup permission) {
-    PermissionHandler()
-        .checkServiceStatus(permission)
-        .then((ServiceStatus serviceStatus) {
-      final SnackBar snackBar =
-          SnackBar(content: Text(serviceStatus.toString()));
-
-      Scaffold.of(context).showSnackBar(snackBar);
-    });
-  }
-
 }
