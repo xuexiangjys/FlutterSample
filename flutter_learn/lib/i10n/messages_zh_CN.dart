@@ -104,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "provider" : MessageLookupByLibrary.simpleMessage("数据共享"),
     "providerNext" : MessageLookupByLibrary.simpleMessage("下一页"),
     "qqgroup" : MessageLookupByLibrary.simpleMessage("QQ群"),
+    "qrcode" : MessageLookupByLibrary.simpleMessage("二维码"),
     "register" : MessageLookupByLibrary.simpleMessage("注册"),
     "registerSuccess" : MessageLookupByLibrary.simpleMessage("注册成功"),
     "repeatPassword" : MessageLookupByLibrary.simpleMessage("重复密码"),

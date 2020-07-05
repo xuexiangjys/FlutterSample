@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-04-01T00:47:02.609797",
+  "@@last_modified": "2020-07-04T01:37:43.354675",
   "title": "Flutter Learn",
   "@title": {
     "type": "text",
@@ -557,6 +557,11 @@
   },
   "userProfile": "UserProfile",
   "@userProfile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "qrcode": "QRCode",
+  "@qrcode": {
     "type": "text",
     "placeholders": {}
   }

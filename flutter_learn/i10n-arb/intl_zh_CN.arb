@@ -559,5 +559,10 @@
   "@userProfile": {
     "type": "text",
     "placeholders": {}
+  },
+  "qrcode": "二维码",
+  "@qrcode": {
+    "type": "text",
+    "placeholders": {}
   }
 }

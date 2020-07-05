@@ -66,7 +66,8 @@ dependencies:
   flutter_app_badger: ^1.1.2
   badges: ^1.1.1
   flutter_local_notifications: ^1.4.4+1
-
+  qr_code_scanner: ^0.0.13
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

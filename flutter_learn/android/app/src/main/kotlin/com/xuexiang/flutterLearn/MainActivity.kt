@@ -1,16 +1,15 @@
 package com.xuexiang.flutterLearn
 
-import android.os.Bundle
-
-import io.flutter.app.FlutterActivity
+import androidx.annotation.NonNull;
+import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugins.GeneratedPluginRegistrant
 import com.umeng.analytics.MobclickAgent
 
 class MainActivity: FlutterActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    GeneratedPluginRegistrant.registerWith(this)
-  }
+    override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
+        GeneratedPluginRegistrant.registerWith(flutterEngine);
+    }
 
   override fun onResume() {
     super.onResume()

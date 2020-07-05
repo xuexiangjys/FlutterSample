@@ -104,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "provider" : MessageLookupByLibrary.simpleMessage("Provider"),
     "providerNext" : MessageLookupByLibrary.simpleMessage("ProviderNext"),
     "qqgroup" : MessageLookupByLibrary.simpleMessage("QQ Group"),
+    "qrcode" : MessageLookupByLibrary.simpleMessage("QRCode"),
     "register" : MessageLookupByLibrary.simpleMessage("Register"),
     "registerSuccess" : MessageLookupByLibrary.simpleMessage("Register Success"),
     "repeatPassword" : MessageLookupByLibrary.simpleMessage("Repeat Password"),
