@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.MODE_WORLD_READABLE" />
     <uses-permission android:name="android.permission.MODE_WORLD_WRITEABLE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-sdk 
@@ -53,6 +54,31 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"
                 tools:replace="android:resource" />
+        </provider>
+
+        <!-- 下载器 -->
+        <provider
+            android:name="vn.hunghd.flutterdownloader.DownloadedFileProvider"
+            android:authorities="${applicationId}.flutter_downloader.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <provider
+            android:name="androidx.work.impl.WorkManagerInitializer"
+            android:authorities="${applicationId}.workmanager-init"
+            android:enabled="false"
+            android:exported="false"
+            tools:node="remove"/>
+        <provider
+            android:name="vn.hunghd.flutterdownloader.FlutterDownloaderInitializer"
+            android:authorities="${applicationId}.flutter-downloader-init"
+            android:exported="false">
+            <meta-data
+                android:name="vn.hunghd.flutterdownloader.MAX_CONCURRENT_TASKS"
+                android:value="5" />
         </provider>
 
     </application>

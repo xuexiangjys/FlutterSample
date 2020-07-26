@@ -19,6 +19,8 @@ PODS:
   - flutter_bugly (0.0.1):
     - Bugly
     - Flutter
+  - flutter_downloader (0.0.1):
+    - Flutter
   - flutter_local_notifications (0.0.1):
     - Flutter
   - flutter_plugin_android_lifecycle (0.0.1):
@@ -46,18 +48,24 @@ PODS:
     - Flutter
     - UMCAnalytics
     - UMCCommon
-  - multi_image_picker (4.6.4):
+  - MTBBarcodeScanner (5.0.11)
+  - multi_image_picker (4.6.7):
     - BSImagePicker (~> 2.10.3)
     - Flutter
   - package_info (0.0.1):
     - Flutter
   - path_provider (0.0.1):
     - Flutter
+  - path_provider_linux (0.0.1):
+    - Flutter
   - path_provider_macos (0.0.1):
     - Flutter
-  - "permission_handler (4.4.0+hotfix.2)":
+  - permission_handler (5.0.1):
     - Flutter
-  - share (0.5.2):
+  - qr_code_scanner (0.0.2):
+    - Flutter
+    - MTBBarcodeScanner
+  - share (0.0.1):
     - Flutter
   - shared_preferences (0.0.1):
     - Flutter
@@ -90,6 +98,7 @@ DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_app_badger (from `.symlinks/plugins/flutter_app_badger/ios`)
   - flutter_bugly (from `.symlinks/plugins/flutter_bugly/ios`)
+  - flutter_downloader (from `.symlinks/plugins/flutter_downloader/ios`)
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - flutter_plugin_android_lifecycle (from `.symlinks/plugins/flutter_plugin_android_lifecycle/ios`)
   - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
@@ -102,8 +111,10 @@ DEPENDENCIES:
   - multi_image_picker (from `.symlinks/plugins/multi_image_picker/ios`)
   - package_info (from `.symlinks/plugins/package_info/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - path_provider_linux (from `.symlinks/plugins/path_provider_linux/ios`)
   - path_provider_macos (from `.symlinks/plugins/path_provider_macos/ios`)
   - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - qr_code_scanner (from `.symlinks/plugins/qr_code_scanner/ios`)
   - share (from `.symlinks/plugins/share/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
   - shared_preferences_macos (from `.symlinks/plugins/shared_preferences_macos/ios`)
@@ -124,6 +135,7 @@ SPEC REPOS:
     - FMDB
     - JCore
     - JPush
+    - MTBBarcodeScanner
     - UMCAnalytics
     - UMCCommon
 
@@ -142,6 +154,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_app_badger/ios"
   flutter_bugly:
     :path: ".symlinks/plugins/flutter_bugly/ios"
+  flutter_downloader:
+    :path: ".symlinks/plugins/flutter_downloader/ios"
   flutter_local_notifications:
     :path: ".symlinks/plugins/flutter_local_notifications/ios"
   flutter_plugin_android_lifecycle:
@@ -166,10 +180,14 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/package_info/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
+  path_provider_linux:
+    :path: ".symlinks/plugins/path_provider_linux/ios"
   path_provider_macos:
     :path: ".symlinks/plugins/path_provider_macos/ios"
   permission_handler:
     :path: ".symlinks/plugins/permission_handler/ios"
+  qr_code_scanner:
+    :path: ".symlinks/plugins/qr_code_scanner/ios"
   share:
     :path: ".symlinks/plugins/share/ios"
   shared_preferences:
@@ -192,45 +210,49 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/video_player_web/ios"
 
 SPEC CHECKSUMS:
-  battery: 42c3029d295615713120da60f48f2dc4ce98f030
+  battery: 6b19dafdbba590f03b1f0cd2f1224e3ffedadbe6
   BSGridCollectionViewLayout: 333dcb457a5a3bdd9212607ab5756553dcfe06cb
   BSImagePicker: 07404254f2fcdaf5a2eb403c0f8c337267ce8738
   BSImageView: a149459433a2687157d034c78e059d30ac7f2544
   Bugly: dbac48b55ad469a97cc4321045cd50df8f63d44f
   camera: 38cc83ae9a5667bb5a71c7d9edaf60a91920fd4e
   city_pickers: b0370f4c35c201723b5b7fcce10ec29b59d5bc35
-  device_info: cbf09d2ec12aa7110e0b09fabe54b5bd6c8efe74
+  device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_app_badger: 65de4d6f0c34a891df49e6cfb8a1c0496426fa68
   flutter_bugly: c9800f4d5bc5bdc27ffdde3417a26ba44266e0c3
+  flutter_downloader: 058b9c41564a90500f67f3e432e3524613a7fd83
   flutter_local_notifications: 9e4738ce2471c5af910d961a6b7eadcf57c50186
-  flutter_plugin_android_lifecycle: 47de533a02850f070f5696a623995e93eddcdb9b
+  flutter_plugin_android_lifecycle: dc0b544e129eebb77a6bfb1239d4d1c673a60a35
   flutter_webview_plugin: ed9e8a6a96baf0c867e90e1bce2673913eeac694
   flutter_xupdate: c7c62e59874a8d7dde645563cd3c458fdfa1830a
   fluttertoast: b644586ef3b16f67fae9a1f8754cef6b2d6b634b
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  image_picker: e3eacd46b94694dde7cf2705955cece853aa1a8f
+  image_picker: 66aa71bc96850a90590a35d4c4a2907b0d823109
   image_picker_saver: 4f28bd70e1efdca68ad88beab0f11d22cffe04f6
   JCore: a7f1dead960d77a97717c73ea8b0aa5b33706491
   JPush: 8ce888d6dedfa417e90c8b6bc87405a16ce2e699
   jpush_flutter: 69133df35eaf9135e540549b154d992c44f8ee44
   lcfarm_flutter_umeng: a06d7aba0fbbdee6c780c35a4506b43489429293
-  multi_image_picker: 1651732277b2db3b09e83f3be8eb7ea65cf2a933
-  package_info: 48b108e75b8802c2d5e126f208ef540561c98aef
-  path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
+  MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
+  multi_image_picker: 7968ace12b658a9ee51be6514473f5ee5501ea80
+  package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  path_provider_linux: 4d630dc393e1f20364f3e3b4a2ff41d9674a84e4
   path_provider_macos: f760a3c5b04357c380e2fddb6f9db6f3015897e0
-  permission_handler: d5d46b2ca93671e8dcf870b949e304c7ddb65ad0
-  share: bae0a282aab4483288913fc4dc0b935d4b491f2e
-  shared_preferences: 430726339841afefe5142b9c1f50cb6bd7793e01
+  permission_handler: 7022f8972d2d85ce95c1040db945f28bdbfa45d1
+  qr_code_scanner: 16107718bdad7d708cdf6a5eacdca24b56cdf471
+  share: 0b2c3e82132f5888bccca3351c504d0003b3b410
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   shared_preferences_macos: f3f29b71ccbb56bf40c9dd6396c9acf15e214087
   shared_preferences_web: 141cce0c3ed1a1c5bf2a0e44f52d31eeb66e5ea9
   sqflite: 4001a31ff81d210346b500c55b17f4d6c7589dd0
   UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
   UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
-  url_launcher: a1c0cc845906122c4784c542523d8cacbded5626
+  url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
   url_launcher_macos: fd7894421cd39320dce5f292fc99ea9270b2a313
   url_launcher_web: e5527357f037c87560776e36436bf2b0288b965c
-  video_player: 69c5f029fac4ffe4fc8a85ea7f7b793709661549
+  video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
   video_player_web: da8cadb8274ed4f8dbee8d7171b420dedd437ce7
 
 PODFILE CHECKSUM: 78d265b1080599c1c61080caca757b8ceb187aa7

@@ -23,4 +23,12 @@ class PathUtils {
     Directory directory = await getApplicationDocumentsDirectory();
     return directory.path;
   }
+
+  ///获取下载缓存路径
+  static Future<String> getDownloadDirPath() async {
+    Directory directory = Platform.isAndroid
+        ? await getExternalStorageDirectory()
+        : await getApplicationDocumentsDirectory();
+    return directory.path;
+  }
 }

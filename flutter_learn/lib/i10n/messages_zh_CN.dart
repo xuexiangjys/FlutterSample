@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "decoratedBox" : MessageLookupByLibrary.simpleMessage("装饰容器"),
     "deviceInfo" : MessageLookupByLibrary.simpleMessage("设备信息"),
     "dialog" : MessageLookupByLibrary.simpleMessage("对话框"),
+    "download" : MessageLookupByLibrary.simpleMessage("下载器"),
     "drag" : MessageLookupByLibrary.simpleMessage("拖拽动作"),
     "drawer" : MessageLookupByLibrary.simpleMessage("侧滑菜单"),
     "drawingWidget" : MessageLookupByLibrary.simpleMessage("自绘组件"),

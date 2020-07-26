@@ -564,5 +564,10 @@
   "@qrcode": {
     "type": "text",
     "placeholders": {}
+  },
+  "download": "下载器",
+  "@download": {
+    "type": "text",
+    "placeholders": {}
   }
 }

@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "decoratedBox" : MessageLookupByLibrary.simpleMessage("DecoratedBox"),
     "deviceInfo" : MessageLookupByLibrary.simpleMessage("DeviceInfo"),
     "dialog" : MessageLookupByLibrary.simpleMessage("Dialog"),
+    "download" : MessageLookupByLibrary.simpleMessage("Download"),
     "drag" : MessageLookupByLibrary.simpleMessage("Drag"),
     "drawer" : MessageLookupByLibrary.simpleMessage("Drawer"),
     "drawingWidget" : MessageLookupByLibrary.simpleMessage("DrawingWidget"),

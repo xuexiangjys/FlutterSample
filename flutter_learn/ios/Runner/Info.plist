@@ -45,6 +45,7 @@
 	<false/>
 	<key>UIBackgroundModes</key>
     <array>
+		<string>fetch</string>
         <string>remote-notification</string>
     </array>
     <key>NSPhotoLibraryUsageDescription</key>
@@ -55,8 +56,12 @@
     <string>应用需要访问您的麦克风</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	<key>NSAllowsArbitraryLoads</key>
-	<true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
+	<key>FDMaximumConcurrentTasks</key>
+	<integer>5</integer>
+	<key>FDAllFilesDownloadedMessage</key>
+	<string>All files have been downloaded</string>
 </dict>
 </plist>

@@ -57,14 +57,15 @@ flutter run
 * [oktoast](https://pub.dev/packages/oktoast)
 * [fluro (页面路由神器)](https://pub.dev/packages/fluro)
 * [flutter_app_badger (应用消息徽章)](https://pub.dev/packages/flutter_app_badger)
+* [flutter_bugly (bugly统计)](https://pub.dev/packages/flutter_bugly)
 * [flutter_colorpicker (颜色选择器)](https://pub.dev/packages/flutter_colorpicker)
+* [flutter_datetime_picker (时间选择器)](https://pub.dev/packages/flutter_datetime_picker)
+* [flutter_downloader (下载器)](https://pub.dev/packages/flutter_downloader)
+* [flutter_easyrefresh (刷新组件)](https://pub.dev/packages/flutter_easyrefresh)
 * [flutter_local_notifications (本地通知栏消息)](https://pub.dev/packages/flutter_local_notifications)
 * [flutter_webview_plugin (网页加载)](https://pub.dev/packages/flutter_webview_plugin)
 * [flutter_spinkit (loading加载动画)](https://pub.dev/packages/flutter_spinkit)
 * [flutter_swiper (轮播图组件)](https://pub.dev/packages/flutter_swiper)
-* [flutter_bugly (bugly统计)](https://pub.dev/packages/flutter_bugly)
-* [flutter_easyrefresh (刷新组件)](https://pub.dev/packages/flutter_easyrefresh)
-* [flutter_datetime_picker (时间选择器)](https://pub.dev/packages/flutter_datetime_picker)
 * [image_picker (图片选择)](https://pub.dev/packages/image_picker)
 * [intl (国际化)](https://pub.dev/packages/intl)
 * [jpush_flutter (极光推送)](https://pub.dev/packages/jpush_flutter)
@@ -75,12 +76,12 @@ flutter run
 * [path_provider (路径)](https://pub.dev/packages/path_provider)
 * [permission_handler 权限申请](https://pub.dev/packages/permission_handler)
 * [provider (非常好用的数据共享工具)](https://pub.dev/packages/provider)
+* [qr_code_scanner (二维码扫描)](https://pub.dev/packages/qr_code_scanner)
 * [shared_preferences](https://pub.dev/packages/shared_preferences)
 * [share (分享)](https://pub.dev/packages/share)
 * [sqflite (sqlite数据库)](https://pub.dev/packages/sqflite)
 * [url_launcher (链接处理)](https://pub.dev/packages/url_launcher)
 * [video_player (视屏播放)](https://pub.dev/packages/video_player)
-
 
 ## 非常感谢
 

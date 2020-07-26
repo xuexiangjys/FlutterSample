@@ -3,6 +3,7 @@ import 'package:flutter_learn/home.dart';
 import 'package:flutter_learn/page/expand/badge.dart';
 import 'package:flutter_learn/page/expand/city_picker.dart';
 import 'package:flutter_learn/page/expand/date_picker.dart';
+import 'package:flutter_learn/page/expand/download.dart';
 import 'package:flutter_learn/page/expand/iconfont.dart';
 import 'package:flutter_learn/page/expand/image_picker.dart';
 import 'package:flutter_learn/page/expand/multi_image_picker.dart';
@@ -251,6 +252,8 @@ class RouteMap {
         SwiperPage(Languages.of(context).swiper),
     '/expand/qrcode': (BuildContext context) =>
         QRCodePage(Languages.of(context).qrcode),
+    '/expand/download': (BuildContext context) =>
+        DownloadPage(Languages.of(context).download),
 
     '/expand/easy_refresh': (BuildContext context) => SimpleListPage(
         Languages.of(context).easyRefresh, refreshItems(context)),
@@ -392,6 +395,8 @@ class RouteMap {
             "使用EasyRefresh构建丰富的下拉刷新样式", '/expand/easy_refresh'),
         ListItem(Icons.scanner, Languages.of(context).qrcode, "二维码扫描",
             '/expand/qrcode'),
+        ListItem(Icons.file_download, Languages.of(context).download, "下载器使用",
+            '/expand/download'),
       ];
 
   ///图片演示
@@ -417,7 +422,7 @@ class RouteMap {
             "滚动控制、滚动监听", '/widget/scrollview/scroll_controller'),
       ];
 
-  ///布局演示
+  ///布局��示
   static List<ListItem> layoutItems(BuildContext context) => [
         ListItem(
             Icons.layers,

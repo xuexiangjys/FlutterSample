@@ -167,6 +167,7 @@ class Languages {
       Intl.message('MaterialRefresh', name: 'materialRefresh');
   String get userProfile => Intl.message('UserProfile', name: 'userProfile');
   String get qrcode => Intl.message('QRCode', name: 'qrcode');
+  String get download => Intl.message('Download', name: 'download');
 }
 
 //Locale代理类
