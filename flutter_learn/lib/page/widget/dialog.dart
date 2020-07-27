@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/utils/oktoast.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:flutter_learn/view/loading_dialog.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:progress_dialog/progress_dialog.dart';
 
 class DialogPage extends StatefulWidget {
   DialogPage(this.title, {Key key}) : super(key: key);
@@ -141,7 +145,7 @@ class _DialogPageState extends State<DialogPage> {
   }
 
   void showLoadingDialog2(BuildContext context) {
-     showDialog(
+    showDialog(
         context: context,
         barrierDismissible: false,
         builder: (BuildContext context) {
@@ -153,6 +157,40 @@ class _DialogPageState extends State<DialogPage> {
         });
     Future.delayed(Duration(seconds: 2), () {
       Navigator.pop(context);
+    });
+  }
+
+  double percentage = 0.0;
+
+  void showProgressDialog(BuildContext context) {
+    ProgressDialog pr = ProgressDialog(
+      context,
+      type: ProgressDialogType.Download,
+      // textDirection: TextDirection.ltr,
+      isDismissible: false,
+    );
+    pr.show();
+    Timer.periodic(Duration(milliseconds: 50), (timer) {
+      percentage = percentage + 2.0;
+      if (percentage >= 100) {
+        timer.cancel();
+        pr.hide().whenComplete(() {
+          percentage = 0.0;
+          ToastUtils.success("下载成功!");
+        });
+      } else {
+        pr.update(
+          progress: percentage,
+          message: "正在下载中...",
+          progressWidget:
+              Container(child: SpinKitCircle(color: Colors.lightBlue)),
+          maxProgress: 100.0,
+          progressTextStyle: TextStyle(
+              color: Colors.black, fontSize: 12.0, fontWeight: FontWeight.w400),
+          messageTextStyle: TextStyle(
+              color: Colors.black, fontSize: 16.0, fontWeight: FontWeight.w500),
+        );
+      }
     });
   }
 
@@ -200,7 +238,7 @@ class _DialogPageState extends State<DialogPage> {
                 ButtonBar(
                   alignment:
                       MainAxisAlignment.start, //布局方向，默认MainAxisAlignment.end
-                  mainAxisSize: MainAxisSize.min, //主轴大小，默认MainAxisSize.max
+                  mainAxisSize: MainAxisSize.min, //主轴大小，默��MainAxisSize.max
                   children: <Widget>[
                     RaisedButton(
                       child: Text('LoadingDialog1'),
@@ -209,6 +247,17 @@ class _DialogPageState extends State<DialogPage> {
                     RaisedButton(
                       child: Text('LoadingDialog2'),
                       onPressed: () => {showLoadingDialog2(context)},
+                    ),
+                  ],
+                ),
+                ButtonBar(
+                  alignment:
+                      MainAxisAlignment.start, //布局方向，默认MainAxisAlignment.end
+                  mainAxisSize: MainAxisSize.min, //主轴大小，默认MainAxisSize.max
+                  children: <Widget>[
+                    RaisedButton(
+                      child: Text('ProgressDialog'),
+                      onPressed: () => {showProgressDialog(context)},
                     ),
                   ],
                 ),

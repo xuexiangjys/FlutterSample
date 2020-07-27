@@ -75,6 +75,7 @@ flutter run
 * [package_info (应用包信息)](https://pub.dev/packages/url_launcher)
 * [path_provider (路径)](https://pub.dev/packages/path_provider)
 * [permission_handler 权限申请](https://pub.dev/packages/permission_handler)
+* [progress_dialog (进度对话框)](https://pub.dev/packages/progress_dialog)
 * [provider (非常好用的数据共享工具)](https://pub.dev/packages/provider)
 * [qr_code_scanner (二维码扫描)](https://pub.dev/packages/qr_code_scanner)
 * [shared_preferences](https://pub.dev/packages/shared_preferences)
