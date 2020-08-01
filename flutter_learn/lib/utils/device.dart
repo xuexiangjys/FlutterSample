@@ -1,11 +1,12 @@
 import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:device_info/device_info.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_learn/utils/random.dart';
 
 class DeviceUtils {
   DeviceUtils._internal();
-  
+
   static final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
 
   //================================设备全局信息================================================//
@@ -103,5 +104,15 @@ class DeviceUtils {
     return data.androidId;
   }
 
+  static Size getScreenSize(BuildContext context) {
+    return MediaQuery.of(context).size;
+  }
 
+  static double getScreenHeight(BuildContext context) {
+    return MediaQuery.of(context).size.height;
+  }
+
+  static double getScreenWidth(BuildContext context) {
+    return MediaQuery.of(context).size.width;
+  }
 }

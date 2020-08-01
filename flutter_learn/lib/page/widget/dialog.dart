@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/utils/dialog.dart';
 import 'package:flutter_learn/utils/oktoast.dart';
 import 'package:flutter_learn/utils/toast.dart';
 import 'package:flutter_learn/view/loading_dialog.dart';
+import 'package:flutter_learn/view/update_dialog.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 
@@ -16,9 +18,9 @@ class DialogPage extends StatefulWidget {
 
 class _DialogPageState extends State<DialogPage> {
   void showAboutDialog() {
-    showDialog(
-        context: context,
-        builder: (_) => AboutDialog(
+    DialogUtils.show(
+        context,
+        AboutDialog(
             applicationName: '应用名称',
             applicationIcon: Icon(Icons.ac_unit),
             applicationVersion: 'V1.0',
@@ -26,11 +28,9 @@ class _DialogPageState extends State<DialogPage> {
   }
 
   void showAlertDialog() {
-    showDialog(
-      context: context,
-      barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return AlertDialog(
+    DialogUtils.show(
+        context,
+        AlertDialog(
           title: Text('标题'),
           content: SingleChildScrollView(
             child: ListBody(
@@ -74,16 +74,13 @@ class _DialogPageState extends State<DialogPage> {
               },
             ),
           ],
-        );
-      },
-    );
+        ));
   }
 
   void showSimpleDialog() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return SimpleDialog(
+    DialogUtils.show(
+        context,
+        SimpleDialog(
           title: Text('选择'),
           children: <Widget>[
             SimpleDialogOption(
@@ -99,17 +96,14 @@ class _DialogPageState extends State<DialogPage> {
               },
             ),
           ],
-        );
-      },
-    );
+        ),
+        dismissible: true);
   }
 
   void showCustomDialog() {
-    showDialog(
-      context: context,
-      barrierDismissible: false, // user must tap button!
-      builder: (BuildContext context) {
-        return Dialog(
+    DialogUtils.show(
+        context,
+        Dialog(
             child: Container(
           height: 100,
           child: Column(
@@ -124,37 +118,29 @@ class _DialogPageState extends State<DialogPage> {
               )
             ],
           ),
-        ));
-      },
-    );
+        )));
   }
 
   void showLoadingDialog1(BuildContext context) {
-    showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (BuildContext context) {
-          return LoadingDialog(
-            content: "加载中…",
-            loadingView: SpinKitCircle(color: Colors.lightBlue),
-          );
-        });
+    DialogUtils.show(
+        context,
+        LoadingDialog(
+          content: "加载中…",
+          loadingView: SpinKitCircle(color: Colors.lightBlue),
+        ));
     Future.delayed(Duration(seconds: 2), () {
       Navigator.pop(context);
     });
   }
 
   void showLoadingDialog2(BuildContext context) {
-    showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (BuildContext context) {
-          return LoadingDialog(
-            showContent: false,
-            backgroundColor: Colors.black38,
-            loadingView: SpinKitCircle(color: Colors.white),
-          );
-        });
+    DialogUtils.show(
+        context,
+        LoadingDialog(
+          showContent: false,
+          backgroundColor: Colors.black38,
+          loadingView: SpinKitCircle(color: Colors.white),
+        ));
     Future.delayed(Duration(seconds: 2), () {
       Navigator.pop(context);
     });
@@ -191,6 +177,22 @@ class _DialogPageState extends State<DialogPage> {
               color: Colors.black, fontSize: 16.0, fontWeight: FontWeight.w500),
         );
       }
+    });
+  }
+
+  void showUpdateDialog(BuildContext context) {
+    UpdateDialog.show(context,
+        title: "是否升级到4.1.4版本？",
+        updateContent: "新版本大小:2.0M\n1.xxxxxxx\n2.xxxxxxx\n3.xxxxxxx",
+        topImage: Image(
+          image: AssetImage('assets/images/bg_update_top.png'),
+        ),
+        radius: 8,
+        themeColor: Color(0xFFFFAC5D),
+        enableIgnore: true, onIgnore: () {
+      XToast.success("忽略");
+    }, onUpdate: () {
+      XToast.success("升级");
     });
   }
 
@@ -258,6 +260,10 @@ class _DialogPageState extends State<DialogPage> {
                     RaisedButton(
                       child: Text('ProgressDialog'),
                       onPressed: () => {showProgressDialog(context)},
+                    ),
+                    RaisedButton(
+                      child: Text('UpdateDialog'),
+                      onPressed: () => {showUpdateDialog(context)},
                     ),
                   ],
                 ),
