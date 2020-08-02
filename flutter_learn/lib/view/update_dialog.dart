@@ -1,3 +1,4 @@
+import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/view/number_progress.dart';
 
@@ -23,6 +24,7 @@ class UpdateDialog {
       onClose}) {
     _context = context;
     _widget = UpdateWidget(
+        width: width,
         title: title,
         updateContent: updateContent,
         onUpdate: onUpdate,
@@ -100,6 +102,7 @@ class UpdateDialog {
       onIgnore,
       isForce = false}) {
     UpdateDialog dialog = UpdateDialog(context,
+        width: width,
         title: title,
         updateContent: updateContent,
         onUpdate: onUpdate,

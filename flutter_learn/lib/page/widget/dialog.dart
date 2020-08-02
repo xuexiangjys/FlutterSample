@@ -203,7 +203,7 @@ class _DialogPageState extends State<DialogPage> {
       XToast.success("升级");
       Timer.periodic(Duration(milliseconds: 50), (timer) {
         progress = progress + 0.02;
-        if (progress >= 1) {
+        if (progress > 1.0001) {
           timer.cancel();
           dialog.dismiss();
           progress = 0;
