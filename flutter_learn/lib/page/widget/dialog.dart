@@ -191,12 +191,11 @@ class _DialogPageState extends State<DialogPage> {
     dialog = UpdateDialog.showUpdate(context,
         title: "是否升级到4.1.4版本？",
         updateContent: "新版本大小:2.0M\n1.xxxxxxx\n2.xxxxxxx\n3.xxxxxxx",
-        topImage: Image(
-          image: AssetImage('assets/images/bg_update_top.png'),
-        ),
+        topImage: Image.asset('assets/images/bg_update_top.png'),
         radius: 8,
         themeColor: Color(0xFFFFAC5D),
         progressBackgroundColor: Color(0x5AFFAC5D),
+        isForce: true,
         enableIgnore: true, onIgnore: () {
       XToast.success("忽略");
       dialog.dismiss();

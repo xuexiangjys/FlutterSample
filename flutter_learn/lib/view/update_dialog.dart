@@ -19,6 +19,7 @@ class UpdateDialog {
       themeColor = Colors.red,
       enableIgnore = false,
       onIgnore,
+      isForce = false,
       onClose}) {
     _context = context;
     _widget = UpdateWidget(
@@ -32,6 +33,7 @@ class UpdateDialog {
         progressBackgroundColor: progressBackgroundColor,
         enableIgnore: enableIgnore,
         onIgnore: onIgnore,
+        isForce: isForce,
         onClose: onClose != null ? onClose : () => {dismiss()});
   }
 
@@ -46,11 +48,7 @@ class UpdateDialog {
           barrierDismissible: false,
           builder: (BuildContext context) {
             return WillPopScope(
-                onWillPop: () => Future.value(false),
-                child: Dialog(
-                    backgroundColor: Colors.transparent,
-                    elevation: 0,
-                    child: _widget));
+                onWillPop: () => Future.value(false), child: _widget);
           });
       _isShowing = true;
       return Future.value(true);
@@ -99,7 +97,8 @@ class UpdateDialog {
       double radius = 4.0,
       themeColor = Colors.red,
       enableIgnore = false,
-      onIgnore}) {
+      onIgnore,
+      isForce = false}) {
     UpdateDialog dialog = UpdateDialog(context,
         title: title,
         updateContent: updateContent,
@@ -110,6 +109,7 @@ class UpdateDialog {
         themeColor: themeColor,
         progressBackgroundColor: progressBackgroundColor,
         enableIgnore: enableIgnore,
+        isForce: isForce,
         onIgnore: onIgnore);
     dialog.show();
     return dialog;
@@ -152,6 +152,9 @@ class UpdateWidget extends StatefulWidget {
   /// 更新事件
   final VoidCallback onClose;
 
+  /// 是否是强制更新
+  final bool isForce;
+
   UpdateWidget(
       {Key key,
       this.width = 0.0,
@@ -165,6 +168,7 @@ class UpdateWidget extends StatefulWidget {
       this.themeColor = Colors.red,
       this.enableIgnore = false,
       this.onIgnore,
+      this.isForce = false,
       this.onClose})
       : super(key: key);
 
@@ -190,105 +194,106 @@ class _UpdateWidgetState extends State<UpdateWidget> {
     double dialogWidth =
         widget.width <= 0 ? getScreenWidth(context) * 0.8 : widget.width;
     return Material(
-      type: MaterialType.transparency,
-      child: Container(
-        child: SizedBox(
-          width: dialogWidth,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(
-                width: dialogWidth,
-                child: widget.topImage != null
-                    ? widget.topImage
-                    : Image(
-                        image:
-                            AssetImage('assets/images/xupdate_bg_app_top.png'),
-                      ),
-              ),
-              Container(
-                width: dialogWidth,
-                alignment: Alignment.center,
-                padding:
-                    EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(widget.radius),
-                        bottomRight: Radius.circular(widget.radius)),
-                  ),
+        type: MaterialType.transparency,
+        child: Container(
+          child: SizedBox(
+            width: dialogWidth,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(
+                  width: dialogWidth,
+                  child: widget.topImage != null
+                      ? widget.topImage
+                      : Image.asset('assets/images/xupdate_bg_app_top.png'),
                 ),
-                child: SingleChildScrollView(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(widget.title, style: TextStyle(fontSize: 16)),
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10),
-                      child: Text(widget.updateContent,
-                          style: TextStyle(
-                              fontSize: 14, color: Color(0xFF666666))),
+                Container(
+                  width: dialogWidth,
+                  alignment: Alignment.center,
+                  padding:
+                      EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
+                  decoration: ShapeDecoration(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(widget.radius),
+                          bottomRight: Radius.circular(widget.radius)),
                     ),
-                    widget.progress < 0
-                        ? Column(children: <Widget>[
-                            FractionallySizedBox(
-                              widthFactor: 1,
-                              child: RaisedButton(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(5)),
-                                elevation: 0,
-                                highlightElevation: 0,
-                                child: Text('升级'),
-                                color: widget.themeColor,
-                                textColor: Colors.white,
-                                onPressed: widget.onUpdate,
+                  ),
+                  child: SingleChildScrollView(
+                      child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(widget.title, style: TextStyle(fontSize: 16)),
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Text(widget.updateContent,
+                            style: TextStyle(
+                                fontSize: 14, color: Color(0xFF666666))),
+                      ),
+                      widget.progress < 0
+                          ? Column(children: <Widget>[
+                              FractionallySizedBox(
+                                widthFactor: 1,
+                                child: RaisedButton(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(5)),
+                                  elevation: 0,
+                                  highlightElevation: 0,
+                                  child: Text('升级'),
+                                  color: widget.themeColor,
+                                  textColor: Colors.white,
+                                  onPressed: widget.onUpdate,
+                                ),
                               ),
-                            ),
-                            widget.enableIgnore && widget.onIgnore != null
-                                ? FractionallySizedBox(
-                                    widthFactor: 1,
-                                    child: FlatButton(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(5)),
-                                      child: Text('忽略此版本'),
-                                      materialTapTargetSize:
-                                          MaterialTapTargetSize.shrinkWrap,
-                                      textColor: Color(0xFF666666),
-                                      onPressed: widget.onIgnore,
-                                    ),
-                                  )
-                                : SizedBox()
-                          ])
-                        : NumberProgress(
-                            value: widget.progress,
-                            backgroundColor: widget.progressBackgroundColor,
-                            valueColor: widget.themeColor,
-                            padding: EdgeInsets.symmetric(vertical: 10))
-                  ],
-                )),
-              ),
-              SizedBox(
-                  width: 1.5,
-                  height: 50,
-                  child: DecoratedBox(
-                      decoration: BoxDecoration(color: Colors.white))),
-              IconButton(
-                iconSize: 30,
-                constraints: BoxConstraints(maxHeight: 30, maxWidth: 30),
-                padding: EdgeInsets.zero,
-                icon: Image(
-                  image: AssetImage('assets/images/xupdate_ic_close.png'),
+                              widget.enableIgnore && widget.onIgnore != null
+                                  ? FractionallySizedBox(
+                                      widthFactor: 1,
+                                      child: FlatButton(
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(5)),
+                                        child: Text('忽略此版本'),
+                                        materialTapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
+                                        textColor: Color(0xFF666666),
+                                        onPressed: widget.onIgnore,
+                                      ),
+                                    )
+                                  : SizedBox()
+                            ])
+                          : NumberProgress(
+                              value: widget.progress,
+                              backgroundColor: widget.progressBackgroundColor,
+                              valueColor: widget.themeColor,
+                              padding: EdgeInsets.symmetric(vertical: 10))
+                    ],
+                  )),
                 ),
-                onPressed: widget.onClose,
-              )
-            ],
+                !widget.isForce
+                    ? Column(children: <Widget>[
+                        SizedBox(
+                            width: 1.5,
+                            height: 50,
+                            child: DecoratedBox(
+                                decoration:
+                                    BoxDecoration(color: Colors.white))),
+                        IconButton(
+                          iconSize: 30,
+                          constraints:
+                              BoxConstraints(maxHeight: 30, maxWidth: 30),
+                          padding: EdgeInsets.zero,
+                          icon:
+                              Image.asset('assets/images/xupdate_ic_close.png'),
+                          onPressed: widget.onClose,
+                        )
+                      ])
+                    : SizedBox()
+              ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 
   double getScreenHeight(BuildContext context) {
