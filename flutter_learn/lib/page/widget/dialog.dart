@@ -168,8 +168,8 @@ class _DialogPageState extends State<DialogPage> {
         pr.update(
           progress: percentage,
           message: "正在下载中...",
-          progressWidget:
-              Container(child: SpinKitCircle(color: Colors.lightBlue)),
+          // progressWidget:
+          //     Container(child: SpinKitCircle(color: Colors.lightBlue)),
           maxProgress: 100.0,
           progressTextStyle: TextStyle(
               color: Colors.black, fontSize: 12.0, fontWeight: FontWeight.w400),
@@ -180,8 +180,15 @@ class _DialogPageState extends State<DialogPage> {
     });
   }
 
+  UpdateDialog dialog;
+
+  double progress = 0.0;
+
   void showUpdateDialog(BuildContext context) {
-    UpdateDialog.show(context,
+    if (dialog != null && dialog.isShowing()) {
+      return;
+    }
+    dialog = UpdateDialog.showUpdate(context,
         title: "是否升级到4.1.4版本？",
         updateContent: "新版本大小:2.0M\n1.xxxxxxx\n2.xxxxxxx\n3.xxxxxxx",
         topImage: Image(
@@ -189,10 +196,22 @@ class _DialogPageState extends State<DialogPage> {
         ),
         radius: 8,
         themeColor: Color(0xFFFFAC5D),
+        progressBackgroundColor: Color(0x5AFFAC5D),
         enableIgnore: true, onIgnore: () {
       XToast.success("忽略");
+      dialog.dismiss();
     }, onUpdate: () {
       XToast.success("升级");
+      Timer.periodic(Duration(milliseconds: 50), (timer) {
+        progress = progress + 0.02;
+        if (progress >= 1) {
+          timer.cancel();
+          dialog.dismiss();
+          progress = 0;
+        } else {
+          dialog.update(progress);
+        }
+      });
     });
   }
 

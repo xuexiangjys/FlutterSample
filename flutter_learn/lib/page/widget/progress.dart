@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/view/number_progress.dart';
 
 class ProgressPage extends StatefulWidget {
   ProgressPage(this.title, {Key key}) : super(key: key);
@@ -23,7 +24,7 @@ class _ProgressPageState extends State<ProgressPage>
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Container(
+        body: SingleChildScrollView(
             padding: const EdgeInsets.all(10),
             child: Column(
               children: <Widget>[
@@ -32,6 +33,12 @@ class _ProgressPageState extends State<ProgressPage>
                 SizedBox(
                     height: 30,
                     child: LinearProgressIndicator(value: _progress)),
+                SizedBox(height: 20),
+                NumberProgress(
+                  value: _progress,
+                  backgroundColor: Colors.red[100],
+                  valueColor: Colors.red,
+                ),
                 SizedBox(height: 20),
                 CircularProgressIndicator(),
                 SizedBox(height: 20),

@@ -1,7 +1,123 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/view/number_progress.dart';
 
 ///版本更新加提示框
-class UpdateDialog extends Dialog {
+class UpdateDialog {
+  bool _isShowing = false;
+  BuildContext _context;
+  UpdateWidget _widget;
+
+  UpdateDialog(BuildContext context,
+      {double width = 0.0,
+      @required title,
+      @required updateContent,
+      @required onUpdate,
+      double progress = -1.0,
+      progressBackgroundColor = const Color(0xFFFFCDD2),
+      topImage,
+      double radius = 4.0,
+      themeColor = Colors.red,
+      enableIgnore = false,
+      onIgnore,
+      onClose}) {
+    _context = context;
+    _widget = UpdateWidget(
+        title: title,
+        updateContent: updateContent,
+        onUpdate: onUpdate,
+        progress: progress,
+        topImage: topImage,
+        radius: radius,
+        themeColor: themeColor,
+        progressBackgroundColor: progressBackgroundColor,
+        enableIgnore: enableIgnore,
+        onIgnore: onIgnore,
+        onClose: onClose != null ? onClose : () => {dismiss()});
+  }
+
+  /// 显示弹窗
+  Future<bool> show() {
+    try {
+      if (isShowing()) {
+        return Future.value(false);
+      }
+      showDialog(
+          context: _context,
+          barrierDismissible: false,
+          builder: (BuildContext context) {
+            return WillPopScope(
+                onWillPop: () => Future.value(false),
+                child: Dialog(
+                    backgroundColor: Colors.transparent,
+                    elevation: 0,
+                    child: _widget));
+          });
+      _isShowing = true;
+      return Future.value(true);
+    } catch (err) {
+      _isShowing = false;
+      return Future.value(false);
+    }
+  }
+
+  /// 隐藏弹窗
+  Future<bool> dismiss() {
+    try {
+      if (_isShowing) {
+        _isShowing = false;
+        Navigator.pop(_context);
+        return Future.value(true);
+      } else {
+        return Future.value(false);
+      }
+    } catch (err) {
+      return Future.value(false);
+    }
+  }
+
+  /// 是否显示
+  bool isShowing() {
+    return _isShowing;
+  }
+
+  /// 更新进度
+  void update(double progress) {
+    if (isShowing()) {
+      _widget.update(progress);
+    }
+  }
+
+  /// 显示版本更新提示框
+  static UpdateDialog showUpdate(BuildContext context,
+      {double width = 0.0,
+      @required title,
+      @required updateContent,
+      @required onUpdate,
+      double progress = -1.0,
+      progressBackgroundColor = const Color(0xFFFFCDD2),
+      topImage,
+      double radius = 4.0,
+      themeColor = Colors.red,
+      enableIgnore = false,
+      onIgnore}) {
+    UpdateDialog dialog = UpdateDialog(context,
+        title: title,
+        updateContent: updateContent,
+        onUpdate: onUpdate,
+        progress: progress,
+        topImage: topImage,
+        radius: radius,
+        themeColor: themeColor,
+        progressBackgroundColor: progressBackgroundColor,
+        enableIgnore: enableIgnore,
+        onIgnore: onIgnore);
+    dialog.show();
+    return dialog;
+  }
+}
+
+// ignore: must_be_immutable
+class UpdateWidget extends StatefulWidget {
   /// 对话框的宽度
   final double width;
 
@@ -28,22 +144,51 @@ class UpdateDialog extends Dialog {
   /// 更新事件
   final VoidCallback onIgnore;
 
-  UpdateDialog(
+  double progress;
+
+  /// 进度条的背景颜色
+  final Color progressBackgroundColor;
+
+  /// 更新事件
+  final VoidCallback onClose;
+
+  UpdateWidget(
       {Key key,
-      this.width = 0,
+      this.width = 0.0,
       @required this.title,
       @required this.updateContent,
-      this.topImage,
-      this.radius = 4,
-      this.themeColor = Colors.red,
       @required this.onUpdate,
+      this.progress = -1.0,
+      this.progressBackgroundColor = const Color(0xFFFFCDD2),
+      this.topImage,
+      this.radius = 4.0,
+      this.themeColor = Colors.red,
       this.enableIgnore = false,
-      this.onIgnore})
+      this.onIgnore,
+      this.onClose})
       : super(key: key);
+
+  _UpdateWidgetState _state = _UpdateWidgetState();
+
+  update(double progress) {
+    _state.update(progress);
+  }
+
+  @override
+  _UpdateWidgetState createState() => _state;
+}
+
+class _UpdateWidgetState extends State<UpdateWidget> {
+  update(double progress) {
+    setState(() {
+      widget.progress = progress;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    double dialogWidth = width <= 0 ? getScreenWidth(context) * 0.8 : width;
+    double dialogWidth =
+        widget.width <= 0 ? getScreenWidth(context) * 0.8 : widget.width;
     return Material(
       type: MaterialType.transparency,
       child: Container(
@@ -55,8 +200,8 @@ class UpdateDialog extends Dialog {
             children: <Widget>[
               SizedBox(
                 width: dialogWidth,
-                child: topImage != null
-                    ? topImage
+                child: widget.topImage != null
+                    ? widget.topImage
                     : Image(
                         image:
                             AssetImage('assets/images/xupdate_bg_app_top.png'),
@@ -71,48 +216,57 @@ class UpdateDialog extends Dialog {
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(radius),
-                        bottomRight: Radius.circular(radius)),
+                        bottomLeft: Radius.circular(widget.radius),
+                        bottomRight: Radius.circular(widget.radius)),
                   ),
                 ),
                 child: SingleChildScrollView(
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(title, style: TextStyle(fontSize: 16)),
+                    Text(widget.title, style: TextStyle(fontSize: 16)),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 10),
-                      child: Text(updateContent,
+                      child: Text(widget.updateContent,
                           style: TextStyle(
                               fontSize: 14, color: Color(0xFF666666))),
                     ),
-                    FractionallySizedBox(
-                      widthFactor: 1,
-                      child: RaisedButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5)),
-                        elevation: 0,
-                        highlightElevation: 0,
-                        child: Text('升级'),
-                        color: themeColor,
-                        textColor: Colors.white,
-                        onPressed: onUpdate,
-                      ),
-                    ),
-                    enableIgnore && onIgnore != null
-                        ? FractionallySizedBox(
-                            widthFactor: 1,
-                            child: FlatButton(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)),
-                              child: Text('忽略此版本'),
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              textColor: Color(0xFF666666),
-                              onPressed: onIgnore,
+                    widget.progress < 0
+                        ? Column(children: <Widget>[
+                            FractionallySizedBox(
+                              widthFactor: 1,
+                              child: RaisedButton(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)),
+                                elevation: 0,
+                                highlightElevation: 0,
+                                child: Text('升级'),
+                                color: widget.themeColor,
+                                textColor: Colors.white,
+                                onPressed: widget.onUpdate,
+                              ),
                             ),
-                          )
-                        : SizedBox(),
+                            widget.enableIgnore && widget.onIgnore != null
+                                ? FractionallySizedBox(
+                                    widthFactor: 1,
+                                    child: FlatButton(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(5)),
+                                      child: Text('忽略此版本'),
+                                      materialTapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
+                                      textColor: Color(0xFF666666),
+                                      onPressed: widget.onIgnore,
+                                    ),
+                                  )
+                                : SizedBox()
+                          ])
+                        : NumberProgress(
+                            value: widget.progress,
+                            backgroundColor: widget.progressBackgroundColor,
+                            valueColor: widget.themeColor,
+                            padding: EdgeInsets.symmetric(vertical: 10))
                   ],
                 )),
               ),
@@ -128,43 +282,13 @@ class UpdateDialog extends Dialog {
                 icon: Image(
                   image: AssetImage('assets/images/xupdate_ic_close.png'),
                 ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
+                onPressed: widget.onClose,
               )
             ],
           ),
         ),
       ),
     );
-  }
-
-  static Future<UpdateDialog> show(BuildContext context,
-      {double width,
-      @required title,
-      @required updateContent,
-      topImage,
-      double radius,
-      themeColor,
-      @required onUpdate,
-      enableIgnore,
-      onIgnore}) {
-    return showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (BuildContext context) {
-          return WillPopScope(
-              onWillPop: () => Future.value(false),
-              child: UpdateDialog(
-                  title: title,
-                  updateContent: updateContent,
-                  topImage: topImage,
-                  radius: radius,
-                  themeColor: themeColor,
-                  enableIgnore: enableIgnore,
-                  onIgnore: onIgnore,
-                  onUpdate: onUpdate));
-        });
   }
 
   double getScreenHeight(BuildContext context) {
