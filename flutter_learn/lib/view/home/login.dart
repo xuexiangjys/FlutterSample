@@ -27,7 +27,6 @@ class _LoginPageState extends State<LoginPage> {
     return WillPopScope(
         child: Scaffold(
           appBar: AppBar(
-            // leading: _leading(context),
             title: Text(Languages.of(context).login),
             actions: <Widget>[
               FlatButton(
@@ -54,24 +53,6 @@ class _LoginPageState extends State<LoginPage> {
         onWillPop: () async {
           return Future.value(false);
         });
-  }
-
-  Widget _leading(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Container(
-          padding: EdgeInsets.only(left: 4),
-          child: IconButton(
-            icon: Icon(Icons.close),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ),
-      ],
-    );
   }
 
   //构建表单

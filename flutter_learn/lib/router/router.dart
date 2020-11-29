@@ -4,14 +4,14 @@ import 'package:flutter_learn/router/switch_animation.dart';
 import 'package:flutter_learn/view/web_view_page.dart';
 
 class XRouter {
-  static Router router;
+  static FluroRouter router;
 
   static void init() {
-    router = Router();
+    router = FluroRouter();
     configureRoutes(router);
   }
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       print("route is not find !");

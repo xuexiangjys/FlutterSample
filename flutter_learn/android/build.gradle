@@ -1,10 +1,7 @@
 buildscript {
-    ext.kotlin_version = '1.3.50'
-    repositories {
-        google()
-        jcenter()
-    }
-
+    apply from: './repos.gradle'
+    ext.kotlin_version = '1.3.72'
+    addRepos(repositories)
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -12,10 +9,7 @@ buildscript {
 }
 
 allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
+    addRepos(repositories)
 }
 
 rootProject.buildDir = '../build'

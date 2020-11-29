@@ -1,0 +1,14 @@
+//默认添加代码仓库路径
+static def addRepos(RepositoryHandler handler) {
+    handler.mavenLocal()
+    handler.google { url 'https://maven.aliyun.com/repository/google' }
+    handler.jcenter { url 'https://maven.aliyun.com/repository/jcenter' }
+    handler.mavenCentral { url 'https://maven.aliyun.com/repository/central' }
+    handler.maven { url "https://jitpack.io" }
+    handler.maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    handler.maven { url 'https://oss.sonatype.org/content/repositories/public' }
+}
+
+ext.addRepos = this.&addRepos
+
+

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 class BadgePage extends StatefulWidget {
   final String title;
+
   BadgePage(this.title, {Key key}) : super(key: key);
+
   @override
   _BadgePageState createState() => _BadgePageState();
 }
@@ -95,15 +97,15 @@ class _BadgePageState extends State<BadgePage> {
     return BottomNavigationBar(
       items: [
         BottomNavigationBarItem(
-          title: Text('Events'),
+          label: 'Events',
           icon: Icon(Icons.event),
         ),
         BottomNavigationBarItem(
-          title: Text('Messages'),
+          label: 'Messages',
           icon: Icon(Icons.message),
         ),
         BottomNavigationBarItem(
-          title: Text('Settings'),
+          label: 'Settings',
           icon: Badge(
             shape: BadgeShape.circle,
             borderRadius: 100,
@@ -264,6 +266,8 @@ class _BadgePageState extends State<BadgePage> {
             return _listTile('Friends', '7');
           } else if (index == 2) {
             return _listTile('Events', '!');
+          } else {
+            return null;
           }
         },
       ),

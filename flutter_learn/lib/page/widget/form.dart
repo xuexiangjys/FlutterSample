@@ -6,6 +6,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 class FormPage extends StatefulWidget {
   FormPage(this.title, {Key key}) : super(key: key);
   final String title;
+
   @override
   _FormPageState createState() => _FormPageState();
 }
@@ -41,7 +42,8 @@ class _FormPageState extends State<FormPage> {
   Widget buildForm(BuildContext context) {
     return Form(
       key: _formKey, //设置globalKey，用于后面获取FormState
-      autovalidate: true, //开启自动校验
+      //开启自动校验
+      autovalidateMode: AutovalidateMode.always,
       child: Column(
         children: <Widget>[
           Center(
@@ -70,7 +72,9 @@ class _FormPageState extends State<FormPage> {
                   icon: Icon(Icons.lock),
                   suffixIcon: IconButton(
                       icon: Icon(
-                        _isShowPassWord ? Icons.visibility : Icons.visibility_off,
+                        _isShowPassWord
+                            ? Icons.visibility
+                            : Icons.visibility_off,
                         color: Colors.black,
                       ),
                       onPressed: showPassWord)),

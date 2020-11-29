@@ -10,12 +10,12 @@ class BottomNavigationBarPage extends StatefulWidget {
 
 class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
   List<BottomNavigationBarItem> _myTabs = [
-    BottomNavigationBarItem(title: Text("主页"), icon: Icon(Icons.home)),
-    BottomNavigationBarItem(title: Text("列表"), icon: Icon(Icons.list)),
-    BottomNavigationBarItem(title: Text("新建"), icon: Icon(Icons.add)),
-    BottomNavigationBarItem(title: Text("消息"), icon: Icon(Icons.message)),
-    BottomNavigationBarItem(title: Text("菜单"), icon: Icon(Icons.menu)),
-    BottomNavigationBarItem(title: Text("其他"), icon: Icon(Icons.devices_other)),
+    BottomNavigationBarItem(label: "主页", icon: Icon(Icons.home)),
+    BottomNavigationBarItem(label: "列表", icon: Icon(Icons.list)),
+    BottomNavigationBarItem(label: "新建", icon: Icon(Icons.add)),
+    BottomNavigationBarItem(label: "消息", icon: Icon(Icons.message)),
+    BottomNavigationBarItem(label: "菜单", icon: Icon(Icons.menu)),
+    BottomNavigationBarItem(label: "其他", icon: Icon(Icons.devices_other)),
   ];
 
   int _currentIndex = 0;
@@ -37,7 +37,7 @@ class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
       body: IndexedStack(
         index: _currentIndex,
         children: _myTabs.map((BottomNavigationBarItem tab) {
-          return Center(child: tab.title);
+          return Center(child: Text(tab.label));
         }).toList(),
       ),
       bottomNavigationBar: BottomNavigationBar(
