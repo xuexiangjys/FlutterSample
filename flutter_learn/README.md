@@ -69,7 +69,7 @@ flutter run
 * [image_picker (图片选择)](https://pub.dev/packages/image_picker)
 * [intl (国际化)](https://pub.dev/packages/intl)
 * [jpush_flutter (极光推送)](https://pub.dev/packages/jpush_flutter)
-* [lcfarm_flutter_umeng (友盟统计)](https://pub.dev/packages/lcfarm_flutter_umeng)
+* [umeng_analytics_plugin (友盟统计)](https://pub.dev/packages/umeng_analytics_plugin)
 * [multi_image_picker (多图片选择)](https://pub.dev/packages/multi_image_picker)
 * [mmkv_flutter](https://pub.dev/packages/mmkv_flutter)
 * [package_info (应用包信息)](https://pub.dev/packages/url_launcher)

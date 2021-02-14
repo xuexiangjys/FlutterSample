@@ -137,7 +137,7 @@ class _QRCodePageState extends State<QRCodePage> {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
       setState(() {
-        qrText = scanData;
+        qrText = scanData.code;
       });
     });
   }

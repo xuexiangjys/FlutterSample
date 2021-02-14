@@ -5,7 +5,7 @@ static def addRepos(RepositoryHandler handler) {
     handler.jcenter { url 'https://maven.aliyun.com/repository/jcenter' }
     handler.mavenCentral { url 'https://maven.aliyun.com/repository/central' }
     handler.maven { url "https://jitpack.io" }
-    handler.maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    handler.maven { url 'https://maven.aliyun.com/repository/public' }
     handler.maven { url 'https://oss.sonatype.org/content/repositories/public' }
 }
 

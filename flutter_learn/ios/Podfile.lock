@@ -23,14 +23,11 @@ PODS:
     - Flutter
   - flutter_local_notifications (0.0.1):
     - Flutter
-  - flutter_plugin_android_lifecycle (0.0.1):
-    - Flutter
   - flutter_webview_plugin (0.0.1):
-    - Flutter
-  - flutter_xupdate (0.0.1):
     - Flutter
   - fluttertoast (0.0.2):
     - Flutter
+    - Toast
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -38,16 +35,13 @@ PODS:
     - Flutter
   - image_picker_saver (0.0.1):
     - Flutter
-  - JCore (2.1.8)
-  - JPush (3.2.8):
+  - JCore (2.4.0)
+  - JPush (3.4.0):
     - JCore (< 3.0.0, >= 2.0.0)
   - jpush_flutter (0.0.2):
     - Flutter
-    - JPush
-  - lcfarm_flutter_umeng (0.0.1):
-    - Flutter
-    - UMCAnalytics
-    - UMCCommon
+    - JCore (= 2.4.0)
+    - JPush (= 3.4.0)
   - MTBBarcodeScanner (5.0.11)
   - multi_image_picker (4.6.7):
     - BSImagePicker (~> 2.10.3)
@@ -56,38 +50,26 @@ PODS:
     - Flutter
   - path_provider (0.0.1):
     - Flutter
-  - path_provider_linux (0.0.1):
-    - Flutter
-  - path_provider_macos (0.0.1):
-    - Flutter
   - permission_handler (5.0.1):
     - Flutter
-  - qr_code_scanner (0.0.2):
+  - qr_code_scanner (0.2.0):
     - Flutter
     - MTBBarcodeScanner
   - share (0.0.1):
     - Flutter
   - shared_preferences (0.0.1):
     - Flutter
-  - shared_preferences_macos (0.0.1):
-    - Flutter
-  - shared_preferences_web (0.0.1):
-    - Flutter
   - sqflite (0.0.1):
     - Flutter
     - FMDB (~> 2.7.2)
-  - UMCAnalytics (6.0.5):
-    - UMCCommon
-  - UMCCommon (2.1.1)
+  - Toast (4.0.0)
+  - umeng_analytics_plugin (0.0.1):
+    - Flutter
+    - UMengAnalytics-NO-IDFA
+  - UMengAnalytics-NO-IDFA (4.2.5)
   - url_launcher (0.0.1):
     - Flutter
-  - url_launcher_macos (0.0.1):
-    - Flutter
-  - url_launcher_web (0.0.1):
-    - Flutter
   - video_player (0.0.1):
-    - Flutter
-  - video_player_web (0.0.1):
     - Flutter
 
 DEPENDENCIES:
@@ -100,31 +82,22 @@ DEPENDENCIES:
   - flutter_bugly (from `.symlinks/plugins/flutter_bugly/ios`)
   - flutter_downloader (from `.symlinks/plugins/flutter_downloader/ios`)
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
-  - flutter_plugin_android_lifecycle (from `.symlinks/plugins/flutter_plugin_android_lifecycle/ios`)
   - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
-  - flutter_xupdate (from `.symlinks/plugins/flutter_xupdate/ios`)
   - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
   - image_picker (from `.symlinks/plugins/image_picker/ios`)
   - image_picker_saver (from `.symlinks/plugins/image_picker_saver/ios`)
   - jpush_flutter (from `.symlinks/plugins/jpush_flutter/ios`)
-  - lcfarm_flutter_umeng (from `.symlinks/plugins/lcfarm_flutter_umeng/ios`)
   - multi_image_picker (from `.symlinks/plugins/multi_image_picker/ios`)
   - package_info (from `.symlinks/plugins/package_info/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
-  - path_provider_linux (from `.symlinks/plugins/path_provider_linux/ios`)
-  - path_provider_macos (from `.symlinks/plugins/path_provider_macos/ios`)
   - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
   - qr_code_scanner (from `.symlinks/plugins/qr_code_scanner/ios`)
   - share (from `.symlinks/plugins/share/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
-  - shared_preferences_macos (from `.symlinks/plugins/shared_preferences_macos/ios`)
-  - shared_preferences_web (from `.symlinks/plugins/shared_preferences_web/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - umeng_analytics_plugin (from `.symlinks/plugins/umeng_analytics_plugin/ios`)
   - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
-  - url_launcher_macos (from `.symlinks/plugins/url_launcher_macos/ios`)
-  - url_launcher_web (from `.symlinks/plugins/url_launcher_web/ios`)
   - video_player (from `.symlinks/plugins/video_player/ios`)
-  - video_player_web (from `.symlinks/plugins/video_player_web/ios`)
 
 SPEC REPOS:
   trunk:
@@ -136,8 +109,8 @@ SPEC REPOS:
     - JCore
     - JPush
     - MTBBarcodeScanner
-    - UMCAnalytics
-    - UMCCommon
+    - Toast
+    - UMengAnalytics-NO-IDFA
 
 EXTERNAL SOURCES:
   battery:
@@ -158,12 +131,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_downloader/ios"
   flutter_local_notifications:
     :path: ".symlinks/plugins/flutter_local_notifications/ios"
-  flutter_plugin_android_lifecycle:
-    :path: ".symlinks/plugins/flutter_plugin_android_lifecycle/ios"
   flutter_webview_plugin:
     :path: ".symlinks/plugins/flutter_webview_plugin/ios"
-  flutter_xupdate:
-    :path: ".symlinks/plugins/flutter_xupdate/ios"
   fluttertoast:
     :path: ".symlinks/plugins/fluttertoast/ios"
   image_picker:
@@ -172,18 +141,12 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/image_picker_saver/ios"
   jpush_flutter:
     :path: ".symlinks/plugins/jpush_flutter/ios"
-  lcfarm_flutter_umeng:
-    :path: ".symlinks/plugins/lcfarm_flutter_umeng/ios"
   multi_image_picker:
     :path: ".symlinks/plugins/multi_image_picker/ios"
   package_info:
     :path: ".symlinks/plugins/package_info/ios"
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
-  path_provider_linux:
-    :path: ".symlinks/plugins/path_provider_linux/ios"
-  path_provider_macos:
-    :path: ".symlinks/plugins/path_provider_macos/ios"
   permission_handler:
     :path: ".symlinks/plugins/permission_handler/ios"
   qr_code_scanner:
@@ -192,22 +155,14 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/share/ios"
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
-  shared_preferences_macos:
-    :path: ".symlinks/plugins/shared_preferences_macos/ios"
-  shared_preferences_web:
-    :path: ".symlinks/plugins/shared_preferences_web/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/ios"
+  umeng_analytics_plugin:
+    :path: ".symlinks/plugins/umeng_analytics_plugin/ios"
   url_launcher:
     :path: ".symlinks/plugins/url_launcher/ios"
-  url_launcher_macos:
-    :path: ".symlinks/plugins/url_launcher_macos/ios"
-  url_launcher_web:
-    :path: ".symlinks/plugins/url_launcher_web/ios"
   video_player:
     :path: ".symlinks/plugins/video_player/ios"
-  video_player_web:
-    :path: ".symlinks/plugins/video_player_web/ios"
 
 SPEC CHECKSUMS:
   battery: 6b19dafdbba590f03b1f0cd2f1224e3ffedadbe6
@@ -223,38 +178,29 @@ SPEC CHECKSUMS:
   flutter_bugly: c9800f4d5bc5bdc27ffdde3417a26ba44266e0c3
   flutter_downloader: 058b9c41564a90500f67f3e432e3524613a7fd83
   flutter_local_notifications: 9e4738ce2471c5af910d961a6b7eadcf57c50186
-  flutter_plugin_android_lifecycle: dc0b544e129eebb77a6bfb1239d4d1c673a60a35
   flutter_webview_plugin: ed9e8a6a96baf0c867e90e1bce2673913eeac694
-  flutter_xupdate: c7c62e59874a8d7dde645563cd3c458fdfa1830a
-  fluttertoast: b644586ef3b16f67fae9a1f8754cef6b2d6b634b
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  image_picker: 66aa71bc96850a90590a35d4c4a2907b0d823109
+  image_picker: 9c3312491f862b28d21ecd8fdf0ee14e601b3f09
   image_picker_saver: 4f28bd70e1efdca68ad88beab0f11d22cffe04f6
-  JCore: a7f1dead960d77a97717c73ea8b0aa5b33706491
-  JPush: 8ce888d6dedfa417e90c8b6bc87405a16ce2e699
-  jpush_flutter: 69133df35eaf9135e540549b154d992c44f8ee44
-  lcfarm_flutter_umeng: a06d7aba0fbbdee6c780c35a4506b43489429293
+  JCore: a29e4b0ee54e1301446dc02d8e1c350404108b34
+  JPush: defaa108c38806f6efdcfaf4c416854d25fca8e5
+  jpush_flutter: 364b245849348e05377d67295d0896ddd664a896
   MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
   multi_image_picker: 7968ace12b658a9ee51be6514473f5ee5501ea80
   package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
-  path_provider_linux: 4d630dc393e1f20364f3e3b4a2ff41d9674a84e4
-  path_provider_macos: f760a3c5b04357c380e2fddb6f9db6f3015897e0
   permission_handler: 7022f8972d2d85ce95c1040db945f28bdbfa45d1
-  qr_code_scanner: 16107718bdad7d708cdf6a5eacdca24b56cdf471
+  qr_code_scanner: bb67d64904c3b9658ada8c402e8b4d406d5d796e
   share: 0b2c3e82132f5888bccca3351c504d0003b3b410
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
-  shared_preferences_macos: f3f29b71ccbb56bf40c9dd6396c9acf15e214087
-  shared_preferences_web: 141cce0c3ed1a1c5bf2a0e44f52d31eeb66e5ea9
   sqflite: 4001a31ff81d210346b500c55b17f4d6c7589dd0
-  UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
-  UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  umeng_analytics_plugin: 7035dfb8c5636e50429ab935125e5a3f0d23e72e
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
-  url_launcher_macos: fd7894421cd39320dce5f292fc99ea9270b2a313
-  url_launcher_web: e5527357f037c87560776e36436bf2b0288b965c
   video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
-  video_player_web: da8cadb8274ed4f8dbee8d7171b420dedd437ce7
 
-PODFILE CHECKSUM: 78d265b1080599c1c61080caca757b8ceb187aa7
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1
