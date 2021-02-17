@@ -47,7 +47,7 @@ dependencies:
   flutter_webview_plugin: ^0.3.11
   flutter_spinkit: ^4.1.2+1
   flutter_swiper: ^1.1.6
-  flutter_xupdate: ^0.0.3
+  flutter_xupdate: ^1.0.2
   flutter_picker: ^1.1.5
   flutter_local_notifications: ^1.4.4+1
   fluro: ^1.7.8
