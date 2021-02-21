@@ -38,7 +38,6 @@ Handler webViewPageHand = Handler(
   return WebViewPage(url, title);
 });
 
-
 class AppAnalysis extends NavigatorObserver {
   @override
   void didPush(Route<dynamic> route, Route<dynamic> previousRoute) {

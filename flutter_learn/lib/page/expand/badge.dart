@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/router/router.dart';
 
 class BadgePage extends StatefulWidget {
   final String title;
@@ -26,7 +27,9 @@ class _BadgePageState extends State<BadgePage> {
             badgeContent: null,
             child: IconButton(
               icon: Icon(Icons.menu),
-              onPressed: () {},
+              onPressed: () {
+                XRouter.router.pop(context);
+              },
             ),
           ),
           title: Text(widget.title),
